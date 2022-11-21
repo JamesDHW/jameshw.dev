@@ -2,11 +2,12 @@
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
-    "react-app",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "curly": ["error", "all"],
     "eqeqeq": ["error", "smart"],
     "import/no-extraneous-dependencies": [
@@ -23,6 +24,7 @@
         "hoist": "all"
       }
     ],
+    "@typescript-eslint/no-shadow": "error",
     "prefer-const": "error",
     "import/order": [
       "error",

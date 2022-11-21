@@ -16,8 +16,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"]
+      "styles/*": ["styles/*"],
+      "components/*": ["components/*"],
+      "icons/*": ["icons/*"],
+      "types/*": ["types/*"],
+      "api/*": ["server/*"]
     },
     "plugins": [
       {
