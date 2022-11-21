@@ -22,7 +22,7 @@ export const NavItem: FC<NavItemPops> = ({ href, label }) => {
             "text-gray-800 dark:text-gray-200": isActive,
             "text-gray-400 dark:text-gray-300": !isActive,
           },
-          "py-2 px-3 font-semibold text-base rounded-lg hover:dark:bg-gray-800 hover:bg-gray-200 text-gray-900 dark:text-gray-100 transition-all"
+          "py-10 sm:py-2 px-3 w-full font-semibold text-3xl sm:text-base rounded-lg hover:dark:bg-gray-800 hover:bg-gray-200 text-gray-900 dark:text-gray-100 transition-all"
         )}
         style={{ transitionDelay: "100ms" }}
       >

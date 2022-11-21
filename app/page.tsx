@@ -24,7 +24,7 @@ export default function Home() {
             width={200}
             src="/av-2.png"
             priority
-            className="rounded-full grayscale hover:grayscale-0 hover:scale-[1.1] transition duration-0 hover:duration-1000"
+            className="rounded-full sm:grayscale hover:grayscale-0 sm:hover:scale-[1.1] scale-[1.1] sm:scale-[1.0] transition duration-0 hover:duration-1000"
           />
         </div>
       </div>

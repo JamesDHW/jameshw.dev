@@ -15,7 +15,7 @@ export default function RootLayout({ children }: PageProps) {
   return (
     <html lang="en" className="h-full">
       <head />
-      <body className="flex flex-col justify-between h-full overflow-y-scroll max-w-3xl m-auto dark:bg-gray-900">
+      <body className="flex flex-col justify-between h-full max-w-3xl m-auto dark:bg-gray-900">
         <ThemeProvider attribute="class">
           <div className="flex flex-col justify-center px-8">
             <Navbar />

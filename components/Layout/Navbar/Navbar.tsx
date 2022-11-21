@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { useTheme } from "next-themes";
 import { NavItem, NavItemPops } from "./NavItem";
 
@@ -19,43 +19,28 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  const toggleMenu = () => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-      document.body.style.overflow = "";
-    } else {
-      setIsMenuOpen(true);
-      document.body.style.overflow = "hidden";
-    }
-  };
-
-  useEffect(() => {
-    return function cleanup() {
-      document.body.style.overflow = "";
-    };
-  }, []);
-
   return (
-    <nav className="flex width-full pt-8 pb-12 justify-between">
+    <nav className="flex width-full pt-8 pb-12 justify-between align-baseline">
+      <MobileNav open={isMenuOpen} setOpen={setIsMenuOpen} />
       <button
-        className="visible sm:hidden relative"
+        className="sm:hidden relative w-10 h-10 z-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
+        onClick={() => setIsMenuOpen((v) => !v)}
         aria-label="Toggle menu"
         type="button"
-        onClick={toggleMenu}
       >
-        <MenuIcon data-hide={isMenuOpen} />
-        <CrossIcon data-hide={!isMenuOpen} />
+        {isMenuOpen ? <CrossIcon /> : <MenuIcon />}
       </button>
 
-      <ul className="flex sm:flex-row flex-col">
+      <ul className="hidden sm:flex sm:flex-row flex-col">
         {navBarItems.map((item) => (
           <NavItem key={item.href} {...item} />
         ))}
       </ul>
+
       <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all"
+        className="w-10 h-10 z-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all"
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
         <svg
@@ -97,14 +82,21 @@ function MenuIcon(props: JSX.IntrinsicElements["svg"]) {
       {...props}
     >
       <path
-        d="M2.5 7.5H17.5"
+        d="M2.5 5.5H17.5"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M2.5 12.5H17.5"
+        d="M2.5 10.5H17.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M2.5 15.5H17.5"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -132,5 +124,32 @@ function CrossIcon(props: JSX.IntrinsicElements["svg"]) {
       <path d="M18 6L6 18" />
       <path d="M6 6l12 12" />
     </svg>
+  );
+}
+
+function MobileNav({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}) {
+  return (
+    <div
+      className={`fixed top-0 left-0 h-screen w-screen transform ${
+        open ? "-translate-x-0" : "-translate-x-full"
+      } transition-transform duration-100 ease-in-out filter bg-gray-50 dark:bg-gray-900 opacity-95 z-10 drop-shadow-md overscroll-contain`}
+    >
+      <div className="flex flex-col h-full justify-center align-middle">
+        {navBarItems.map((item) => (
+          <button
+            key={item.href}
+            onClick={() => setTimeout(() => setOpen((v: boolean) => !v), 500)}
+          >
+            <NavItem {...item} />
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
