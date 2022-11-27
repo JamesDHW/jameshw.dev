@@ -1,9 +1,5 @@
-import { Skeleton } from "components/Skeleton";
+import { ArticleLoadingState } from "components/Blog/ArticleLoadingState";
 
 export default function ArticleLoading() {
-  return (
-    <div className="flex flex-col mt-20">
-      <Skeleton numberOfLineGroups={9} />
-    </div>
-  );
+  return <ArticleLoadingState />;
 }

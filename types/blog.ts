@@ -3,5 +3,10 @@ export type Article = {
   title: string;
   author: string;
   summary: string;
-  tags: string[];
+  tags: Tag[];
+};
+
+type Tag = {
+  color: string;
+  name: string;
 };

@@ -1,42 +1,35 @@
-import { Suspense } from "react";
 import Link from "next/link";
-import { Article } from "types/blog";
-import { BASE_URL } from "utils/env";
+import { Suspense } from "react";
 import { getArticles } from "server/handlers/articles/list";
-import BlogLoading from "./loading";
-
-const getData = async (): Promise<Article[]> => {
-  const res = await fetch(`${BASE_URL}/api/articles`, { cache: "no-store" });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return (await res.json()) as Article[];
-};
+import { Chip } from "components/General/Chip";
+import { BlogLoadingState } from "components/Blog/BlogLoadingState";
 
 export default async function Blog() {
-  const articles = await getArticles();
-
   return (
-    <Suspense fallback={<BlogLoading />}>
+    <Suspense fallback={<BlogLoadingState />}>
       <div className="flex flex-col">
         <h1 className="font-bold text-3xl md:text-4xl tracking-tight mb-5 text-black dark:text-white">
           Articles
         </h1>
-        {articles.map(({ slug, title, author, summary }) => (
-          <Link key={slug} href={`/blog/${slug}`} className="w-full">
+        {(await getArticles()).map(({ slug, title, author, summary, tags }) => (
+          <Link key={slug} href={`/blog/${slug}`} className="w-full py-4">
             <div className="w-full">
               <div className="flex flex-col justify-between md:flex-row">
                 <h4 className="w-full mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
                   {title}
                 </h4>
-                {/* <p className="w-32 mb-4 text-left text-gray-500 md:text-right md:mb-0">
-                  {`${new Number(100).toLocaleString()} views`}
-                </p> */}
               </div>
               <p className="text-gray-600 dark:text-gray-400">{summary}</p>
-              <hr className="my-8 border-gray-500" />
+              {tags.length !== 0 && (
+                <div className="flex flex-row pt-4">
+                  {tags.map(({ name }) => (
+                    <Chip key={name} className="mr-3">
+                      {name}
+                    </Chip>
+                  ))}
+                </div>
+              )}
+              <hr className="my-4 border-gray-500" />
             </div>
           </Link>
         ))}
