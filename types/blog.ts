@@ -4,6 +4,7 @@ export type Article = {
   author: string;
   summary: string;
   tags: Tag[];
+  published: { start: Date };
 };
 
 type Tag = {
