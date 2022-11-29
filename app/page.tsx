@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Suspense fallback={null}>
       <div className="flex sm:flex-row flex-col-reverse justify-between">
-        <div className="flex flex-col justify-center align-middle mb-8 sm:mb-24 text-center sm:text-left">
+        <div className="flex flex-col justify-top align-top mb-8 sm:mb-24 text-center sm:text-left">
           <h1 className="font-bold text-3xl md:text-4xl mb-8 tracking-tight text-gray-700 dark:text-white">
             James Haworth Wheatman
           </h1>
@@ -22,7 +22,7 @@ export default function Home() {
             alt="James Haworth Wheatman"
             height={200}
             width={200}
-            src="/av-2.png"
+            src="/avatar.png"
             priority
             className="rounded-full sm:grayscale hover:grayscale-0 sm:hover:scale-[1.1] scale-[1.1] sm:scale-[1.0] transition duration-0 hover:duration-1000"
           />
