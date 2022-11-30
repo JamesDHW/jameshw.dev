@@ -24,10 +24,10 @@ export const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="flex width-full pt-8 pb-12 justify-between align-baseline">
+    <nav className="flex z-10 width-full sticky top-0 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900">
       <MobileNav open={isMenuOpen} setOpen={setIsMenuOpen} />
       <button
-        className="sm:hidden relative w-10 h-10 z-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
+        className="sm:hidden relative w-10 h-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
         onClick={() => setIsMenuOpen((v) => !v)}
         aria-label="Toggle menu"
         type="button"
@@ -142,7 +142,7 @@ function MobileNav({
     <div
       className={`fixed top-0 left-0 h-screen w-screen transform ${
         open ? "-translate-x-0" : "-translate-x-full"
-      } transition-transform duration-100 ease-in-out filter bg-gray-50 dark:bg-gray-900 opacity-95 z-10 drop-shadow-md overscroll-contain`}
+      } transition-transform duration-100 ease-in-out filter bg-gray-50 dark:bg-gray-900 opacity-95 drop-shadow-md overscroll-contain`}
     >
       <div className="flex flex-col h-full justify-center align-middle">
         {navBarItems.map((item) => (
