@@ -14,6 +14,12 @@ export const Footer: FC = () => {
             Home
           </Link>
           <Link
+            href="/about"
+            className="text-gray-500 hover:text-gray-600 transition"
+          >
+            About Me
+          </Link>
+          <Link
             href="/blog"
             className="text-gray-500 hover:text-gray-600 transition"
           >
