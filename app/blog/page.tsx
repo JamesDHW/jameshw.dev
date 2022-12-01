@@ -5,13 +5,15 @@ import { Chip } from "components/General/Chip";
 import { BlogLoadingState } from "components/Blog/BlogLoadingState";
 
 export default async function Blog() {
+  const articles = await getArticles();
+
   return (
     <Suspense fallback={<BlogLoadingState />}>
       <div className="flex flex-col">
         <h1 className="font-bold text-3xl md:text-4xl tracking-tight mb-5 text-black dark:text-white">
           Articles
         </h1>
-        {(await getArticles())
+        {articles
           .filter(({ published }) => new Date(published.start) < new Date())
           .map(({ slug, title, author, summary, tags }) => (
             <Link key={slug} href={`/blog/${slug}`} className="w-full py-4">
