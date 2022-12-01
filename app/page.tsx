@@ -17,14 +17,13 @@ export default function Home() {
             I help people do good things with software!
           </p>
         </div>
-        <div className="flex sm:w-[200px] w-full justify-center mb-12">
+        <div className="relative mx-auto w-[225px] h-[225px] overflow-hidden rounded-full m-5 hover:scale-[1.05] transition-all hover:shadow-xl shadow-md">
           <Image
             alt="James Haworth Wheatman"
-            height={200}
-            width={200}
             src="/avatar.png"
             priority
-            className="rounded-full sm:grayscale hover:grayscale-0 sm:hover:scale-[1.1] scale-[1.1] sm:scale-[1.0] transition duration-0 hover:duration-1000"
+            fill
+            className="object-cover"
           />
         </div>
       </div>
