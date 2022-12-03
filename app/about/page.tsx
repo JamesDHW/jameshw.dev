@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col px-8">
       <h1 className="font-bold text-3xl md:text-4xl mb-5 text-black dark:text-white">
         Hey! I&apos;m James
         <span className="inline-block ml-2 animate-waving-hand">👋</span>

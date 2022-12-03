@@ -1,7 +1,9 @@
 "use client";
 
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, FC, SetStateAction, useState } from "react";
 import { useTheme } from "next-themes";
+import { CrossIcon } from "icons/cross";
+import { MenuIcon } from "icons/hamburger";
 import { NavItem, NavItemPops } from "./NavItem";
 
 const navBarItems: NavItemPops[] = [
@@ -24,8 +26,7 @@ export const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="flex z-10 width-full sticky top-0 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900">
-      <MobileNav open={isMenuOpen} setOpen={setIsMenuOpen} />
+    <nav className="flex z-10 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900">
       <button
         className="sm:hidden relative w-10 h-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
         onClick={() => setIsMenuOpen((v) => !v)}
@@ -35,6 +36,7 @@ export const Navbar = () => {
         {isMenuOpen ? <CrossIcon /> : <MenuIcon />}
       </button>
 
+      <MobileNav open={isMenuOpen} setOpen={setIsMenuOpen} />
       <ul className="hidden sm:flex sm:flex-row flex-col">
         {navBarItems.map((item) => (
           <NavItem key={item.href} {...item} />
@@ -75,69 +77,11 @@ export const Navbar = () => {
   );
 };
 
-function MenuIcon(props: JSX.IntrinsicElements["svg"]) {
-  return (
-    <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      {...props}
-    >
-      <path
-        d="M2.5 5.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M2.5 10.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M2.5 15.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function CrossIcon(props: JSX.IntrinsicElements["svg"]) {
-  return (
-    <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-      shapeRendering="geometricPrecision"
-      {...props}
-    >
-      <path d="M18 6L6 18" />
-      <path d="M6 6l12 12" />
-    </svg>
-  );
-}
-
-function MobileNav({
-  open,
-  setOpen,
-}: {
+interface MobileNavProps {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
-}) {
+}
+const MobileNav: FC<MobileNavProps> = ({ open, setOpen }) => {
   return (
     <div
       className={`fixed top-0 left-0 h-screen w-screen transform ${
@@ -156,4 +100,4 @@ function MobileNav({
       </div>
     </div>
   );
-}
+};

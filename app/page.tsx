@@ -1,10 +1,9 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import { BlogHighlightCard } from "components/Blog/BlogHighlightCard";
 
 export default function Home() {
   return (
-    <Suspense fallback={null}>
+    <div className="px-8">
       <div className="flex sm:flex-row flex-col-reverse justify-between">
         <div className="flex flex-col justify-top align-top mb-8 sm:mb-24 text-center sm:text-left">
           <h1 className="font-bold text-3xl md:text-4xl mb-8 tracking-tight text-gray-700 dark:text-white">
@@ -27,7 +26,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
+      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6">
         Articles
       </h3>
       <div className="flex gap-6 flex-col md:flex-row">
@@ -47,6 +46,6 @@ export default function Home() {
           gradient="from-gray-700 to-gray-300"
         />
       </div>
-    </Suspense>
+    </div>
   );
 }
