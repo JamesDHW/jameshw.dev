@@ -1,14 +1,16 @@
 import {
   PageObjectResponse,
+  PartialPageObjectResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints";
+import { Article } from "types/blog";
 import {
   DateProperty,
   MultiSelectProperty,
   NotionBlockTypes,
 } from "./notion.types";
 
-export const notionDatabasePropertyResolver = (
+const notionDatabasePropertyResolver = (
   prop: PageObjectResponse["properties"][string]
 ): string | MultiSelectProperty[] | DateProperty | null => {
   const type = prop["type"];
@@ -45,3 +47,18 @@ const multiSelectValueResolver = (
     color,
   }));
 };
+
+export const isFullNotionResponse = (
+  results: (PageObjectResponse | PartialPageObjectResponse)[]
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+): results is PageObjectResponse[] => results[0].properties !== undefined;
+
+export const formatNotionPageAttributes = (
+  properties: PageObjectResponse["properties"]
+): Article =>
+  Object.entries(properties).reduce((acc, [key, prop]) => {
+    const value = notionDatabasePropertyResolver(prop);
+
+    return { ...acc, [key]: value };
+  }, {} as Article);

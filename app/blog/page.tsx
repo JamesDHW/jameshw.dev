@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { getArticles } from "server/handlers/articles/list";
 import { Chip } from "components/General/Chip";
+import { serverSideCmsClient } from "api/services/notion/notion.client";
 
 export default async function Blog() {
-  const articles = await getArticles();
+  const articles = await serverSideCmsClient.getArticles();
 
   return (
     <div className="flex flex-col">
