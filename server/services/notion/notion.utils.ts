@@ -32,11 +32,11 @@ const notionDatabasePropertyResolver = (
 };
 
 const richTextValueResolver = (prop: RichTextItemResponse[]): string => {
-  return prop[0].plain_text;
+  return prop[0]?.plain_text ?? "";
 };
 
 const titleValueResolver = (prop: RichTextItemResponse[]): string => {
-  return prop[0].plain_text;
+  return prop[0]?.plain_text ?? "";
 };
 
 const multiSelectValueResolver = (
