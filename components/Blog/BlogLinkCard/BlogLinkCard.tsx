@@ -21,7 +21,7 @@ export const BlogLinkCard: FC<BlogLinkCardProps> = ({
       <div className="flex flex-col sm:flex-row gap-2 py-2 sm:p-2 justify-between">
         <div className="flex flex-row gap-2 items-center text-gray-600 dark:text-gray-500">
           <CalendarIcon />
-          <p>{publishDate.toLocaleDateString()}</p>
+          <p>{publishDate.toLocaleDateString("en-GB")}</p>
         </div>
         {tags.length > 0 && (
           <div className="flex flex-row gap-2">
