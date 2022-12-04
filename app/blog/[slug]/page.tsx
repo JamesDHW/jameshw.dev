@@ -1,12 +1,19 @@
+import { notFound } from "next/navigation";
 import { serverSideCmsClient } from "api/services/notion/notion.client";
 import { NotionRenderer } from "components/General/NotionRenderer";
 
 import { PageProps } from "types/nextjs";
 
-export default async function ArticlePage(props: PageProps) {
-  const recordMap = await serverSideCmsClient.getArticleContent(
-    props?.params?.slug ?? ""
-  );
+const getArticle = async (slug: string) => {
+  try {
+    return await serverSideCmsClient.getArticleContent(slug);
+  } catch {
+    throw notFound();
+  }
+};
 
-  return <NotionRenderer recordMap={recordMap} />;
+export default async function ArticlePage(props: PageProps) {
+  const article = await getArticle(props?.params?.slug ?? "");
+
+  return <NotionRenderer recordMap={article} />;
 }

@@ -47,7 +47,9 @@ class ServerSideCmsClient {
       },
     });
 
-    const id = results[0].id;
+    const id = results[0]?.id;
+
+    if (id === undefined) throw new Error("No Article Found");
 
     return await this.notionContentClient.getPage(id);
   }
