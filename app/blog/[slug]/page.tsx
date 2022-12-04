@@ -17,3 +17,9 @@ export default async function ArticlePage(props: PageProps) {
 
   return <NotionRenderer recordMap={article} />;
 }
+
+export async function generateStaticParams() {
+  const articles = await serverSideCmsClient.getArticles();
+
+  return articles.map(({ slug }) => ({ slug }));
+}
