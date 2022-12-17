@@ -15,7 +15,10 @@ export default function About() {
             Currently, I&apos;m working as an{" "}
             <span className="font-semibold">Architect Developer</span> on
             full-stack web and mobile applications at{" "}
-            <a href="https://theodo.co.uk" className="font-semibold underline">
+            <a
+              href="https://www.theodo.co.uk"
+              className="font-semibold underline"
+            >
               Theodo UK
             </a>
             .
