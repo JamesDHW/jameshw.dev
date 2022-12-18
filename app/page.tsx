@@ -32,14 +32,14 @@ export default function Home() {
       </h3>
       <div className="flex gap-6 flex-col md:flex-row">
         <BlogHighlightCard
+          slug="how-to-be-a-good-software-engineer"
+          title="What does it mean to be a good Software Engineer?"
+          gradient="from-gray-700 to-gray-300"
+        />
+        <BlogHighlightCard
           slug="serverless-for-long-computational-tasks"
           title="AWS Fargate: harness the power of serverless for long-running computational tasks"
           gradient="from-gray-300 to-gray-500"
-        />
-        <BlogHighlightCard
-          slug="writing-a-native-ionic-plugin-for-capacitor"
-          title="Writing a native Ionic plugin for Capacitor in less than 30 minutes"
-          gradient="from-gray-500 to-gray-700"
         />
         <BlogHighlightCard
           slug="principles-from-clean-code"
