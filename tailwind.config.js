@@ -43,9 +43,14 @@ module.exports = {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        scroll: {
+          "0%": { transform: "translateX(0px)" },
+          "100%": { transform: "translateX(calc(-100vw - 2rem))" },
+        },
       },
       animation: {
         "waving-hand": "wave 5s linear infinite",
+        scrolling: "scroll 60s linear infinite",
       },
     },
   },
