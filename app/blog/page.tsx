@@ -1,4 +1,4 @@
-import { serverSideCmsClient } from "api/services/notion/notion.client";
+import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { BlogLinkCard } from "components/Blog/BlogLinkCard";
 
 export default async function Blog() {

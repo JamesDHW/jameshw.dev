@@ -1,10 +1,7 @@
 import { NotionAPI } from "notion-client";
 import { Client } from "@notionhq/client";
 import { Article } from "types/blog";
-import {
-  formatNotionPageAttributes,
-  isFullNotionResponse,
-} from "./notion.utils";
+import { formatNotionPageAttributes, isFullNotionResponse } from "./cms.utils";
 
 class ServerSideCmsClient {
   private notionContentClient: NotionAPI;

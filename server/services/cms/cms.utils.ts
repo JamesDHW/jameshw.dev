@@ -8,7 +8,7 @@ import {
   DateProperty,
   MultiSelectProperty,
   NotionBlockTypes,
-} from "./notion.types";
+} from "./cms.types";
 
 const notionDatabasePropertyResolver = (
   prop: PageObjectResponse["properties"][string]

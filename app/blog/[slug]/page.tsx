@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { serverSideCmsClient } from "api/services/notion/notion.client";
+import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { NotionRenderer } from "components/General/NotionRenderer";
 
 import { PageProps } from "types/nextjs";
