@@ -9,6 +9,12 @@ export default async function Blog() {
       <h1 className="font-bold text-3xl md:text-4xl tracking-tight mb-5 text-black dark:text-white">
         Articles
       </h1>
+      <p>
+        I&apos;ve been writing articles infrequently since 2020 to consolidate
+        my learnings on various topics. Packaging ideas into blog posts helps me
+        to actively reflect on them; it might also help others to learn too - I
+        hope there&apos;s something interesting here for you!
+      </p>
       {articles
         .filter(({ published }) => new Date(published.start) < new Date())
         .sort((a, b) => (a.published.start > b.published.start ? -1 : 1))
