@@ -11,7 +11,7 @@ export const BookCover: FC<BlogPreviewCardProps> = ({ title, uri }) => {
   return (
     <div
       className={classes(
-        "transform transition-all opacity-50 hover:opacity-100 shadow-lg",
+        "transform transition-all dark:opacity-50 dark:hover:opacity-100 shadow-lg",
         "w-full md:w-1/3 bg-gradient-to-r m-2"
       )}
     >

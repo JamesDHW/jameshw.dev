@@ -10,7 +10,7 @@ export const BlogLoadingState: FC = () => {
 
   if (path === "/blog")
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col px-8">
         <h1 className="font-bold text-3xl md:text-4xl tracking-tight mb-5 text-black dark:text-white">
           Articles
         </h1>

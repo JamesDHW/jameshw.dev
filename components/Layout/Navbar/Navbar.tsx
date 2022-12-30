@@ -26,9 +26,9 @@ export const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="flex z-10 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900">
+    <nav className="flex z-10 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-90">
       <button
-        className="sm:hidden relative w-10 h-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
+        className="sm:hidden relative w-10 h-10 z-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
         onClick={() => setIsMenuOpen((v) => !v)}
         aria-label="Toggle menu"
         type="button"
@@ -84,7 +84,7 @@ interface MobileNavProps {
 const MobileNav: FC<MobileNavProps> = ({ open, setOpen }) => {
   return (
     <div
-      className={`fixed top-0 left-0 h-screen w-screen transform ${
+      className={`sm:hidden fixed top-0 left-0 h-screen w-screen transform ${
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-100 ease-in-out filter bg-gray-50 dark:bg-gray-900 opacity-95 drop-shadow-md overscroll-contain`}
     >

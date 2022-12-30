@@ -41,7 +41,7 @@ export default function Home() {
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
         Articles
       </h3>
-      <div className="flex gap-6 flex-col md:flex-row overflow-hidden pb-4 mb-4 border-b-2">
+      <div className="flex gap-6 flex-col md:flex-row overflow-hidden pb-4 mb-12 border-b-2">
         <BlogHighlightCard
           slug="how-to-be-a-good-software-engineer"
           title="What does it mean to be a good Software Engineer?"
