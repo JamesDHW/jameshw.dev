@@ -14,9 +14,17 @@ export const BlogLoadingState: FC = () => {
         <h1 className="font-bold text-3xl md:text-4xl tracking-tight mb-5 text-black dark:text-white">
           Articles
         </h1>
-        {Array.from({ length: 3 }).map((_, i) => (
-          <Skeleton key={`article-skel-${i}`} />
-        ))}
+        <p>
+          I{`'`}ve been writing articles infrequently since 2020 to consolidate
+          my learnings on various topics. Packaging ideas into blog posts helps
+          me to actively reflect on them; it might also help others to learn too
+          - I hope there{`'`}s something interesting here for you!
+        </p>
+        <div className="my-4">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <Skeleton key={`article-skel-${i}`} />
+          ))}
+        </div>
       </div>
     );
 

@@ -7,7 +7,11 @@ import { PageProps } from "types/nextjs";
 export default async function ArticlePage(props: PageProps) {
   const article = await getArticle(props?.params?.slug ?? "");
 
-  return <NotionRenderer recordMap={article} />;
+  return (
+    <div className="mb-8">
+      <NotionRenderer recordMap={article} />
+    </div>
+  );
 }
 
 const getArticle = async (slug: string) => {

@@ -1,24 +1,38 @@
 import classes from "classnames";
 import { FC } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-interface BlogPreviewCardProps {
-  subHeading: string;
-  imageUri: string;
+interface CharityDisplayItemProps {
+  name: string;
+  logoUri: string;
+  donation: string;
+  siteUrl: string;
 }
 
-export const CharityDisplayItem: FC<BlogPreviewCardProps> = ({
-  subHeading,
-  imageUri,
+export const CharityDisplayItem: FC<CharityDisplayItemProps> = ({
+  name,
+  logoUri,
+  donation,
+  siteUrl,
 }) => {
   return (
-    <div className={classes("md:w-1/3 bg-gradient-to-r m-4 max-w-[200px]")}>
-      <div className="relative mx-auto w-[200px] h-[200px]">
-        <Image alt={subHeading} src={imageUri} className="object-fit" fill />
+    <Link href={siteUrl}>
+      <div
+        className={classes(
+          "flex justify-between my-2 py-2",
+          "shadow-md hover:shadow-lg dark:shadow-gray-700",
+          "hover:scale-[1.02] transition-all"
+        )}
+      >
+        <div className="flex px-2">
+          <div className="relative min-w-[50px] w-[50px] h-[50px]">
+            <Image alt={name} src={logoUri} className="object-fit" fill />
+          </div>
+          <p className="text-base sm:text-lg font-thin px-4 my-auto">{name}</p>
+        </div>
+        <p className="font-thin px-4 my-auto">{donation}</p>
       </div>
-      <p className="py-2 text-center font-semibold break-words whitespace-normal">
-        {subHeading}
-      </p>
-    </div>
+    </Link>
   );
 };

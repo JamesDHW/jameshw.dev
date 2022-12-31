@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Carousel } from "components/General/Carousel";
 import { CharityDisplayItem } from "components/Giving/CharityDisplayItem";
 import { MY_DONATIONS } from "app/constants";
 
@@ -37,19 +36,23 @@ export default function Giving() {
         focusing on high-impact, cost-effective, highly-neglected interventions.
       </p>
       <p className="py-2 text-lg">
-        Giving What We Can encourage us to donate publicly so that giving to
-        charity becomes the norm. To that end, I{`'`}ve listed my pick of
-        charities here:
+        Giving What We Can encourage us to{" "}
+        <Link
+          className="font-semibold"
+          href="https://www.givingwhatwecan.org/blog/should-charity-be-anonymous"
+          target="_blank"
+          rel="noreferrer"
+        >
+          donate publicly
+        </Link>{" "}
+        so that giving to charity becomes the norm. To that end, I{`'`}ve listed
+        my pick of charities and what percentage of my donation goes to each:
       </p>
-      <Carousel>
-        {MY_DONATIONS.map(({ logoUri, subHeading }, i) => (
-          <CharityDisplayItem
-            key={i}
-            imageUri={logoUri}
-            subHeading={subHeading}
-          />
+      <div className="my-4">
+        {MY_DONATIONS.map((donation, i) => (
+          <CharityDisplayItem key={i} {...donation} />
         ))}
-      </Carousel>
+      </div>
     </div>
   );
 }
