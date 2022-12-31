@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BlogHighlightCard } from "components/Home/BlogHighlightCard";
 import avatar from "/public/avatar.png";
 import { BookCover } from "components/Home/BookCover";
-import { BookShelf } from "components/Home/BookShelf";
+import { Carousel } from "components/General/Carousel";
 import { MY_READING_LIST } from "./constants";
 
 export default function Home() {
@@ -15,14 +16,14 @@ export default function Home() {
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 md:text-xl text-xl">
             Architect Developer at{" "}
-            <a
+            <Link
               className="font-semibold"
               href="https://www.theodo.co.uk"
               target="_blank"
               rel="noreferrer"
             >
               Theodo
-            </a>
+            </Link>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-base">
             I help people do good things with software!
@@ -61,11 +62,11 @@ export default function Home() {
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
         Are we on the same page?
       </h3>
-      <BookShelf>
+      <Carousel>
         {MY_READING_LIST.map(({ title, uri }, i) => (
           <BookCover title={title} uri={uri} key={`${title}-${i}`} />
         ))}
-      </BookShelf>
+      </Carousel>
     </div>
   );
 }

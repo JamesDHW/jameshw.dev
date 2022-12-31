@@ -1,11 +1,11 @@
 import { FC, ReactNode } from "react";
 import classes from "classnames";
 
-interface BookShelfProps {
+interface CarouselProps {
   children: ReactNode;
 }
 
-export const BookShelf: FC<BookShelfProps> = ({ children }) => {
+export const Carousel: FC<CarouselProps> = ({ children }) => {
   return (
     <div
       className={classes(
