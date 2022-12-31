@@ -5,14 +5,14 @@ export default function About() {
   return (
     <div className="flex flex-col px-8">
       <h1 className="font-bold text-3xl md:text-4xl mb-5 text-black dark:text-white">
-        Hey! I&apos;m James
+        Hey! I{`'`}m James
         <span className="inline-block ml-2 animate-waving-hand">👋</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 w-100 ltr justify-center flex-wrap">
         <div className="flex flex-col justify-evenly align-middle text-xl">
-          <p className="py-2">I&apos;m a software engineer living in London!</p>
+          <p className="py-2">I{`'`}m a software engineer living in London!</p>
           <p className="py-2">
-            Currently, I&apos;m working as an{" "}
+            Currently, I{`'`}m working as an{" "}
             <span className="font-semibold">Architect Developer</span> on
             full-stack web and mobile applications at{" "}
             <a

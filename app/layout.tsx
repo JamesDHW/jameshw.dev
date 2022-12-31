@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import { ThemeProvider } from "styles/ThemeProvider";
 import { Navbar } from "components/Layout/Navbar";
 import { Footer } from "components/Layout/Footer";
@@ -9,9 +9,9 @@ import "react-notion-x/src/styles.css";
 import "katex/dist/katex.min.css";
 import "prismjs/themes/prism-tomorrow.css";
 
-type PageProps = { children: ReactNode };
+type RootPageProps = { children: ReactNode };
 
-export default function RootLayout({ children }: PageProps) {
+const RootLayout: FC<RootPageProps> = ({ children }) => {
   return (
     <html lang="en" className="h-full">
       <head />
@@ -26,4 +26,6 @@ export default function RootLayout({ children }: PageProps) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

@@ -1,5 +1,3 @@
-"use client";
-
 import { useTheme } from "next-themes";
 import { NotionRenderer as Renderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";

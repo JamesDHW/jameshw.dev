@@ -10,10 +10,10 @@ export default async function Blog() {
         Articles
       </h1>
       <p>
-        I&apos;ve been writing articles infrequently since 2020 to consolidate
-        my learnings on various topics. Packaging ideas into blog posts helps me
-        to actively reflect on them; it might also help others to learn too - I
-        hope there&apos;s something interesting here for you!
+        I{`'`}ve been writing articles infrequently since 2020 to consolidate my
+        learnings on various topics. Packaging ideas into blog posts helps me to
+        actively reflect on them; it might also help others to learn too - I
+        hope there{`'`}s something interesting here for you!
       </p>
       {articles
         .filter(({ published }) => new Date(published.start) < new Date())

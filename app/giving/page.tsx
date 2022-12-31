@@ -10,7 +10,7 @@ export default function Giving() {
         Giving What We Can
       </h1>
       <p className="py-2 text-lg">
-        I&apos;ve been enthusiastic about{" "}
+        I{`'`}ve been enthusiastic about{" "}
         <Link
           className="font-semibold"
           href="https://www.effectivealtruism.org/"
@@ -38,7 +38,7 @@ export default function Giving() {
       </p>
       <p className="py-2 text-lg">
         Giving What We Can encourage us to donate publicly so that giving to
-        charity becomes the norm. To that end, I&apos;ve listed my pick of
+        charity becomes the norm. To that end, I{`'`}ve listed my pick of
         charities here:
       </p>
       <Carousel>

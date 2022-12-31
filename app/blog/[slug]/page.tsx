@@ -4,6 +4,12 @@ import { NotionRenderer } from "components/General/NotionRenderer";
 
 import { PageProps } from "types/nextjs";
 
+export default async function ArticlePage(props: PageProps) {
+  const article = await getArticle(props?.params?.slug ?? "");
+
+  return <NotionRenderer recordMap={article} />;
+}
+
 const getArticle = async (slug: string) => {
   try {
     return await serverSideCmsClient.getArticleContent(slug);
@@ -11,12 +17,6 @@ const getArticle = async (slug: string) => {
     throw notFound();
   }
 };
-
-export default async function ArticlePage(props: PageProps) {
-  const article = await getArticle(props?.params?.slug ?? "");
-
-  return <NotionRenderer recordMap={article} />;
-}
 
 export async function generateStaticParams() {
   const articles = await serverSideCmsClient.getArticles();
