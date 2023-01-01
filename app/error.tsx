@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 
-export default function NotFound() {
+export default function Error() {
   return (
     <div className="flex flex-col justify-between max-w-2xl mx-auto mb-16 px-8">
       <div className="font-bold text-center tracking-tight">
@@ -9,15 +11,23 @@ export default function NotFound() {
       </div>
       <div className="my-8">
         <p className="text-gray-600 dark:text-gray-400 text-justify">
-          The HTTP 418 I{`'`}m a teapot client error response code indicates
-          that the server refuses to brew coffee because it is, permanently, a
-          teapot. A combined coffee/tea pot that is temporarily out of coffee
-          should instead return 503. This error is a reference to Hyper Text
-          Coffee Pot Control Protocol defined in April Fools{`'`} jokes in 1998
-          and 2014.
+          The{" "}
+          <Link
+            className="font-semibold"
+            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418"
+            target="_blank"
+            rel="noreferrer"
+          >
+            HTTP 418
+          </Link>{" "}
+          I{`'`}m a teapot client error response code indicates that the server
+          refuses to brew coffee because it is, permanently, a teapot. A
+          combined coffee/tea pot that is temporarily out of coffee should
+          instead return 503. This error is a reference to Hyper Text Coffee Pot
+          Control Protocol defined in April Fools{`'`} jokes in 1998 and 2014.
         </p>
         <p className="text-gray-600 dark:text-gray-400 my-8 text-xl sm:text-3xl text-center font-bold">
-          (Sorry, this article doesn{`'`}t exist!)
+          (Sorry, something went wrong!)
         </p>
       </div>
       <Link

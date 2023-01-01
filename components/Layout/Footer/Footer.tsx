@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FC } from "react";
+import { NAVBAR_ITEMS } from "app/constants";
 
 export const Footer: FC = () => {
   return (
@@ -7,24 +8,15 @@ export const Footer: FC = () => {
       <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8" />
       <div className="w-full grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3 sm:gap-32">
         <div className="flex flex-col space-y-4">
-          <Link
-            href="/"
-            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
-          >
-            About Me
-          </Link>
-          <Link
-            href="/blog"
-            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
-          >
-            Blog
-          </Link>
+          {NAVBAR_ITEMS.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
+            >
+              {label}
+            </Link>
+          ))}
         </div>
         <div className="flex flex-col space-y-4">
           <Link

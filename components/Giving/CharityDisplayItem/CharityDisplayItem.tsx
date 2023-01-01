@@ -22,7 +22,7 @@ export const CharityDisplayItem: FC<CharityDisplayItemProps> = ({
         className={classes(
           "flex justify-between my-2 py-2",
           "shadow-md hover:shadow-lg dark:shadow-gray-700",
-          "hover:scale-[1.02] transition-all"
+          "hover:scale-[1.01] transition-all"
         )}
       >
         <div className="flex px-2">

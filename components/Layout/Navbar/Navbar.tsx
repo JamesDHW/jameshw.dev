@@ -4,22 +4,8 @@ import { Dispatch, FC, SetStateAction, useState } from "react";
 import { useTheme } from "next-themes";
 import { CrossIcon } from "icons/cross";
 import { MenuIcon } from "icons/hamburger";
-import { NavItem, NavItemPops } from "./NavItem";
-
-const navBarItems: NavItemPops[] = [
-  {
-    href: "/",
-    label: "Home",
-  },
-  {
-    href: "/about",
-    label: "About Me",
-  },
-  {
-    href: "/blog",
-    label: "Blog",
-  },
-];
+import { NAVBAR_ITEMS } from "app/constants";
+import { NavItem } from "./NavItem";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +24,7 @@ export const Navbar = () => {
 
       <MobileNav open={isMenuOpen} setOpen={setIsMenuOpen} />
       <ul className="hidden sm:flex sm:flex-row flex-col">
-        {navBarItems.map((item) => (
+        {NAVBAR_ITEMS.map((item) => (
           <NavItem key={item.href} {...item} />
         ))}
       </ul>
@@ -89,7 +75,7 @@ const MobileNav: FC<MobileNavProps> = ({ open, setOpen }) => {
       } transition-transform duration-100 ease-in-out filter bg-gray-50 dark:bg-gray-900 opacity-95 drop-shadow-md overscroll-contain`}
     >
       <div className="flex flex-col h-full justify-center align-middle">
-        {navBarItems.map((item) => (
+        {NAVBAR_ITEMS.map((item) => (
           <button
             key={item.href}
             onClick={() => setTimeout(() => setOpen((v: boolean) => !v), 500)}

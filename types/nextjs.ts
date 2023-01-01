@@ -1,12 +1,16 @@
 import { ReactNode } from "react";
 
-export type PageProps =
+export type PageProps<T extends PageParams | CatchAllPageParams> =
   | {
-      params?: PageParams;
+      params?: T;
       children?: ReactNode;
     }
   | undefined;
 
-type PageParams = {
+export type PageParams = {
   slug?: string;
+};
+
+export type CatchAllPageParams = {
+  slug?: string[];
 };

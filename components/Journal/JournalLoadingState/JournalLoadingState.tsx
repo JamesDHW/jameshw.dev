@@ -3,20 +3,20 @@
 import { FC } from "react";
 import { usePathname } from "next/navigation";
 import { ContentPageLoadingState } from "components/General/ContentPageLoadingState";
-import { Skeleton } from "components/General/Skeleton";
 import { PATHS } from "app/constants";
-import { BlogHeader } from "../BlogHeader";
+import { JournalHeader } from "../JournalHeader";
+import { JournalEntryRow } from "../JournalEntryRow";
 
-export const BlogLoadingState: FC = () => {
+export const JournalLoadingState: FC = () => {
   const path = usePathname();
 
-  if (path === PATHS.BLOG)
+  if (path === PATHS.JOURNAL)
     return (
       <div className="flex flex-col px-8">
-        <BlogHeader />
+        <JournalHeader />
         <div className="my-4">
           {Array.from({ length: 3 }).map((_, i) => (
-            <Skeleton key={`article-skel-${i}`} />
+            <JournalEntryRow key={`journal-skel-${i}`} />
           ))}
         </div>
       </div>

@@ -17,6 +17,7 @@ import SUVITA from "images/charities/suvita";
 import SANKU from "images/charities/sanku";
 import DISPENSERS_FOR_SAFE_WATER from "images/charities/dispensers-for-safe-water";
 import CHARITY_ENTREPRENEURSHIP from "images/charities/charity-entrepreneurship";
+import { NavItemPops } from "components/Layout/Navbar/NavItem";
 
 export const MY_READING_LIST = [
   {
@@ -113,5 +114,32 @@ export const MY_DONATIONS = [
     name: "Charity Entrepreneurship",
     donation: "5%",
     siteUrl: "https://www.charityentrepreneurship.com/",
+  },
+];
+
+export const PATHS = {
+  HOME: "/",
+  ABOUT: "/about",
+  BLOG: "/blog",
+  JOURNAL: "/journal",
+  GIVING: "/giving",
+};
+
+export const NAVBAR_ITEMS: NavItemPops[] = [
+  {
+    href: PATHS.HOME,
+    label: "Home",
+  },
+  {
+    href: PATHS.ABOUT,
+    label: "About Me",
+  },
+  {
+    href: PATHS.BLOG,
+    label: "Blog",
+  },
+  {
+    href: PATHS.JOURNAL,
+    label: "Dev Journal",
   },
 ];

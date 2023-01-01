@@ -3,16 +3,15 @@ import {
   PartialPageObjectResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import { Article } from "types/blog";
 import {
-  DateProperty,
   MultiSelectProperty,
   NotionBlockTypes,
+  NotionDatabaseProperty,
 } from "./cms.types";
 
 const notionDatabasePropertyResolver = (
   prop: PageObjectResponse["properties"][string]
-): string | MultiSelectProperty[] | DateProperty | null => {
+): NotionDatabaseProperty => {
   const type = prop["type"];
 
   switch (type) {
@@ -23,9 +22,9 @@ const notionDatabasePropertyResolver = (
     case NotionBlockTypes.title:
       return titleValueResolver(prop[NotionBlockTypes.title]);
     case NotionBlockTypes.last_edited_time:
-      return prop[NotionBlockTypes.last_edited_time];
+      return prop.last_edited_time;
     case NotionBlockTypes.date:
-      return prop[NotionBlockTypes.date];
+      return prop.date?.start ?? null;
     default:
       throw new Error("Notion Block Resolver Not Found");
   }
@@ -48,17 +47,17 @@ const multiSelectValueResolver = (
   }));
 };
 
-export const isFullNotionResponse = (
+export const isNonEmptyNonPartialNotionResponse = (
   results: (PageObjectResponse | PartialPageObjectResponse)[]
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-): results is PageObjectResponse[] => results[0].properties !== undefined;
+): results is PageObjectResponse[] => results[0]?.properties !== undefined;
 
 export const formatNotionPageAttributes = (
   properties: PageObjectResponse["properties"]
-): Article =>
+): { [key: string]: NotionDatabaseProperty } =>
   Object.entries(properties).reduce((acc, [key, prop]) => {
     const value = notionDatabasePropertyResolver(prop);
 
     return { ...acc, [key]: value };
-  }, {} as Article);
+  }, {} as { [key: string]: NotionDatabaseProperty });

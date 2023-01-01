@@ -1,7 +1,14 @@
 import { NotionAPI } from "notion-client";
 import { Client } from "@notionhq/client";
-import { Article } from "types/blog";
-import { formatNotionPageAttributes, isFullNotionResponse } from "./cms.utils";
+import { QueryDatabaseParameters } from "@notionhq/client/build/src/api-endpoints";
+import { ExtendedRecordMap } from "notion-types";
+import { Article, JournalEntry } from "types/blog";
+import { isArticle, isJournalEntry } from "types/guards";
+import {
+  formatNotionPageAttributes,
+  isNonEmptyNonPartialNotionResponse,
+} from "./cms.utils";
+import { NotionDatabaseProperty } from "./cms.types";
 
 class ServerSideCmsClient {
   private notionContentClient: NotionAPI;
@@ -18,37 +25,95 @@ class ServerSideCmsClient {
     });
   }
 
-  async getArticles(): Promise<Article[]> {
+  async getDatabaseEntries(
+    databaseId: string
+  ): Promise<{ [key: string]: NotionDatabaseProperty }[]> {
     const { results } = await this.notionApiClient.databases.query({
-      database_id: process.env.BLOG_DB_ID ?? "",
+      database_id: databaseId,
     });
 
-    if (isFullNotionResponse(results)) {
-      const articles = results.map(({ id, properties }) => ({
-        id,
-        ...formatNotionPageAttributes(properties),
-      }));
+    if (results.length === 0) return [];
 
-      return articles;
+    if (isNonEmptyNonPartialNotionResponse(results)) {
+      const entries = results.map(({ id, properties }) => {
+        return {
+          ...formatNotionPageAttributes(properties),
+          id,
+        };
+      });
+
+      return entries;
     }
 
-    throw new Error("oops");
+    throw new Error("Partial response returned by Notion API");
   }
 
-  async getArticleContent(slug: string) {
+  async getArticles(): Promise<Article[]> {
+    if (process.env.BLOG_DB_ID === undefined)
+      throw new Error("env.BLOG_DB_ID not provided");
+
+    const databaseEntries = await this.getDatabaseEntries(
+      process.env.BLOG_DB_ID
+    );
+
+    return databaseEntries.filter(isArticle);
+  }
+
+  async getJournalEntries(): Promise<JournalEntry[]> {
+    if (process.env.JOURNAL_DB_ID === undefined)
+      throw new Error("env.JOURNAL_DB_ID not provided");
+
+    const databaseEntries = await this.getDatabaseEntries(
+      process.env.JOURNAL_DB_ID
+    );
+
+    return databaseEntries.filter(isJournalEntry);
+  }
+
+  async getPageContent(
+    databaseId: string,
+    filter: QueryDatabaseParameters["filter"]
+  ): Promise<ExtendedRecordMap> {
     const { results } = await this.notionApiClient.databases.query({
-      database_id: process.env.BLOG_DB_ID ?? "",
-      filter: {
-        property: "slug",
-        rich_text: { equals: slug },
-      },
+      database_id: databaseId,
+      filter,
     });
 
     const id = results[0]?.id;
 
-    if (id === undefined) throw new Error("No Article Found");
+    if (id === undefined) throw new Error("No Page Found");
 
     return await this.notionContentClient.getPage(id);
+  }
+
+  async getArticleContent(date: string, slug: string) {
+    if (process.env.BLOG_DB_ID === undefined)
+      throw new Error("env.BLOG_DB_ID not provided");
+
+    return await this.getPageContent(process.env.BLOG_DB_ID, {
+      and: [
+        { property: "published", date: { equals: date } },
+        {
+          property: "slug",
+          rich_text: { equals: slug },
+        },
+      ],
+    });
+  }
+
+  async getJournalContent(date: string, slug: string) {
+    if (process.env.JOURNAL_DB_ID === undefined)
+      throw new Error("env.BLOG_DB_ID not provided");
+
+    return await this.getPageContent(process.env.JOURNAL_DB_ID, {
+      and: [
+        { property: "date", date: { equals: date } },
+        {
+          property: "slug",
+          rich_text: { equals: slug },
+        },
+      ],
+    });
   }
 }
 
