@@ -44,17 +44,17 @@ export default function Home() {
       </h3>
       <div className="flex gap-6 flex-col md:flex-row overflow-hidden pb-4 mb-12 border-b-2">
         <BlogHighlightCard
-          slug="how-to-be-a-good-software-engineer"
+          slug="2022-12-18/how-to-be-a-good-software-engineer"
           title="What does it mean to be a good Software Engineer?"
           gradient="from-gray-700 to-gray-300"
         />
         <BlogHighlightCard
-          slug="serverless-for-long-computational-tasks"
+          slug="2021-08-21/serverless-for-long-computational-tasks"
           title="AWS Fargate: harness the power of serverless for long-running computational tasks"
           gradient="from-gray-300 to-gray-500"
         />
         <BlogHighlightCard
-          slug="principles-from-clean-code"
+          slug="2022-02-05/principles-from-clean-code"
           title="Principles gathered from Clean Code: A Handbook of Agile Software Craftsmanship"
           gradient="from-gray-700 to-gray-300"
         />
