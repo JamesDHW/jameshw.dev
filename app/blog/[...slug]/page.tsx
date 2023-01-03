@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { serverSideCmsClient } from "api/services/cms/cms.client";
-import { NotionRenderer } from "components/General/NotionRenderer";
+import { NotionRenderer } from "components/Common/NotionRenderer";
 
 import { CatchAllPageParams, PageProps } from "types/nextjs";
 import { isTwoStringArray } from "types/guards";

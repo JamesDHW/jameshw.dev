@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC } from "react";
-import { NAVBAR_ITEMS } from "app/constants";
+import { NAVBAR_ITEMS, PATHS } from "app/constants";
 
 export const Footer: FC = () => {
   return (
@@ -20,7 +20,13 @@ export const Footer: FC = () => {
         </div>
         <div className="flex flex-col space-y-4">
           <Link
-            href="/giving"
+            href={PATHS.TECH}
+            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
+          >
+            Tech
+          </Link>
+          <Link
+            href={PATHS.JOURNAL}
             className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
             Giving What We Can

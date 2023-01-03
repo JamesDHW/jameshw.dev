@@ -2,8 +2,8 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import { ContentPageLoadingState } from "components/General/ContentPageLoadingState";
-import { Skeleton } from "components/General/Skeleton";
+import { ContentPageLoadingState } from "components/Common/ContentPageLoadingState";
+import { Skeleton } from "components/Common/Skeleton";
 import { PATHS } from "app/constants";
 import { BlogHeader } from "../BlogHeader";
 

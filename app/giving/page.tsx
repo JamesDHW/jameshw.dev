@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { CharityDisplayItem } from "components/Giving/CharityDisplayItem";
 import { MY_DONATIONS } from "app/constants";
+import { PageTitle } from "components/Common/PageTitle";
 
 export default function Giving() {
   return (
     <div className="flex flex-col px-8">
-      <h1 className="font-bold text-3xl md:text-4xl mb-5 text-black dark:text-white">
-        Giving What We Can
-      </h1>
+      <PageTitle>Giving What We Can</PageTitle>
       <p className="py-2 text-lg">
         I{`'`}ve been enthusiastic about{" "}
         <Link

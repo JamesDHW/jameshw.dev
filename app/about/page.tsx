@@ -1,13 +1,14 @@
+import { PageTitle } from "components/Common/PageTitle";
 import Image from "next/image";
 import windemere from "/public/windemere.jpeg";
 
 export default function About() {
   return (
     <div className="flex flex-col px-8">
-      <h1 className="font-bold text-3xl md:text-4xl mb-5 text-black dark:text-white">
+      <PageTitle>
         Hey! I{`'`}m James
         <span className="inline-block ml-2 animate-waving-hand">👋</span>
-      </h1>
+      </PageTitle>
       <div className="grid grid-cols-1 sm:grid-cols-2 w-100 ltr justify-center flex-wrap">
         <div className="flex flex-col justify-evenly align-middle text-xl">
           <p className="py-2">I{`'`}m a software engineer living in London!</p>

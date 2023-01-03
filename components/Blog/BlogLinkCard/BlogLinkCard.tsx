@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC } from "react";
-import { Chip } from "components/General/Chip";
+import { Chip } from "components/Common/Chip";
 import { Article } from "types/blog";
 import { CalendarIcon } from "icons/calendar";
 import { PATHS } from "app/constants";

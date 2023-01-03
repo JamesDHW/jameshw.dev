@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BlogHighlightCard } from "components/Home/BlogHighlightCard";
 import avatar from "/public/avatar.png";
 import { BookCover } from "components/Home/BookCover";
-import { Carousel } from "components/General/Carousel";
+import { Carousel } from "components/Common/Carousel";
 import { MY_READING_LIST } from "./constants";
 
 export default function Home() {
