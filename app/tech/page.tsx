@@ -18,9 +18,7 @@ export default function Tech() {
       <p className="py-2 text-lg">
         Here{`'`}s some of the tech I{`'`}ve used - I{`'`}
         ve highlighted those which I{`'`}ve used to{" "}
-        <span className="font-bold underline">
-          deploy production code professionally
-        </span>
+        <span className="font-bold">deploy production code professionally</span>
         .
       </p>
       <div className="grid sm:grid-cols-2 sm:gap-10 gap-8 my-8">

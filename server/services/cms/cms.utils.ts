@@ -3,11 +3,7 @@ import {
   PartialPageObjectResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import {
-  MultiSelectProperty,
-  NotionBlockTypes,
-  NotionDatabaseProperty,
-} from "./cms.types";
+import { NotionBlockTypes, NotionDatabaseProperty } from "./cms.types";
 
 const notionDatabasePropertyResolver = (
   prop: PageObjectResponse["properties"][string]
@@ -18,14 +14,19 @@ const notionDatabasePropertyResolver = (
     case NotionBlockTypes.rich_text:
       return richTextValueResolver(prop[NotionBlockTypes.rich_text]);
     case NotionBlockTypes.multi_select:
-      return multiSelectValueResolver(prop[NotionBlockTypes.multi_select]);
+      return prop.multi_select;
     case NotionBlockTypes.title:
       return titleValueResolver(prop[NotionBlockTypes.title]);
     case NotionBlockTypes.last_edited_time:
       return prop.last_edited_time;
     case NotionBlockTypes.date:
       return prop.date?.start ?? null;
+    case NotionBlockTypes.select:
+      return prop.select;
+    case NotionBlockTypes.url:
+      return prop.url;
     default:
+      console.log({ type });
       throw new Error("Notion Block Resolver Not Found");
   }
 };
@@ -36,15 +37,6 @@ const richTextValueResolver = (prop: RichTextItemResponse[]): string => {
 
 const titleValueResolver = (prop: RichTextItemResponse[]): string => {
   return prop[0]?.plain_text ?? "";
-};
-
-const multiSelectValueResolver = (
-  prop: MultiSelectProperty[]
-): MultiSelectProperty[] => {
-  return prop.map(({ name, color }) => ({
-    name,
-    color,
-  }));
 };
 
 export const isNonEmptyNonPartialNotionResponse = (

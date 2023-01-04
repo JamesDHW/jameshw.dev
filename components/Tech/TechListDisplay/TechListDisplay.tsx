@@ -32,7 +32,7 @@ export const TechListDisplay: FC<TechListDisplayProps> = ({ list }) => {
 
           <p
             className={classes("py-2", {
-              "font-bold underline": experience === TECH_PROFICIENCY.PRODUCTION,
+              "font-bold": experience === TECH_PROFICIENCY.PRODUCTION,
             })}
           >
             {name}

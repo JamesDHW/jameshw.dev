@@ -1,3 +1,5 @@
+import { SelectColor } from "api/services/cms/cms.types";
+
 export type Article = {
   id: string;
   slug: string;
@@ -15,7 +17,16 @@ export type JournalEntry = {
   date: string;
 };
 
+export type LearningResource = {
+  id: string;
+  uri: string;
+  title: string;
+  type: Tag;
+  tags: Tag[];
+};
+
 type Tag = {
-  color: string;
+  id: string;
+  color: SelectColor;
   name: string;
 };

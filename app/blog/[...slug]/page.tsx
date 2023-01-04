@@ -3,7 +3,7 @@ import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { NotionRenderer } from "components/Common/NotionRenderer";
 
 import { CatchAllPageParams, PageProps } from "types/nextjs";
-import { isTwoStringArray } from "types/guards";
+import { isArticle, isTwoStringArray } from "types/guards";
 
 export default async function ArticlePage(
   props: PageProps<CatchAllPageParams>
@@ -23,14 +23,25 @@ export default async function ArticlePage(
 
 const getArticle = async (date: string, slug: string) => {
   try {
-    return await serverSideCmsClient.getArticleContent(date, slug);
+    return await serverSideCmsClient.getPageContent(process.env.BLOG_DB_ID, {
+      and: [
+        { property: "published", date: { equals: date } },
+        {
+          property: "slug",
+          rich_text: { equals: slug },
+        },
+      ],
+    });
   } catch {
     throw notFound();
   }
 };
 
 export async function generateStaticParams() {
-  const articles = await serverSideCmsClient.getArticles();
+  const articles = await serverSideCmsClient.getDatabaseEntries(
+    process.env.BLOG_DB_ID,
+    isArticle
+  );
 
   return articles.map(({ published, slug }) => ({ slug: [published, slug] }));
 }

@@ -3,7 +3,7 @@ import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { NotionRenderer } from "components/Common/NotionRenderer";
 
 import { CatchAllPageParams, PageProps } from "types/nextjs";
-import { isTwoStringArray } from "types/guards";
+import { isJournalEntry, isTwoStringArray } from "types/guards";
 
 export default async function JournalPage(
   props: PageProps<CatchAllPageParams>
@@ -23,14 +23,25 @@ export default async function JournalPage(
 
 const getJournalEntry = async (date: string, slug: string) => {
   try {
-    return await serverSideCmsClient.getJournalContent(date, slug);
+    return await serverSideCmsClient.getPageContent(process.env.JOURNAL_DB_ID, {
+      and: [
+        { property: "date", date: { equals: date } },
+        {
+          property: "slug",
+          rich_text: { equals: slug },
+        },
+      ],
+    });
   } catch {
     throw notFound();
   }
 };
 
 export async function generateStaticParams() {
-  const journalEntries = await serverSideCmsClient.getJournalEntries();
+  const journalEntries = await serverSideCmsClient.getDatabaseEntries(
+    process.env.JOURNAL_DB_ID,
+    isJournalEntry
+  );
 
   return journalEntries.map(({ date, slug }) => ({ slug: [date, slug] }));
 }

@@ -1,5 +1,5 @@
 import { NotionDatabaseProperty } from "api/services/cms/cms.types";
-import { Article, JournalEntry } from "./blog";
+import { Article, JournalEntry, LearningResource } from "./cms";
 
 export const isTwoStringArray = (
   value: string[] | undefined
@@ -35,5 +35,20 @@ export const isJournalEntry = (obj: {
     typeof obj.title === "string" &&
     Array.isArray(obj.tags) &&
     typeof obj.date === "string"
+  );
+};
+
+export const isLearningResource = (obj: {
+  [key: string]: NotionDatabaseProperty;
+}): obj is LearningResource => {
+  return (
+    typeof obj === "object" &&
+    typeof obj.id === "string" &&
+    typeof obj.uri === "string" &&
+    typeof obj.title === "string" &&
+    typeof obj.type === "object" &&
+    !Array.isArray(obj.type) &&
+    typeof obj.type?.name === "string" &&
+    Array.isArray(obj.tags)
   );
 };

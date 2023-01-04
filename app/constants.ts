@@ -1,3 +1,4 @@
+import { FC } from "react";
 import CLEAN_ARCHITECTURE from "images/books/clean-architecture";
 import SOFTWARE_CRAFTSMAN from "images/books/software-craftsman";
 import CLEAN_CODE from "images/books/clean-code";
@@ -50,6 +51,11 @@ import { PostgresIcon } from "icons/technologies/database/postgres";
 
 import { VsCodeIcon } from "icons/technologies/development/vscode";
 import { AppleIcon } from "icons/technologies/development/apple";
+
+import { BookIcon } from "icons/book";
+import { VideoIcon } from "icons/video";
+import { FilmIcon } from "icons/film";
+import { ArticleIcon } from "icons/article";
 
 import { NavItemPops } from "components/Layout/Navbar/NavItem";
 
@@ -261,6 +267,7 @@ export const PATHS = {
   JOURNAL: "/journal",
   GIVING: "/giving",
   TECH: "/tech",
+  RESOURCES: "/resources",
 };
 
 export const NAVBAR_ITEMS: NavItemPops[] = [
@@ -281,3 +288,11 @@ export const NAVBAR_ITEMS: NavItemPops[] = [
     label: "Dev Journal",
   },
 ];
+
+export const RESOURCE_ICONS: { [k: string]: FC<JSX.IntrinsicElements["svg"]> } =
+  {
+    BOOK: BookIcon,
+    VIDEO: VideoIcon,
+    CHANNEL: FilmIcon,
+    ARTICLE: ArticleIcon,
+  };

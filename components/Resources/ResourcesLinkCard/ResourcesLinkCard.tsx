@@ -1,33 +1,30 @@
 import Link from "next/link";
 import { FC } from "react";
 import { Chip } from "components/Common/Chip";
-import { JournalEntry } from "types/cms";
-import { CalendarIcon } from "icons/calendar";
-import { PATHS } from "app/constants";
+import { LearningResource } from "types/cms";
+import { RESOURCE_ICONS } from "app/constants";
 
-type JournalEntryRowProps = { entry?: JournalEntry };
+type ResourcesLinkCardProps = { entry?: LearningResource };
 
-export const JournalEntryRow: FC<JournalEntryRowProps> = ({ entry }) => {
-  if (entry === undefined) return <JournalEntryRowSkeleton />;
+export const ResourcesLinkCard: FC<ResourcesLinkCardProps> = ({ entry }) => {
+  if (entry === undefined) return <ResourcesLinkCardSkeleton />;
 
-  const { slug, tags, title, date } = entry;
-  const formattedDate = date.replace(new RegExp("/", "g"), "-");
-
-  const fullSlug = `${PATHS.JOURNAL}/${formattedDate}/${slug}`;
+  const { title, uri, type, tags } = entry;
+  const ResourceTypeIcon = RESOURCE_ICONS[type.name];
 
   return (
     <Link
-      href={fullSlug}
+      href={uri}
+      target="_blank"
       className="flex flex-col sm:flex-row w-full p-2 shadow-md justify-between hover:scale-[1.01] transition-all"
     >
-      <div className="flex-col my-auto">
-        <p className="italic">{title}</p>
-        <div className="flex flex-row gap-1 font-semibold text-gray-600 dark:text-gray-500">
-          <CalendarIcon />
-          <p>{new Date(date).toLocaleDateString("en-GB")}</p>
-        </div>
+      <div className="flex">
+        {ResourceTypeIcon && (
+          <ResourceTypeIcon width={25} height={25} className="my-auto m-2" />
+        )}
+        <p className="my-auto flex-grow-0">{title}</p>
       </div>
-      <div className="flex flex-col sm:flex-row gap-2 py-2 sm:px-2 my-auto">
+      <div className="flex flex-col sm:flex-row gap-2 py-2 sm:py-0 my-auto">
         {tags.length > 0 && (
           <div className="flex flex-row gap-2">
             {tags.map(({ name }) => (
@@ -40,7 +37,7 @@ export const JournalEntryRow: FC<JournalEntryRowProps> = ({ entry }) => {
   );
 };
 
-const JournalEntryRowSkeleton = () => (
+const ResourcesLinkCardSkeleton = () => (
   <div className="flex flex-col sm:flex-row w-full p-2 shadow-md justify-between">
     <div className="flex-col my-auto">
       <p className="italic">
@@ -49,7 +46,6 @@ const JournalEntryRowSkeleton = () => (
         </div>
       </p>
       <div className="flex flex-row gap-1 font-semibold text-gray-600 dark:text-gray-500">
-        <CalendarIcon className="my-auto" />
         <div role="status" className="animate-pulse w-36">
           <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 m-2" />
         </div>
