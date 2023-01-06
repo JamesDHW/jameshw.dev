@@ -5,12 +5,14 @@ import { JournalEntry } from "types/cms";
 import { CalendarIcon } from "icons/calendar";
 import { PATHS } from "app/constants";
 
-type JournalEntryRowProps = { entry?: JournalEntry };
+type JournalEntryRowProps = JournalEntry;
 
-export const JournalEntryRow: FC<JournalEntryRowProps> = ({ entry }) => {
-  if (entry === undefined) return <JournalEntryRowSkeleton />;
-
-  const { slug, tags, title, date } = entry;
+export const JournalEntryRow: FC<JournalEntryRowProps> = ({
+  slug,
+  tags,
+  title,
+  date,
+}) => {
   const formattedDate = date.replace(new RegExp("/", "g"), "-");
 
   const fullSlug = `${PATHS.JOURNAL}/${formattedDate}/${slug}`;
@@ -39,28 +41,3 @@ export const JournalEntryRow: FC<JournalEntryRowProps> = ({ entry }) => {
     </Link>
   );
 };
-
-const JournalEntryRowSkeleton = () => (
-  <div className="flex flex-col sm:flex-row w-full p-2 shadow-md justify-between">
-    <div className="flex-col my-auto">
-      <p className="italic">
-        <div role="status" className="animate-pulse w-full">
-          <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 m-2" />
-        </div>
-      </p>
-      <div className="flex flex-row gap-1 font-semibold text-gray-600 dark:text-gray-500">
-        <CalendarIcon className="my-auto" />
-        <div role="status" className="animate-pulse w-36">
-          <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 m-2" />
-        </div>
-      </div>
-    </div>
-    <div className="flex flex-col sm:flex-row gap-2 py-2 sm:px-2 my-auto">
-      <Chip>
-        <div role="status" className="animate-pulse w-16">
-          <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 my-1" />
-        </div>
-      </Chip>
-    </div>
-  </div>
-);

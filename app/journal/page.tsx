@@ -1,5 +1,5 @@
 import { serverSideCmsClient } from "api/services/cms/cms.client";
-import { JournalEntryRow } from "components/Journal/JournalEntryRow";
+import { JournalEntryList } from "components/Journal/JournalEntryList";
 import { JournalHeader } from "components/Journal/JournalHeader";
 import { isJournalEntry } from "types/guards";
 
@@ -12,11 +12,7 @@ export default async function Journal() {
   return (
     <div className="flex flex-col px-8">
       <JournalHeader />
-      {journalEntries
-        .sort((a, b) => (a.date > b.date ? -1 : 1))
-        .map((journalEntry) => (
-          <JournalEntryRow key={journalEntry.slug} entry={journalEntry} />
-        ))}
+      <JournalEntryList data={journalEntries} />
     </div>
   );
 }
