@@ -1,6 +1,6 @@
-import { TECHNOLOGIES } from "app/constants";
 import { PageTitle } from "components/Common/PageTitle";
 import { TechListDisplay } from "components/Tech/TechListDisplay";
+import { TECHNOLOGIES } from "./constants";
 
 export default function Tech() {
   return (
