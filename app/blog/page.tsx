@@ -1,6 +1,6 @@
 import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { BlogHeader } from "components/Blog/BlogHeader";
-import { BlogLinkCard } from "components/Blog/BlogLinkCard";
+import { BlogList } from "components/Blog/BlogList";
 import { isArticle } from "types/guards";
 
 export default async function Blog() {
@@ -12,12 +12,7 @@ export default async function Blog() {
   return (
     <div className="flex flex-col px-8">
       <BlogHeader />
-      {articles
-        .filter(({ published }) => new Date(published) < new Date())
-        .sort((a, b) => (a.published > b.published ? -1 : 1))
-        .map((article) => (
-          <BlogLinkCard key={article.slug} {...article} />
-        ))}
+      <BlogList data={articles} />
     </div>
   );
 }

@@ -22,6 +22,7 @@ export const ResourceList: FC<ResourceList> = ({ data }) => {
     <SearchList<LearningResource>
       ListItem={ResourcesLinkCard}
       fetchData={fetchData}
+      placeholder="Search Recommendations"
     />
   );
 };
