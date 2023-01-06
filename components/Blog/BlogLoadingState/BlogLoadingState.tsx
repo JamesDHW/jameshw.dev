@@ -6,6 +6,7 @@ import { ContentPageLoadingState } from "components/Common/ContentPageLoadingSta
 import { Skeleton } from "components/Common/Skeleton";
 import { PATHS } from "app/constants";
 import { BlogHeader } from "../BlogHeader";
+import { BlogList } from "../BlogList";
 
 export const BlogLoadingState: FC = () => {
   const path = usePathname();
@@ -14,6 +15,7 @@ export const BlogLoadingState: FC = () => {
     return (
       <div className="flex flex-col px-8">
         <BlogHeader />
+        <BlogList data={[]} />
         <div className="my-4">
           {Array.from({ length: 3 }).map((_, i) => (
             <Skeleton key={`article-skel-${i}`} />
