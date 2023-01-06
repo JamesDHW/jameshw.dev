@@ -22,7 +22,7 @@ export const JournalEntryRow: FC<JournalEntryRowProps> = ({ entry }) => {
     >
       <div className="flex-col my-auto">
         <p className="italic">{title}</p>
-        <div className="flex flex-row gap-1 font-semibold text-gray-600 dark:text-gray-500">
+        <div className="flex flex-row gap-1 text-gray-600 dark:text-gray-500">
           <CalendarIcon />
           <p>{new Date(date).toLocaleDateString("en-GB")}</p>
         </div>

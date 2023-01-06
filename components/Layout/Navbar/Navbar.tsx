@@ -3,7 +3,7 @@
 import { Dispatch, FC, SetStateAction, useState } from "react";
 import { useTheme } from "next-themes";
 import { CrossIcon } from "icons/cross";
-import { MenuIcon } from "icons/hamburger";
+import { HamburgerIcon } from "icons/hamburger";
 import { NAVBAR_ITEMS } from "app/constants";
 import { NavItem } from "./NavItem";
 
@@ -19,7 +19,7 @@ export const Navbar = () => {
         aria-label="Toggle menu"
         type="button"
       >
-        {isMenuOpen ? <CrossIcon /> : <MenuIcon />}
+        {isMenuOpen ? <CrossIcon /> : <HamburgerIcon />}
       </button>
 
       <MobileNav open={isMenuOpen} setOpen={setIsMenuOpen} />

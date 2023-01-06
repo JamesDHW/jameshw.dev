@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CharityDisplayItem } from "components/Giving/CharityDisplayItem";
-import { MY_DONATIONS } from "app/constants";
 import { PageTitle } from "components/Common/PageTitle";
+import { MY_DONATIONS } from "./constants";
 
 export default function Giving() {
   return (

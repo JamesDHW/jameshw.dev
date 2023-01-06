@@ -12,6 +12,7 @@ export default async function Resources() {
   return (
     <div className="flex flex-col px-8">
       <ResourcesHeader />
+
       {resources.map((resource) => (
         <ResourcesLinkCard key={resource.id} entry={resource} />
       ))}
