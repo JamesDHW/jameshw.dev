@@ -1,7 +1,7 @@
 import { ResourcesHeader } from "components/Resources/ResourcesHeader";
-import { ResourcesLinkCard } from "components/Resources/ResourcesLinkCard";
 import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { isLearningResource } from "types/guards";
+import { ResourceList } from "components/Resources/ResourceList";
 
 export default async function Resources() {
   const resources = await serverSideCmsClient.getDatabaseEntries(
@@ -12,10 +12,7 @@ export default async function Resources() {
   return (
     <div className="flex flex-col px-8">
       <ResourcesHeader />
-
-      {resources.map((resource) => (
-        <ResourcesLinkCard key={resource.id} entry={resource} />
-      ))}
+      <ResourceList data={resources} />
     </div>
   );
 }
