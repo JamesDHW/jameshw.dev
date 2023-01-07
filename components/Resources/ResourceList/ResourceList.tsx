@@ -55,7 +55,7 @@ export const ResourceList: FC<ResourceList> = ({ data }) => {
               ),
             })}
           >
-            <Icon width={20} height={20} />
+            <Icon width={24} height={24} />
           </button>
         ))}
       </div>
