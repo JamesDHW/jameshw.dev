@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FC, SVGProps } from "react";
 import { Chip } from "components/Common/Chip";
 import { LearningResource } from "types/cms";
 import { RESOURCE_ICONS } from "app/resources/constants";
@@ -12,7 +12,8 @@ export const ResourcesLinkCard: FC<ResourcesLinkCardProps> = ({
   type,
   tags,
 }) => {
-  const ResourceTypeIcon = RESOURCE_ICONS[type.name];
+  const ResourceTypeIcon: FC<SVGProps<SVGSVGElement>> =
+    RESOURCE_ICONS[type.name];
 
   return (
     <Link
@@ -20,9 +21,7 @@ export const ResourcesLinkCard: FC<ResourcesLinkCardProps> = ({
       target="_blank"
       className="flex flex-row w-full p-2 my-1 shadow hover:scale-[1.01] transition-all"
     >
-      {ResourceTypeIcon && (
-        <ResourceTypeIcon width={25} height={25} className="m-2 my-auto" />
-      )}
+      <ResourceTypeIcon width={25} height={25} className="m-2 my-auto" />
       <div className="flex sm:flex-row flex-col w-full justify-between">
         <p className="my-auto px-2">{title}</p>
         {tags.length > 0 && (

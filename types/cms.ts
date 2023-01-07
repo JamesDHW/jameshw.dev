@@ -1,4 +1,5 @@
 import { SelectColor } from "api/services/cms/cms.types";
+import { ResourceType } from "app/resources/constants";
 
 export type Article = {
   id: string;
@@ -21,7 +22,7 @@ export type LearningResource = {
   id: string;
   uri: string;
   title: string;
-  type: Tag;
+  type: LearningResourceType;
   tags: Tag[];
 };
 
@@ -29,4 +30,10 @@ type Tag = {
   id: string;
   color: SelectColor;
   name: string;
+};
+
+type LearningResourceType = {
+  id: string;
+  color: SelectColor;
+  name: ResourceType;
 };

@@ -7,12 +7,12 @@ import { ArticleIcon } from "icons/article";
 import { LinkIcon } from "icons/link";
 import { EnvelopeIcon } from "icons/envelope";
 
-export const RESOURCE_ICONS: { [k: string]: FC<JSX.IntrinsicElements["svg"]> } =
-  {
-    BOOK: BookIcon,
-    VIDEO: VideoIcon,
-    CHANNEL: ChannelIcon,
-    ARTICLE: ArticleIcon,
-    WEBSITE: LinkIcon,
-    NEWSLETTER: EnvelopeIcon,
-  };
+export type ResourceType = keyof typeof RESOURCE_ICONS;
+export const RESOURCE_ICONS = {
+  BOOK: BookIcon,
+  ARTICLE: ArticleIcon,
+  CHANNEL: ChannelIcon,
+  VIDEO: VideoIcon,
+  NEWSLETTER: EnvelopeIcon,
+  WEBSITE: LinkIcon,
+} as const;
