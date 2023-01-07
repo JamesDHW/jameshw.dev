@@ -12,9 +12,9 @@ export const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="flex z-10 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-90">
+    <nav className="flex z-50 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-90">
       <button
-        className="sm:hidden relative w-10 h-10 z-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
+        className="sm:hidden relative w-10 h-10 z-50 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
         onClick={() => setIsMenuOpen((v) => !v)}
         aria-label="Toggle menu"
         type="button"
@@ -32,7 +32,7 @@ export const Navbar = () => {
       <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="w-10 h-10 z-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all"
+        className="w-10 h-10 z-50 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all"
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
         <svg

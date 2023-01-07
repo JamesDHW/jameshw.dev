@@ -4,7 +4,8 @@ import { BlogHighlightCard } from "components/Home/BlogHighlightCard";
 import avatar from "/public/avatar.png";
 import { BookCover } from "components/Home/BookCover";
 import { Carousel } from "components/Common/Carousel";
-import { MY_READING_LIST } from "./constants";
+import { ArrowRightIcon } from "icons/arrow-right";
+import { MY_READING_LIST, PATHS } from "./constants";
 
 export default function Home() {
   return (
@@ -39,10 +40,10 @@ export default function Home() {
           />
         </div>
       </div>
-      <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
+      <h3 className="font-bold text-3xl md:text-4xl tracking-tight my-6">
         Articles
       </h3>
-      <div className="flex gap-6 flex-col md:flex-row overflow-hidden pb-4 mb-12 border-b-2">
+      <div className="flex gap-6 flex-col md:flex-row overflow-hidden pb-4">
         <BlogHighlightCard
           slug="2022-12-18/how-to-be-a-good-software-engineer"
           title="What does it mean to be a good Software Engineer?"
@@ -59,7 +60,15 @@ export default function Home() {
           gradient="from-gray-700 to-gray-300"
         />
       </div>
-      <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
+      <Link className="flex text-lg justify-end" href={PATHS.BLOG}>
+        More articles{" "}
+        <span className="my-auto">
+          <ArrowRightIcon width={20} height={20} />
+        </span>
+      </Link>
+      <hr className="my-4 border-b-2" />
+
+      <h3 className="font-bold text-3xl md:text-4xl tracking-tight my-6">
         Are we on the same page?
       </h3>
       <Carousel>
@@ -67,6 +76,13 @@ export default function Home() {
           <BookCover title={title} uri={uri} key={`${title}-${i}`} />
         ))}
       </Carousel>
+      <Link className="flex text-lg justify-end" href={PATHS.RESOURCES}>
+        More recommendations{" "}
+        <span className="my-auto">
+          <ArrowRightIcon width={20} height={20} />
+        </span>
+      </Link>
+      <hr className="my-4 border-b-2" />
     </div>
   );
 }
