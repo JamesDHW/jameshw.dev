@@ -21,6 +21,7 @@ export const JournalEntryList: FC<JournalEntryListList> = ({ data }) => {
     <SearchList<JournalEntry>
       ListItem={JournalEntryRow}
       fetchData={fetchData}
+      keyExtractor={({ id }) => id}
       placeholder="Search Journal Entries"
     />
   );

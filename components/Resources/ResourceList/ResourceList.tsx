@@ -39,15 +39,16 @@ export const ResourceList: FC<ResourceList> = ({ data }) => {
     <SearchList<LearningResource>
       ListItem={ResourcesLinkCard}
       fetchData={fetchData}
+      keyExtractor={({ id }) => id}
       placeholder="Search Recommendations"
     >
-      <div className="flex justify-evenly sm:justify-start gap-2">
+      <div className="flex justify-around sm:justify-start gap-1">
         {Object.entries(RESOURCE_ICONS).map(([k, Icon]) => (
           <button
             key={k}
             onClick={() => toggleCategory(k as ResourceType)}
             className={classes("rounded-lg p-2", {
-              "bg-gray-200 dark:bg-gray-800 shadow-md dark:shadow-gray-400":
+              "bg-gray-200 dark:bg-gray-900 shadow dark:shadow-gray-600":
                 selectedCategories.includes(k as ResourceType),
               "bg-gray-100 dark:bg-gray-700": !selectedCategories.includes(
                 k as ResourceType

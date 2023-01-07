@@ -26,6 +26,7 @@ export const BlogList: FC<BlogList> = ({ data }) => {
     <SearchList<Article>
       ListItem={BlogLinkCard}
       fetchData={fetchData}
+      keyExtractor={({ id }) => id}
       placeholder="Search Articles"
     />
   );
