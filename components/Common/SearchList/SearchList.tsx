@@ -25,7 +25,7 @@ export const SearchList = <T,>({
 
   return (
     <div>
-      <div className="relative w-full mb-4">
+      <div className="relative w-full mb-2">
         <input
           aria-label={placeholder}
           type="text"

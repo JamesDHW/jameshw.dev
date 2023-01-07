@@ -11,12 +11,16 @@ interface BlogList {
 
 export const BlogList: FC<BlogList> = ({ data }) => {
   const fetchData = (query: string) =>
-    data.filter(
-      ({ title, summary, tags }) =>
-        title.toLowerCase().includes(query) ||
-        summary.toLowerCase().includes(query) ||
-        tags.some(({ name }) => name.toLowerCase().includes(query))
-    );
+    data
+      .filter(
+        ({ title, summary, tags, published }) =>
+          new Date(published) < new Date() &&
+          (title.toLowerCase().includes(query) ||
+            summary.toLowerCase().includes(query) ||
+            summary.toLowerCase().includes(query) ||
+            tags.some(({ name }) => name.toLowerCase().includes(query)))
+      )
+      .sort((a, b) => (a.published > b.published ? -1 : 1));
 
   return (
     <SearchList<Article>
