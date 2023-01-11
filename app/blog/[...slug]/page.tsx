@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { cache } from "react";
 import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { NotionRenderer } from "components/Common/NotionRenderer";
 
@@ -21,7 +22,7 @@ export default async function ArticlePage(
   );
 }
 
-const getArticle = async (date: string, slug: string) => {
+const getArticle = cache(async (date: string, slug: string) => {
   try {
     return await serverSideCmsClient.getPageContent(process.env.BLOG_DB_ID, {
       and: [
@@ -35,7 +36,7 @@ const getArticle = async (date: string, slug: string) => {
   } catch {
     throw notFound();
   }
-};
+});
 
 export async function generateStaticParams() {
   const articles = await serverSideCmsClient.getDatabaseEntries(
