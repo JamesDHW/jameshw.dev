@@ -5,9 +5,9 @@ export const LinkIcon = (props: JSX.IntrinsicElements["svg"]) => {
         d="M208 352h-64a96 96 0 010-192h64M304 160h64a96 96 0 010 192h-64M163.29 256h187.42"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="36"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="36"
       />
     </svg>
   );

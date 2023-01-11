@@ -18,7 +18,7 @@ export const CapacitorIcon = (props: JSX.IntrinsicElements["svg"]) => {
       />
       <path
         d="M140.517 154.896l-39.658 39.601 15.267 15.182z"
-        fill-opacity=".2"
+        fillOpacity=".2"
       />
       <path
         d="M194.57 100.985L256 39.478 216.43 0 155.02 61.384 93.917.31 54.365 39.913 216.01 201.761l39.552-39.602z"
@@ -31,7 +31,7 @@ export const CapacitorIcon = (props: JSX.IntrinsicElements["svg"]) => {
       <path
         d="M115.359 100.985l39.659-39.601-15.27-15.186z"
         stroke="#FFFFFF"
-        fill-opacity=".2"
+        fillOpacity=".2"
       />
     </svg>
   );
