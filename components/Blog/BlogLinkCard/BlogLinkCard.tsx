@@ -26,7 +26,7 @@ export const BlogLinkCard: FC<BlogLinkCardProps> = ({
           <p>{new Date(published).toLocaleDateString("en-GB")}</p>
         </div>
         {tags.length > 0 && (
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row gap-2 flex-wrap">
             {tags.map(({ name }) => (
               <Chip key={name}>{name}</Chip>
             ))}
