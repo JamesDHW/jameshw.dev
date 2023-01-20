@@ -19,7 +19,7 @@ export const NotionRenderer: FC<NotionRendererProps> = ({ recordMap }) => {
 
   return (
     <Renderer
-      darkMode={(resolvedTheme ?? "dark") === "dark"}
+      darkMode={(resolvedTheme ?? "light") === "dark"}
       recordMap={recordMap}
       showCollectionViewDropdown={false}
       showTableOfContents={false}
