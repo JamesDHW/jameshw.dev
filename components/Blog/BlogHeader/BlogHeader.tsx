@@ -9,10 +9,10 @@ export const BlogHeader: FC = () => {
         Articles
       </h1>
       <p>
-        I{`'`}ve been writing articles infrequently since 2020 to consolidate my
-        learnings on various topics. Packaging ideas into blog posts helps me to
-        actively reflect on them; it might also help others to learn too - I
-        hope there{`'`}s something interesting here for you!
+        I started writing articles in 2020 as a way to reflect intentionally on
+        my ideas - I use writing as a way to think and learn. By publishing
+        online, I might help others learn too; I really hope there
+        {`'`}s something interesting here for you!
       </p>
     </div>
   );
