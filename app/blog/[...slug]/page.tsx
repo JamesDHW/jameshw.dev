@@ -46,3 +46,5 @@ export async function generateStaticParams() {
 
   return articles.map(({ published, slug }) => ({ slug: [published, slug] }));
 }
+
+export const revalidate = 60; // revalidate this page every 60 seconds

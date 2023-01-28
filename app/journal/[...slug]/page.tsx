@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { notFound } from "next/navigation";
 import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { NotionRenderer } from "components/Common/NotionRenderer";
@@ -21,7 +22,7 @@ export default async function JournalPage(
   );
 }
 
-const getJournalEntry = async (date: string, slug: string) => {
+const getJournalEntry = cache(async (date: string, slug: string) => {
   try {
     return await serverSideCmsClient.getPageContent(process.env.JOURNAL_DB_ID, {
       and: [
@@ -35,7 +36,7 @@ const getJournalEntry = async (date: string, slug: string) => {
   } catch {
     throw notFound();
   }
-};
+});
 
 export async function generateStaticParams() {
   const journalEntries = await serverSideCmsClient.getDatabaseEntries(
@@ -45,3 +46,5 @@ export async function generateStaticParams() {
 
   return journalEntries.map(({ date, slug }) => ({ slug: [date, slug] }));
 }
+
+export const revalidate = 60; // revalidate this page every 60 seconds
