@@ -9,6 +9,7 @@ interface SearchableListProps<T> {
   fetchData: (query: string) => T[];
   keyExtractor: (element: T) => string;
   placeholder: string;
+  initialQuery?: string | null;
 }
 
 export const SearchList = <T,>({
@@ -17,8 +18,9 @@ export const SearchList = <T,>({
   keyExtractor,
   ListItem,
   placeholder,
+  initialQuery,
 }: SearchableListProps<T>) => {
-  const [query, setQuerySetState] = useState("");
+  const [query, setQuerySetState] = useState(initialQuery ?? "");
   const [data, setData] = useState<T[]>([]);
 
   useEffect(() => {
@@ -35,6 +37,7 @@ export const SearchList = <T,>({
               type="text"
               onChange={(e) => setQuerySetState(e.target.value)}
               placeholder={placeholder}
+              value={query}
               className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-lg dark:border-gray-900 focus:outline-none focus:border-gray-500 dark:focus:border-gray-300 dark:bg-gray-800 dark:text-gray-100"
             />
             <SearchIcon className="absolute w-5 h-5 text-gray-400 right-3 top-3 dark:text-gray-300" />

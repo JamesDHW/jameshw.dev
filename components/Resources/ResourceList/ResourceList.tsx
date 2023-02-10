@@ -2,6 +2,7 @@
 
 import { FC, useCallback, useState } from "react";
 import classes from "classnames";
+import { useSearchParams } from "next/navigation";
 import { SearchList } from "components/Common/SearchList";
 import { ResourcesLinkCard } from "components/Resources/ResourcesLinkCard";
 import { LearningResource } from "types/cms";
@@ -15,6 +16,7 @@ export const ResourceList: FC<ResourceList> = ({ data }) => {
   const [selectedCategories, setSelectedCategories] = useState<ResourceType[]>(
     []
   );
+  const searchParams = useSearchParams();
 
   const toggleCategory = (cat: ResourceType) => {
     if (!selectedCategories.includes(cat))
@@ -41,6 +43,7 @@ export const ResourceList: FC<ResourceList> = ({ data }) => {
       fetchData={fetchData}
       keyExtractor={({ id }) => id}
       placeholder="Search Recommendations"
+      initialQuery={searchParams.get("search")}
     >
       <div className="flex justify-around sm:justify-start gap-1">
         {Object.entries(RESOURCE_ICONS).map(([k, Icon]) => (
