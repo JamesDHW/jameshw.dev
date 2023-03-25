@@ -11,11 +11,13 @@ interface JournalEntryListList {
 
 export const JournalEntryList: FC<JournalEntryListList> = ({ data }) => {
   const fetchData = (query: string) =>
-    data.filter(
-      ({ title, tags }) =>
-        title.toLowerCase().includes(query) ||
-        tags.some(({ name }) => name.toLowerCase().includes(query))
-    );
+    data
+      .filter(
+        ({ title, tags }) =>
+          title.toLowerCase().includes(query) ||
+          tags.some(({ name }) => name.toLowerCase().includes(query))
+      )
+      .sort((a, b) => (a.date > b.date ? -1 : 1));
 
   return (
     <SearchList<JournalEntry>
