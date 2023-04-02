@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import { BookIcon } from "icons/book";
 import { VideoIcon } from "icons/video";
 import { ChannelIcon } from "icons/channel";

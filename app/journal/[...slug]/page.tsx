@@ -6,10 +6,9 @@ import { NotionRenderer } from "components/Common/NotionRenderer";
 import { CatchAllPageParams, PageProps } from "types/nextjs";
 import { isJournalEntry, isTwoStringArray } from "types/guards";
 
-export default async function JournalPage(
-  props: PageProps<CatchAllPageParams>
-) {
-  const pathParams = props?.params?.slug;
+export default async function JournalPage({
+  params: { slug: pathParams },
+}: PageProps<CatchAllPageParams>) {
   if (!isTwoStringArray(pathParams)) throw notFound();
 
   const [date, slug] = pathParams;

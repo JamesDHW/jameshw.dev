@@ -2,14 +2,12 @@ import { notFound } from "next/navigation";
 import { cache } from "react";
 import { serverSideCmsClient } from "api/services/cms/cms.client";
 import { NotionRenderer } from "components/Common/NotionRenderer";
-
 import { CatchAllPageParams, PageProps } from "types/nextjs";
 import { isArticle, isTwoStringArray } from "types/guards";
 
-export default async function ArticlePage(
-  props: PageProps<CatchAllPageParams>
-) {
-  const pathParams = props?.params?.slug;
+export default async function ArticlePage({
+  params: { slug: pathParams },
+}: PageProps<CatchAllPageParams>) {
   if (!isTwoStringArray(pathParams)) throw notFound();
 
   const [date, slug] = pathParams;

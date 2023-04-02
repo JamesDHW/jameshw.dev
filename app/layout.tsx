@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "styles/ThemeProvider";
 import { Navbar } from "components/Layout/Navbar";
 import { Footer } from "components/Layout/Footer";
@@ -23,6 +24,7 @@ const RootLayout: FC<RootPageProps> = ({ children }) => {
           </div>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

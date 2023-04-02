@@ -10,7 +10,8 @@ export interface NavItemPops {
 
 export const NavItem: FC<NavItemPops> = ({ href, label }) => {
   const path = usePathname();
-  const isActive = href.split("/")[1] === path.split("/")[1];
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  const isActive = href.split("/")[1] === path?.split("/")[1];
 
   return (
     <li className="flex justify-center">

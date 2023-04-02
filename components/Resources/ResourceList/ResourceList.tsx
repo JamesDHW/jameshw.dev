@@ -43,7 +43,8 @@ export const ResourceList: FC<ResourceList> = ({ data }) => {
       fetchData={fetchData}
       keyExtractor={({ id }) => id}
       placeholder="Search Recommendations"
-      initialQuery={searchParams.get("search")}
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      initialQuery={searchParams?.get("search")}
     >
       <div className="flex justify-around sm:justify-start gap-1">
         {Object.entries(RESOURCE_ICONS).map(([k, Icon]) => (
