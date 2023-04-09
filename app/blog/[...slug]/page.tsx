@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import { serverSideCmsClient } from "api/services/cms/cms.client";
@@ -45,4 +46,21 @@ export async function generateStaticParams() {
   return articles.map(({ published, slug }) => ({ slug: [published, slug] }));
 }
 
-export const revalidate = 60; // revalidate this page every 60 seconds
+export async function generateMetadata({
+  params: { slug: pathParams },
+}: PageProps<CatchAllPageParams>): Promise<Metadata> {
+  const [date, articleSlug] = pathParams;
+  const [article] = (
+    await serverSideCmsClient.getDatabaseEntries(
+      process.env.BLOG_DB_ID,
+      isArticle
+    )
+  ).filter(({ published, slug }) => date === published && articleSlug === slug);
+
+  return {
+    title: article?.title,
+    description: article?.summary,
+    authors: { name: "James Haworth Wheatman" },
+    keywords: article?.seoKeywords?.map(({ name }) => name) ?? [],
+  };
+}

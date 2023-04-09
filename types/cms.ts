@@ -6,16 +6,18 @@ export type Article = {
   slug: string;
   title: string;
   summary: string;
-  tags: Tag[];
+  tags: MultiSelectOption[];
   published: string;
+  seoKeywords?: MultiSelectOption[];
 };
 
 export type JournalEntry = {
   id: string;
   slug: string;
   title: string;
-  tags: Tag[];
+  tags: MultiSelectOption[];
   date: string;
+  seoKeywords?: MultiSelectOption[];
 };
 
 export type LearningResource = {
@@ -23,10 +25,10 @@ export type LearningResource = {
   uri: string;
   title: string;
   type: LearningResourceType;
-  tags: Tag[];
+  tags: MultiSelectOption[];
 };
 
-type Tag = {
+type MultiSelectOption = {
   id: string;
   color: SelectColor;
   name: string;

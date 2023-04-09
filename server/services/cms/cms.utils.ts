@@ -26,8 +26,7 @@ const notionDatabasePropertyResolver = (
     case NotionBlockTypes.url:
       return prop.url;
     default:
-      console.log({ type });
-      throw new Error("Notion Block Resolver Not Found");
+      throw new Error(`Notion Block Resolver Not Found For Type: ${type}`);
   }
 };
 
