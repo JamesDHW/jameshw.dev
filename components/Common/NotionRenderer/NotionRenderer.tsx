@@ -8,18 +8,18 @@ import { Equation } from "react-notion-x/build/third-party/equation";
 import { Modal } from "react-notion-x/build/third-party/modal";
 import { Pdf } from "react-notion-x/build/third-party/pdf";
 
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 export interface NotionRendererProps {
   recordMap: ExtendedRecordMap;
 }
 
 export const NotionRenderer: FC<NotionRendererProps> = ({ recordMap }) => {
-  const { resolvedTheme } = useTheme();
+  const [isDarkMode] = useDarkMode();
 
   return (
     <Renderer
-      darkMode={(resolvedTheme ?? "light") === "dark"}
+      darkMode={isDarkMode}
       recordMap={recordMap}
       showCollectionViewDropdown={false}
       showTableOfContents={false}
@@ -35,4 +35,14 @@ export const NotionRenderer: FC<NotionRendererProps> = ({ recordMap }) => {
       }}
     />
   );
+};
+
+const useDarkMode = () => {
+  const { resolvedTheme } = useTheme();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    setIsDarkMode(resolvedTheme === "dark");
+  }, [resolvedTheme]);
+
+  return [isDarkMode];
 };
