@@ -8,7 +8,7 @@ const getSitemapRoute = (path: string) => {
   return `
     <url>
         <loc>${DOMAIN}${path}</loc>
-        <lastmod>${new Date().toDateString()}</lastmod>
+        <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
     </url>`;
 };
 
