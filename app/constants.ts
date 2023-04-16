@@ -54,7 +54,7 @@ export const PATHS = {
   RESOURCES: "/resources",
 };
 
-export const DOMAIN = "https://jameshw.dev";
+export const DOMAIN = "https://www.jameshw.dev";
 
 export const NAVBAR_ITEMS: NavItemPops[] = [
   {
