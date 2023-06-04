@@ -1,4 +1,4 @@
-import { serverSideCmsClient } from "api/services/cms/cms.client";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
 import { JournalEntryList } from "components/Journal/JournalEntryList";
 import { JournalHeader } from "components/Journal/JournalHeader";
 import { isJournalEntry } from "types/guards";
@@ -16,3 +16,6 @@ export default async function Journal() {
     </div>
   );
 }
+
+// Invalidate the cached page every day
+export const revalidate = 86400;

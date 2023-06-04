@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache } from "react";
-import { serverSideCmsClient } from "api/services/cms/cms.client";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
 import { NotionRenderer } from "components/Common/NotionRenderer";
 import { CatchAllPageParams, PageProps } from "types/nextjs";
 import { isArticle, isTwoStringArray } from "types/guards";

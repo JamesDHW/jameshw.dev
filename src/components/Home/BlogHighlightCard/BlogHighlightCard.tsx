@@ -17,7 +17,7 @@ export const BlogHighlightCard: FC<BlogPreviewCardProps> = ({
     <Link
       href={`/blog/${slug}`}
       className={classes(
-        "transform transition-all hover:border-2",
+        "transform transition-all hover:scale-[1.01]",
         "rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1",
         gradient
       )}

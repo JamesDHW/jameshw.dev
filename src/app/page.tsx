@@ -43,7 +43,7 @@ export default function Home() {
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
         Articles
       </h3>
-      <div className="flex gap-6 flex-col md:flex-row overflow-hidden pb-4">
+      <div className="flex gap-6 flex-col md:flex-row pb-4">
         <BlogHighlightCard
           slug="2022-12-18/how-to-be-a-good-software-engineer"
           title="What does it mean to be a good Software Engineer?"
@@ -77,7 +77,7 @@ export default function Home() {
         ))}
       </Carousel>
       <Link className="flex text-lg justify-end" href={PATHS.RESOURCES}>
-        More recommendations{" "}
+        More resources{" "}
         <span className="my-auto">
           <ArrowRightIcon width={20} height={20} />
         </span>

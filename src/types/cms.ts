@@ -1,4 +1,4 @@
-import { SelectColor } from "api/services/cms/cms.types";
+import { SelectColor } from "server/services/cms/cms.types";
 import { ResourceType } from "app/resources/constants";
 
 export type Article = {

@@ -1,5 +1,5 @@
 import { ResourcesHeader } from "components/Resources/ResourcesHeader";
-import { serverSideCmsClient } from "api/services/cms/cms.client";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
 import { isLearningResource } from "types/guards";
 import { ResourceList } from "components/Resources/ResourceList";
 
@@ -16,3 +16,6 @@ export default async function Resources() {
     </div>
   );
 }
+
+// Invalidate the cached page every day
+export const revalidate = 86400;

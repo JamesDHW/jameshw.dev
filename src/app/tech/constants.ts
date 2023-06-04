@@ -28,8 +28,9 @@ import { DynamoDbIcon } from "icons/technologies/database/dynamo";
 import { MongoDbIcon } from "icons/technologies/database/mongo";
 import { PostgresIcon } from "icons/technologies/database/postgres";
 
-import { VsCodeIcon } from "icons/technologies/development/vscode";
 import { AppleIcon } from "icons/technologies/development/apple";
+import { VsCodeIcon } from "icons/technologies/development/vscode";
+import { ArcIcon } from "icons/technologies/development/arc";
 
 export enum TECH_PROFICIENCY {
   PRODUCTION = "PRODUCTION",
@@ -47,7 +48,11 @@ export const TECHNOLOGIES = {
       icons: [PythonIcon],
       experience: TECH_PROFICIENCY.PRODUCTION,
     },
-    { name: "Java", icons: [JavaIcon] },
+    {
+      name: "Java",
+      icons: [JavaIcon],
+      experience: TECH_PROFICIENCY.PRODUCTION,
+    },
   ],
   WEB: [
     {
@@ -129,6 +134,11 @@ export const TECHNOLOGIES = {
     {
       name: "VS Code",
       icons: [VsCodeIcon],
+      experience: TECH_PROFICIENCY.PRODUCTION,
+    },
+    {
+      name: "Arc Browser",
+      icons: [ArcIcon],
       experience: TECH_PROFICIENCY.PRODUCTION,
     },
   ],

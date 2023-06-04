@@ -1,4 +1,4 @@
-import { NotionDatabaseProperty } from "api/services/cms/cms.types";
+import { NotionDatabaseProperty } from "server/services/cms/cms.types";
 import { Article, JournalEntry, LearningResource } from "./cms";
 
 export const isTwoStringArray = (

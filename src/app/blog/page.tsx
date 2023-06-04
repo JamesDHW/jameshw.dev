@@ -1,4 +1,4 @@
-import { serverSideCmsClient } from "api/services/cms/cms.client";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
 import { BlogHeader } from "components/Blog/BlogHeader";
 import { BlogList } from "components/Blog/BlogList";
 import { isArticle } from "types/guards";
