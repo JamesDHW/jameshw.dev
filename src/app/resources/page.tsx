@@ -16,3 +16,6 @@ export default async function Resources() {
     </div>
   );
 }
+
+// Invalidate the cached page every day
+export const revalidate = 86400;
