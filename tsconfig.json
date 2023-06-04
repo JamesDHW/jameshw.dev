@@ -21,8 +21,10 @@
       "styles/*": ["src/styles/*"],
       "components/*": ["src/components/*"],
       "icons/*": ["src/icons/*"],
+      "images/*": ["src/images/*"],
       "types/*": ["src/types/*"],
-      "api/*": ["src/server/*"]
+      "server/*": ["src/server/*"],
+      "app/*": ["src/app/*"]
     },
     "plugins": [
       {

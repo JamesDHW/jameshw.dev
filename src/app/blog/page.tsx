@@ -1,7 +1,7 @@
-import { serverSideCmsClient } from "src/server/services/cms/cms.client";
-import { BlogHeader } from "src/components/Blog/BlogHeader";
-import { BlogList } from "src/components/Blog/BlogList";
-import { isArticle } from "src/types/guards";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
+import { BlogHeader } from "components/Blog/BlogHeader";
+import { BlogList } from "components/Blog/BlogList";
+import { isArticle } from "types/guards";
 
 export default async function Blog() {
   const articles = await serverSideCmsClient.getDatabaseEntries(

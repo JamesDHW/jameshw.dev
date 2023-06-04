@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { FC } from "react";
-import { Chip } from "src/components/Common/Chip";
-import { Article } from "src/types/cms";
-import { CalendarIcon } from "src/icons/calendar";
-import { PATHS } from "src/app/constants";
+import { Chip } from "components/Common/Chip";
+import { Article } from "types/cms";
+import { CalendarIcon } from "icons/calendar";
+import { PATHS } from "app/constants";
 
 type BlogLinkCardProps = Article;
 

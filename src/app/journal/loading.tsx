@@ -1,4 +1,4 @@
-import { JournalLoadingState } from "src/components/Journal/JournalLoadingState";
+import { JournalLoadingState } from "components/Journal/JournalLoadingState";
 
 export default function JournalLoading() {
   return <JournalLoadingState />;

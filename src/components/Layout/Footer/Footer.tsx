@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC } from "react";
-import { NAVBAR_ITEMS, PATHS } from "src/app/constants";
+import { NAVBAR_ITEMS, PATHS } from "app/constants";
 
 export const Footer: FC = () => {
   return (

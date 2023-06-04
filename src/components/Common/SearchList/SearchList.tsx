@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, ReactNode, useEffect, useState } from "react";
-import { SearchIcon } from "src/icons/search";
+import { SearchIcon } from "icons/search";
 
 interface SearchableListProps<T> {
   children?: ReactNode;

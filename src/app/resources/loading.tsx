@@ -1,6 +1,6 @@
-import { ResourcesLinkCardSkeleton } from "src/components/Resources/ResourcesLinkCardSkeleton";
-import { ResourcesHeader } from "src/components/Resources/ResourcesHeader";
-import { ResourceList } from "src/components/Resources/ResourceList";
+import { ResourcesLinkCardSkeleton } from "components/Resources/ResourcesLinkCardSkeleton";
+import { ResourcesHeader } from "components/Resources/ResourcesHeader";
+import { ResourceList } from "components/Resources/ResourceList";
 
 export default function ResourcesLoading() {
   return (

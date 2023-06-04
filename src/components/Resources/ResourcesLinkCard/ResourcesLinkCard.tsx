@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FC, SVGProps } from "react";
-import { Chip } from "src/components/Common/Chip";
-import { LearningResource } from "src/types/cms";
-import { RESOURCE_ICONS } from "src/app/resources/constants";
+import { Chip } from "components/Common/Chip";
+import { LearningResource } from "types/cms";
+import { RESOURCE_ICONS } from "app/resources/constants";
 
 type ResourcesLinkCardProps = LearningResource;
 

@@ -2,9 +2,9 @@
 
 import { Dispatch, FC, SetStateAction, useState } from "react";
 import { useTheme } from "next-themes";
-import { CrossIcon } from "src/icons/cross";
-import { HamburgerIcon } from "src/icons/hamburger";
-import { NAVBAR_ITEMS } from "src/app/constants";
+import { CrossIcon } from "icons/cross";
+import { HamburgerIcon } from "icons/hamburger";
+import { NAVBAR_ITEMS } from "app/constants";
 import { NavItem } from "./NavItem";
 
 export const Navbar = () => {

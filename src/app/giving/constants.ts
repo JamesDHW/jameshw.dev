@@ -1,13 +1,13 @@
-import AGAINST_MALARIA from "src/images/charities/against-malaria-foundation";
-import GIVE_DIRECTLY from "src/images/charities/give-directly";
-import GOOD_FOOD_INSTITUTE from "src/images/charities/good-food-institute";
-import GIVE_WELL from "src/images/charities/give-well";
-import DEWORM_THE_WORLD from "src/images/charities/deworm-the-world";
-import NEW_INCENTIVES from "src/images/charities/new-incentives";
-import SUVITA from "src/images/charities/suvita";
-import SANKU from "src/images/charities/sanku";
-import DISPENSERS_FOR_SAFE_WATER from "src/images/charities/dispensers-for-safe-water";
-import CHARITY_ENTREPRENEURSHIP from "src/images/charities/charity-entrepreneurship";
+import AGAINST_MALARIA from "images/charities/against-malaria-foundation";
+import GIVE_DIRECTLY from "images/charities/give-directly";
+import GOOD_FOOD_INSTITUTE from "images/charities/good-food-institute";
+import GIVE_WELL from "images/charities/give-well";
+import DEWORM_THE_WORLD from "images/charities/deworm-the-world";
+import NEW_INCENTIVES from "images/charities/new-incentives";
+import SUVITA from "images/charities/suvita";
+import SANKU from "images/charities/sanku";
+import DISPENSERS_FOR_SAFE_WATER from "images/charities/dispensers-for-safe-water";
+import CHARITY_ENTREPRENEURSHIP from "images/charities/charity-entrepreneurship";
 
 export const MY_DONATIONS = [
   {

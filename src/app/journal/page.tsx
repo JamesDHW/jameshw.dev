@@ -1,7 +1,7 @@
-import { serverSideCmsClient } from "src/server/services/cms/cms.client";
-import { JournalEntryList } from "src/components/Journal/JournalEntryList";
-import { JournalHeader } from "src/components/Journal/JournalHeader";
-import { isJournalEntry } from "src/types/guards";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
+import { JournalEntryList } from "components/Journal/JournalEntryList";
+import { JournalHeader } from "components/Journal/JournalHeader";
+import { isJournalEntry } from "types/guards";
 
 export default async function Journal() {
   const journalEntries = await serverSideCmsClient.getDatabaseEntries(

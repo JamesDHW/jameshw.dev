@@ -3,10 +3,10 @@
 import { FC, useCallback, useState } from "react";
 import classes from "classnames";
 import { useSearchParams } from "next/navigation";
-import { SearchList } from "src/components/Common/SearchList";
-import { ResourcesLinkCard } from "src/components/Resources/ResourcesLinkCard";
-import { LearningResource } from "src/types/cms";
-import { RESOURCE_ICONS, ResourceType } from "src/app/resources/constants";
+import { SearchList } from "components/Common/SearchList";
+import { ResourcesLinkCard } from "components/Resources/ResourcesLinkCard";
+import { LearningResource } from "types/cms";
+import { RESOURCE_ICONS, ResourceType } from "app/resources/constants";
 
 interface ResourceList {
   data: LearningResource[];

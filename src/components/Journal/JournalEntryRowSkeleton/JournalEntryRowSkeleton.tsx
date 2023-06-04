@@ -1,5 +1,5 @@
-import { Chip } from "src/components/Common/Chip";
-import { CalendarIcon } from "src/icons/calendar";
+import { Chip } from "components/Common/Chip";
+import { CalendarIcon } from "icons/calendar";
 
 export const JournalEntryRowSkeleton = () => (
   <div className="flex flex-col sm:flex-row w-full p-2 shadow-md justify-between">

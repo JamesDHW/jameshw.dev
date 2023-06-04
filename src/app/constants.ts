@@ -1,13 +1,13 @@
-import CLEAN_ARCHITECTURE from "src/images/books/clean-architecture";
-import SOFTWARE_CRAFTSMAN from "src/images/books/software-craftsman";
-import CLEAN_CODE from "src/images/books/clean-code";
-import REFACTORING from "src/images/books/refactoring";
-import FIVE_DYSFUNCTIONS from "src/images/books/five-dysfunctions";
-import GETTING_TO_YES from "src/images/books/getting-to-yes";
-import DOING_GOOD_BETTER from "src/images/books/doing-good-better";
-import LEAN_STARTUP from "src/images/books/lean-startup";
+import CLEAN_ARCHITECTURE from "images/books/clean-architecture";
+import SOFTWARE_CRAFTSMAN from "images/books/software-craftsman";
+import CLEAN_CODE from "images/books/clean-code";
+import REFACTORING from "images/books/refactoring";
+import FIVE_DYSFUNCTIONS from "images/books/five-dysfunctions";
+import GETTING_TO_YES from "images/books/getting-to-yes";
+import DOING_GOOD_BETTER from "images/books/doing-good-better";
+import LEAN_STARTUP from "images/books/lean-startup";
 
-import { NavItemPops } from "src/components/Layout/Navbar/NavItem";
+import { NavItemPops } from "components/Layout/Navbar/NavItem";
 
 export const MY_READING_LIST = [
   {

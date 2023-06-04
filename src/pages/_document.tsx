@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import { Footer } from "src/components/Layout/Footer";
-import { ThemeProvider } from "src/styles/ThemeProvider";
+import { Footer } from "components/Layout/Footer";
+import { ThemeProvider } from "styles/ThemeProvider";
 
 export default function Document() {
   return (

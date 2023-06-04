@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BlogHighlightCard } from "src/components/Home/BlogHighlightCard";
+import { BlogHighlightCard } from "components/Home/BlogHighlightCard";
 import avatar from "/public/avatar.png";
-import { BookCover } from "src/components/Home/BookCover";
-import { Carousel } from "src/components/Common/Carousel";
-import { ArrowRightIcon } from "src/icons/arrow-right";
+import { BookCover } from "components/Home/BookCover";
+import { Carousel } from "components/Common/Carousel";
+import { ArrowRightIcon } from "icons/arrow-right";
 import { MY_READING_LIST, PATHS } from "./constants";
 
 export default function Home() {

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import type { NextApiRequest, NextApiResponse } from "next";
-import { serverSideCmsClient } from "src/server/services/cms/cms.client";
-import { isArticle, isJournalEntry } from "src/types/guards";
-import { DOMAIN, PATHS } from "src/app/constants";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
+import { isArticle, isJournalEntry } from "types/guards";
+import { DOMAIN, PATHS } from "app/constants";
 
 const getSitemapRoute = (path: string) => {
   return `

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache } from "react";
-import { serverSideCmsClient } from "src/server/services/cms/cms.client";
-import { NotionRenderer } from "src/components/Common/NotionRenderer";
-import { CatchAllPageParams, PageProps } from "src/types/nextjs";
-import { isArticle, isTwoStringArray } from "src/types/guards";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
+import { NotionRenderer } from "components/Common/NotionRenderer";
+import { CatchAllPageParams, PageProps } from "types/nextjs";
+import { isArticle, isTwoStringArray } from "types/guards";
 
 export default async function ArticlePage({
   params: { slug: pathParams },

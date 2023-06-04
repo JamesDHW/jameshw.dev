@@ -1,4 +1,4 @@
-import { ContentPageLoadingState } from "src/components/Common/ContentPageLoadingState";
+import { ContentPageLoadingState } from "components/Common/ContentPageLoadingState";
 
 export default function JournalEntryLoading() {
   return <ContentPageLoadingState />;

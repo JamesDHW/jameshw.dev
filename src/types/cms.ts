@@ -1,5 +1,5 @@
-import { SelectColor } from "src/server/services/cms/cms.types";
-import { ResourceType } from "src/app/resources/constants";
+import { SelectColor } from "server/services/cms/cms.types";
+import { ResourceType } from "app/resources/constants";
 
 export type Article = {
   id: string;

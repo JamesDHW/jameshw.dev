@@ -1,7 +1,7 @@
-import { ResourcesHeader } from "src/components/Resources/ResourcesHeader";
-import { serverSideCmsClient } from "src/server/services/cms/cms.client";
-import { isLearningResource } from "src/types/guards";
-import { ResourceList } from "src/components/Resources/ResourceList";
+import { ResourcesHeader } from "components/Resources/ResourcesHeader";
+import { serverSideCmsClient } from "server/services/cms/cms.client";
+import { isLearningResource } from "types/guards";
+import { ResourceList } from "components/Resources/ResourceList";
 
 export default async function Resources() {
   const resources = await serverSideCmsClient.getDatabaseEntries(

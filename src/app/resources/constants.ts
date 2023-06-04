@@ -1,9 +1,9 @@
-import { BookIcon } from "src/icons/book";
-import { VideoIcon } from "src/icons/video";
-import { ChannelIcon } from "src/icons/channel";
-import { ArticleIcon } from "src/icons/article";
-import { LinkIcon } from "src/icons/link";
-import { EnvelopeIcon } from "src/icons/envelope";
+import { BookIcon } from "icons/book";
+import { VideoIcon } from "icons/video";
+import { ChannelIcon } from "icons/channel";
+import { ArticleIcon } from "icons/article";
+import { LinkIcon } from "icons/link";
+import { EnvelopeIcon } from "icons/envelope";
 
 export type ResourceType = keyof typeof RESOURCE_ICONS;
 export const RESOURCE_ICONS = {

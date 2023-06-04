@@ -2,8 +2,8 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import { ContentPageLoadingState } from "src/components/Common/ContentPageLoadingState";
-import { PATHS } from "src/app/constants";
+import { ContentPageLoadingState } from "components/Common/ContentPageLoadingState";
+import { PATHS } from "app/constants";
 import { JournalHeader } from "../JournalHeader";
 import { JournalEntryRowSkeleton } from "../JournalEntryRowSkeleton";
 import { JournalEntryList } from "../JournalEntryList";

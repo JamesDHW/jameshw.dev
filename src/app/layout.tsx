@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { FC, ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import { ThemeProvider } from "src/styles/ThemeProvider";
-import { Navbar } from "src/components/Layout/Navbar";
-import { Footer } from "src/components/Layout/Footer";
+import { ThemeProvider } from "styles/ThemeProvider";
+import { Navbar } from "components/Layout/Navbar";
+import { Footer } from "components/Layout/Footer";
 import "styles/globals.css";
 
 // Notion CSS
-import "react-notion-x/src/styles.css";
+import "react-notion-x/styles.css";
 import "katex/dist/katex.min.css";
 import "prismjs/themes/prism-tomorrow.css";
 

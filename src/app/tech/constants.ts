@@ -1,35 +1,35 @@
-import { TypeScriptIcon } from "src/icons/technologies/languages/typescript";
-import { PythonIcon } from "src/icons/technologies/languages/python";
-import { JavaIcon } from "src/icons/technologies/languages/java";
+import { TypeScriptIcon } from "icons/technologies/languages/typescript";
+import { PythonIcon } from "icons/technologies/languages/python";
+import { JavaIcon } from "icons/technologies/languages/java";
 
-import { DockerIcon } from "src/icons/technologies/infrastructure/docker";
-import { GitIcon } from "src/icons/technologies/infrastructure/git";
-import { GitHubIcon } from "src/icons/technologies/infrastructure/github";
-import { AwsIcon } from "src/icons/technologies/infrastructure/aws";
-import { Ec2Icon } from "src/icons/technologies/infrastructure/ec2";
-import { TerraformIcon } from "src/icons/technologies/infrastructure/terraform";
+import { DockerIcon } from "icons/technologies/infrastructure/docker";
+import { GitIcon } from "icons/technologies/infrastructure/git";
+import { GitHubIcon } from "icons/technologies/infrastructure/github";
+import { AwsIcon } from "icons/technologies/infrastructure/aws";
+import { Ec2Icon } from "icons/technologies/infrastructure/ec2";
+import { TerraformIcon } from "icons/technologies/infrastructure/terraform";
 
-import { NextJsIcon } from "src/icons/technologies/web-frontend/next-js";
-import { GatsbyIcon } from "src/icons/technologies/web-frontend/gatsby";
-import { SveltekitIcon } from "src/icons/technologies/web-frontend/sveltekit";
+import { NextJsIcon } from "icons/technologies/web-frontend/next-js";
+import { GatsbyIcon } from "icons/technologies/web-frontend/gatsby";
+import { SveltekitIcon } from "icons/technologies/web-frontend/sveltekit";
 
-import { ReactNativeIcon } from "src/icons/technologies/mobile/react-native";
-import { ExpoIcon } from "src/icons/technologies/mobile/expo";
-import { IonicIcon } from "src/icons/technologies/mobile/ionic";
-import { CapacitorIcon } from "src/icons/technologies/mobile/capacitor";
-import { AndroidIcon } from "src/icons/technologies/mobile/android";
+import { ReactNativeIcon } from "icons/technologies/mobile/react-native";
+import { ExpoIcon } from "icons/technologies/mobile/expo";
+import { IonicIcon } from "icons/technologies/mobile/ionic";
+import { CapacitorIcon } from "icons/technologies/mobile/capacitor";
+import { AndroidIcon } from "icons/technologies/mobile/android";
 
-import { DjangoIcon } from "src/icons/technologies/web-backend/django";
-import { NestJsIcon } from "src/icons/technologies/web-backend/nest";
-import { FirebaseIcon } from "src/icons/technologies/web-backend/firebase";
-import { ServerlessIcon } from "src/icons/technologies/web-backend/serverless";
+import { DjangoIcon } from "icons/technologies/web-backend/django";
+import { NestJsIcon } from "icons/technologies/web-backend/nest";
+import { FirebaseIcon } from "icons/technologies/web-backend/firebase";
+import { ServerlessIcon } from "icons/technologies/web-backend/serverless";
 
-import { DynamoDbIcon } from "src/icons/technologies/database/dynamo";
-import { MongoDbIcon } from "src/icons/technologies/database/mongo";
-import { PostgresIcon } from "src/icons/technologies/database/postgres";
+import { DynamoDbIcon } from "icons/technologies/database/dynamo";
+import { MongoDbIcon } from "icons/technologies/database/mongo";
+import { PostgresIcon } from "icons/technologies/database/postgres";
 
-import { VsCodeIcon } from "src/icons/technologies/development/vscode";
-import { AppleIcon } from "src/icons/technologies/development/apple";
+import { VsCodeIcon } from "icons/technologies/development/vscode";
+import { AppleIcon } from "icons/technologies/development/apple";
 
 export enum TECH_PROFICIENCY {
   PRODUCTION = "PRODUCTION",
