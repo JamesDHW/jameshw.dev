@@ -18,11 +18,11 @@
     "baseUrl": ".",
     "sourceMap": true,
     "paths": {
-      "styles/*": ["styles/*"],
-      "components/*": ["components/*"],
-      "icons/*": ["icons/*"],
-      "types/*": ["types/*"],
-      "api/*": ["server/*"]
+      "styles/*": ["src/styles/*"],
+      "components/*": ["src/components/*"],
+      "icons/*": ["src/icons/*"],
+      "types/*": ["src/types/*"],
+      "api/*": ["src/server/*"]
     },
     "plugins": [
       {
