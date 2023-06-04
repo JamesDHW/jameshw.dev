@@ -26,11 +26,6 @@ export const NotionRenderer: FC<NotionRendererProps> = ({ recordMap }) => {
       linkTableTitleProperties={false}
       hideBlockId
       previewImages
-      mapImageUrl={(url, block) => {
-        const signedUrl = recordMap.signed_urls[block.id];
-
-        return signedUrl ?? url;
-      }}
       components={{
         Code,
         Collection,
