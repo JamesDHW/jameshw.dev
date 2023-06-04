@@ -77,7 +77,7 @@ export default function Home() {
         ))}
       </Carousel>
       <Link className="flex text-lg justify-end" href={PATHS.RESOURCES}>
-        More recommendations{" "}
+        More resources{" "}
         <span className="my-auto">
           <ArrowRightIcon width={20} height={20} />
         </span>
