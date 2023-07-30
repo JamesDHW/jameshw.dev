@@ -1,14 +1,16 @@
+"use client";
+
 import { useTheme } from "next-themes";
 import { NotionRenderer as Renderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
 
-import { Code } from "react-notion-x/build/third-party/code";
 import { Collection } from "react-notion-x/build/third-party/collection";
 import { Equation } from "react-notion-x/build/third-party/equation";
 import { Modal } from "react-notion-x/build/third-party/modal";
 import { Pdf } from "react-notion-x/build/third-party/pdf";
 
 import { FC, useEffect, useState } from "react";
+import { Code } from "../Code/Code";
 
 export interface NotionRendererProps {
   recordMap: ExtendedRecordMap;
