@@ -1,5 +1,5 @@
-import { PageTitle } from "components/Common/PageTitle";
-import { TechListDisplay } from "components/Tech/TechListDisplay";
+import { PageTitle } from "components/Common/PageTitle/PageTitle";
+import { TechListDisplay } from "components/Tech/TechListDisplay/TechListDisplay";
 import { TECHNOLOGIES } from "./constants";
 
 export default function Tech() {

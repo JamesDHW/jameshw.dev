@@ -1,1 +1,0 @@
-export { JournalHeader } from "./JournalHeader";

@@ -1,9 +1,9 @@
 "use client";
 
 import { FC } from "react";
-import { SearchList } from "components/Common/SearchList";
+import { SearchList } from "components/Common/SearchList/SearchList";
 import { JournalEntry } from "types/cms";
-import { JournalEntryRow } from "../JournalEntryRow";
+import { JournalEntryRow } from "../JournalEntryRow/JournalEntryRow";
 
 interface JournalEntryListList {
   data: JournalEntry[];

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Skeleton } from "components/Common/Skeleton";
+import { Skeleton } from "components/Common/Skeleton/Skeleton";
 
 export const ContentPageLoadingState: FC = () => {
   return (

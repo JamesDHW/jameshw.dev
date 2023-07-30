@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { cache } from "react";
 import { notFound } from "next/navigation";
 import { serverSideCmsClient } from "server/services/cms/cms.client";
-import { NotionRenderer } from "components/Common/NotionRenderer";
+import { NotionRenderer } from "components/Common/NotionRenderer/NotionRenderer";
 
 import { CatchAllPageParams, PageProps } from "types/nextjs";
 import { isJournalEntry, isTwoStringArray } from "types/guards";

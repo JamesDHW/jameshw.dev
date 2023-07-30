@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { FC, ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "styles/ThemeProvider";
-import { Navbar } from "components/Layout/Navbar";
-import { Footer } from "components/Layout/Footer";
+import { Navbar } from "components/Layout/Navbar/Navbar";
+import { Footer } from "components/Layout/Footer/Footer";
 import "styles/globals.css";
 
 // Notion CSS

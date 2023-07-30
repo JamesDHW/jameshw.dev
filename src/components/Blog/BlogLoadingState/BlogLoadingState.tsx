@@ -2,11 +2,11 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import { ContentPageLoadingState } from "components/Common/ContentPageLoadingState";
-import { Skeleton } from "components/Common/Skeleton";
+import { ContentPageLoadingState } from "components/Common/ContentPageLoadingState/ContentPageLoadingState";
+import { Skeleton } from "components/Common/Skeleton/Skeleton";
 import { PATHS } from "app/constants";
-import { BlogHeader } from "../BlogHeader";
-import { BlogList } from "../BlogList";
+import { BlogHeader } from "../BlogHeader/BlogHeader";
+import { BlogList } from "../BlogList/BlogList";
 
 export const BlogLoadingState: FC = () => {
   const path = usePathname();

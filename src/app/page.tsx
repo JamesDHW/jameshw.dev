@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BlogHighlightCard } from "components/Home/BlogHighlightCard";
+import { BlogHighlightCard } from "components/Home/BlogHighlightCard/BlogHighlightCard";
 import avatar from "/public/avatar.png";
-import { BookCover } from "components/Home/BookCover";
-import { Carousel } from "components/Common/Carousel";
+import { BookCover } from "components/Home/BookCover/BookCover";
+import { Carousel } from "components/Common/Carousel/Carousel";
 import { ArrowRightIcon } from "icons/arrow-right";
 import { MY_READING_LIST, PATHS } from "./constants";
 

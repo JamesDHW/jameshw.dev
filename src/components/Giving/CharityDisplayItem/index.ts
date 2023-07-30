@@ -1,1 +1,0 @@
-export { CharityDisplayItem } from "./CharityDisplayItem";

@@ -3,8 +3,8 @@
 import { FC, useCallback, useState } from "react";
 import classes from "classnames";
 import { useSearchParams } from "next/navigation";
-import { SearchList } from "components/Common/SearchList";
-import { ResourcesLinkCard } from "components/Resources/ResourcesLinkCard";
+import { SearchList } from "components/Common/SearchList/SearchList";
+import { ResourcesLinkCard } from "components/Resources/ResourcesLinkCard/ResourcesLinkCard";
 import { LearningResource } from "types/cms";
 import { RESOURCE_ICONS, ResourceType } from "app/resources/constants";
 

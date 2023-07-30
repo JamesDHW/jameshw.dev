@@ -2,11 +2,11 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import { ContentPageLoadingState } from "components/Common/ContentPageLoadingState";
+import { ContentPageLoadingState } from "components/Common/ContentPageLoadingState/ContentPageLoadingState";
 import { PATHS } from "app/constants";
-import { JournalHeader } from "../JournalHeader";
-import { JournalEntryRowSkeleton } from "../JournalEntryRowSkeleton";
-import { JournalEntryList } from "../JournalEntryList";
+import { JournalHeader } from "../JournalHeader/JournalHeader";
+import { JournalEntryRowSkeleton } from "../JournalEntryRowSkeleton/JournalEntryRowSkeleton";
+import { JournalEntryList } from "../JournalEntryList/JournalEntryList";
 
 export const JournalLoadingState: FC = () => {
   const path = usePathname();

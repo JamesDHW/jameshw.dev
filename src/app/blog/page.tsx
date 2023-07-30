@@ -1,6 +1,6 @@
 import { serverSideCmsClient } from "server/services/cms/cms.client";
-import { BlogHeader } from "components/Blog/BlogHeader";
-import { BlogList } from "components/Blog/BlogList";
+import { BlogHeader } from "components/Blog/BlogHeader/BlogHeader";
+import { BlogList } from "components/Blog/BlogList/BlogList";
 import { isArticle } from "types/guards";
 
 export default async function Blog() {

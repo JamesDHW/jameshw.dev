@@ -1,4 +1,4 @@
-import { PageTitle } from "components/Common/PageTitle";
+import { PageTitle } from "components/Common/PageTitle/PageTitle";
 import Image from "next/image";
 import windemere from "/public/windemere.jpeg";
 

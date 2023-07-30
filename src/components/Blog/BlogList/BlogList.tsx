@@ -1,8 +1,8 @@
 "use client";
 
 import { FC } from "react";
-import { SearchList } from "components/Common/SearchList";
-import { BlogLinkCard } from "components/Blog/BlogLinkCard";
+import { SearchList } from "components/Common/SearchList/SearchList";
+import { BlogLinkCard } from "components/Blog/BlogLinkCard/BlogLinkCard";
 import { Article } from "types/cms";
 
 interface BlogList {

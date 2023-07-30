@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { CrossIcon } from "icons/cross";
 import { HamburgerIcon } from "icons/hamburger";
 import { NAVBAR_ITEMS } from "app/constants";
-import { NavItem } from "./NavItem";
+import { NavItem } from "./NavItem/NavItem";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

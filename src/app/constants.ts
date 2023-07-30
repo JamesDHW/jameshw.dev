@@ -7,7 +7,7 @@ import GETTING_TO_YES from "images/books/getting-to-yes";
 import DOING_GOOD_BETTER from "images/books/doing-good-better";
 import LEAN_STARTUP from "images/books/lean-startup";
 
-import { NavItemPops } from "components/Layout/Navbar/NavItem";
+import { NavItemPops } from "components/Layout/Navbar/NavItem/NavItem";
 
 export const MY_READING_LIST = [
   {

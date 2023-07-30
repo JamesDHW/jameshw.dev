@@ -1,6 +1,6 @@
 import { serverSideCmsClient } from "server/services/cms/cms.client";
-import { JournalEntryList } from "components/Journal/JournalEntryList";
-import { JournalHeader } from "components/Journal/JournalHeader";
+import { JournalEntryList } from "components/Journal/JournalEntryList/JournalEntryList";
+import { JournalHeader } from "components/Journal/JournalHeader/JournalHeader";
 import { isJournalEntry } from "types/guards";
 
 export default async function Journal() {
