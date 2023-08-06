@@ -10,6 +10,7 @@ pre[class*="language-"] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
+  min-height: 65px;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -72,7 +73,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-  color: rgb(255 255 255);
+  color: #ccc;
 }
 
 .token.tag,
