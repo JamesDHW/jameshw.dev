@@ -1,3 +1,5 @@
+"use-client";
+
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import dynamic from "next/dynamic";
 
@@ -13,8 +15,6 @@ export const Code = dynamic(() =>
       import("prismjs/components/prism-bash.js"),
       // @ts-ignore
       import("prismjs/components/prism-c.js"),
-      // @ts-ignore
-      import("prismjs/components/prism-cpp.js"),
       // @ts-ignore
       import("prismjs/components/prism-csharp.js"),
       // @ts-ignore
