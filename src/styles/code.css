@@ -1,0 +1,156 @@
+code[class*="language-"],
+pre[class*="language-"] {
+  color: rgb(255 255 255);
+  background: none;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  /* Individual properties */
+  transform: translate(0);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  /* Hover state */
+  &:hover {
+    transform: scale(1.005);
+  }
+
+  /* Other utility classes */
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 20px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -1px 2px;
+
+  /* Dark mode utility class */
+  @media (prefers-color-scheme: dark) {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 20px,
+      rgb(255, 255, 255, 0.12) 0px -12px 30px,
+      rgba(255, 255, 255, 0.12) 0px 4px 6px,
+      rgba(255, 255, 255, 0.17) 0px 12px 13px,
+      rgba(255, 255, 255, 0.09) 0px -1px 2px;
+  }
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #111111;
+  margin: 30px 0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: rgb(150, 150, 150);
+}
+
+.token.punctuation {
+  color: rgb(255 255 255);
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+  color: #fa6368;
+}
+
+.token.function-name {
+  color: #54a9fd;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+  color: #ff8e42;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #ffd950;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #f388f5;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #67f99f;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #61f9f6;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.inserted {
+  color: rgb(0, 206, 0);
+}
+
+.notion-code-copy-button {
+  background-color: rgb(255 255 255);
+}
+
+pre[class*="notion-code"] {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+code[class*="language-"] {
+  display: block;
+  overflow-x: scroll;
+  width: 100%;
+  padding: 1em;
+  padding-right: 70px;
+}
