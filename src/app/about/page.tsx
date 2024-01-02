@@ -1,6 +1,7 @@
 import { PageTitle } from "components/Common/PageTitle/PageTitle";
 import Image from "next/image";
 import windemere from "/public/windemere.jpeg";
+import river from "/public/river.jpeg";
 
 export default function About() {
   return (
@@ -11,7 +12,7 @@ export default function About() {
       </PageTitle>
       <div className="grid grid-cols-1 sm:grid-cols-2 w-100 ltr justify-center flex-wrap">
         <div className="flex flex-col justify-evenly align-middle text-xl">
-          <p className="py-2">I{`'`}m a software engineer living in London!</p>
+          <p className="py-2">I{`'`}m a London-based Software Engineer!</p>
           <p className="py-2">
             Currently, I{`'`}m working as an{" "}
             <span className="font-semibold">Architect Developer</span> on
@@ -32,7 +33,7 @@ export default function About() {
         <div className="relative sm:order-none order-first w-100 sm:w-72 h-96 overflow-hidden rounded-lg m-5 hover:scale-[1.02] transition-all hover:shadow-xl">
           <Image
             className="object-cover transition-all"
-            src={windemere}
+            src={Math.random() > 0.5 ? windemere : river}
             alt="Me stood in front of Windemere in the Lake District"
             placeholder="blur"
             fill
