@@ -1,6 +1,7 @@
 import { TypeScriptIcon } from "icons/technologies/languages/typescript";
 import { PythonIcon } from "icons/technologies/languages/python";
 import { JavaIcon } from "icons/technologies/languages/java";
+import { GroovyIcon } from "icons/technologies/languages/groovy";
 
 import { DockerIcon } from "icons/technologies/infrastructure/docker";
 import { GitIcon } from "icons/technologies/infrastructure/git";
@@ -27,6 +28,7 @@ import { ServerlessIcon } from "icons/technologies/web-backend/serverless";
 import { DynamoDbIcon } from "icons/technologies/database/dynamo";
 import { MongoDbIcon } from "icons/technologies/database/mongo";
 import { PostgresIcon } from "icons/technologies/database/postgres";
+import { MicrosoftSqlIcon } from "icons/technologies/database/microsoft-sql";
 
 import { AppleIcon } from "icons/technologies/development/apple";
 import { VsCodeIcon } from "icons/technologies/development/vscode";
@@ -49,8 +51,8 @@ export const TECHNOLOGIES = {
       experience: TECH_PROFICIENCY.PRODUCTION,
     },
     {
-      name: "Java",
-      icons: [JavaIcon],
+      name: "Java and Groovy",
+      icons: [JavaIcon, GroovyIcon],
       experience: TECH_PROFICIENCY.PRODUCTION,
     },
   ],
@@ -65,7 +67,7 @@ export const TECHNOLOGIES = {
   ],
   MOBILE: [
     {
-      name: "React Native and Expo",
+      name: "React Native with Expo",
       icons: [ReactNativeIcon, ExpoIcon],
       experience: TECH_PROFICIENCY.PRODUCTION,
     },
@@ -94,6 +96,11 @@ export const TECHNOLOGIES = {
     {
       name: "Postgres",
       icons: [PostgresIcon],
+      experience: TECH_PROFICIENCY.PRODUCTION,
+    },
+    {
+      name: "Microsoft SQL Server",
+      icons: [MicrosoftSqlIcon],
       experience: TECH_PROFICIENCY.PRODUCTION,
     },
     {
