@@ -5,6 +5,7 @@ import REFACTORING from "images/books/refactoring";
 import FIVE_DYSFUNCTIONS from "images/books/five-dysfunctions";
 import GETTING_TO_YES from "images/books/getting-to-yes";
 import DOING_GOOD_BETTER from "images/books/doing-good-better";
+import TOYOTA_TALENT from "images/books/toyota-talent";
 import LEAN_STARTUP from "images/books/lean-startup";
 
 import { NavItemPops } from "components/Layout/Navbar/NavItem/NavItem";
@@ -37,6 +38,10 @@ export const MY_READING_LIST = [
   {
     title: "Doing Good Better",
     uri: DOING_GOOD_BETTER,
+  },
+  {
+    title: "Toyota Talent: Developing Your People The Toyota Way",
+    uri: TOYOTA_TALENT,
   },
   {
     title: "The Lean Startup",
