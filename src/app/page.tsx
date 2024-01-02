@@ -66,7 +66,7 @@ export default function Home() {
           <ArrowRightIcon width={20} height={20} />
         </span>
       </Link>
-      <hr className="my-4 border-b-2" />
+      <hr className="w-full my-4 border-b-1 border-gray-200 dark:border-gray-700" />
 
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
         Are we on the same page?
@@ -76,13 +76,12 @@ export default function Home() {
           <BookCover title={title} uri={uri} key={`${title}-${i}`} />
         ))}
       </Carousel>
-      <Link className="flex text-lg justify-end" href={PATHS.RESOURCES}>
+      <Link className="flex text-lg justify-end mb-4" href={PATHS.RESOURCES}>
         More resources{" "}
         <span className="my-auto">
           <ArrowRightIcon width={20} height={20} />
         </span>
       </Link>
-      <hr className="my-4 border-b-2" />
     </div>
   );
 }
