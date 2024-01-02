@@ -129,17 +129,14 @@ export const TECHNOLOGIES = {
     {
       name: "2021 MacBook Pro M1",
       icons: [AppleIcon],
-      experience: TECH_PROFICIENCY.PRODUCTION,
     },
     {
       name: "VS Code",
       icons: [VsCodeIcon],
-      experience: TECH_PROFICIENCY.PRODUCTION,
     },
     {
       name: "Arc Browser",
       icons: [ArcIcon],
-      experience: TECH_PROFICIENCY.PRODUCTION,
     },
   ],
 };
