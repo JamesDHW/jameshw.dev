@@ -15,7 +15,7 @@ export const BookCover: FC<BlogPreviewCardProps> = ({ title, uri }) => {
         "w-full md:w-1/3 bg-gradient-to-r m-2"
       )}
     >
-      <div className="relative mx-auto w-[225px] h-[300px] hover:scale-[1.05] transition-all hover:shadow-xl shadow-md">
+      <div className="relative mx-auto w-[225px] h-[300px] hover:scale-[1.05] transition-all hover:shadow-lg shadow-md">
         <Image alt={title} src={uri} className="object-fit" fill />
       </div>
     </div>
