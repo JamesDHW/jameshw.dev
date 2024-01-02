@@ -78,4 +78,8 @@ export const NAVBAR_ITEMS: NavItemPops[] = [
     href: PATHS.JOURNAL,
     label: "Dev Journal",
   },
+  {
+    href: PATHS.RESOURCES,
+    label: "Resources",
+  },
 ];
