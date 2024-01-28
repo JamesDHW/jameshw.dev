@@ -10,7 +10,7 @@ export default function Giving() {
       <p className="py-2 text-lg">
         I{`'`}ve been enthusiastic about{" "}
         <Link
-          className="font-semibold"
+          className="font-semibold underline"
           href="https://www.effectivealtruism.org/"
           target="_blank"
           rel="noreferrer"
@@ -23,7 +23,7 @@ export default function Giving() {
         In late 2019, I started making monthly donations to various {`"`}
         effective{`"`} charities through{" "}
         <Link
-          className="font-semibold"
+          className="font-semibold underline"
           href="https://www.givingwhatwecan.org/"
           target="_blank"
           rel="noreferrer"
@@ -37,7 +37,7 @@ export default function Giving() {
       <p className="py-2 text-lg">
         Giving What We Can encourage us to{" "}
         <Link
-          className="font-semibold"
+          className="font-semibold underline"
           href="https://www.givingwhatwecan.org/blog/should-charity-be-anonymous"
           target="_blank"
           rel="noreferrer"
