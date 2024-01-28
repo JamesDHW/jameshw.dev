@@ -40,6 +40,12 @@ export const Footer: FC = () => {
             GitHub
           </Link>
           <Link
+            href="https://twitter.com/JamesDHW"
+            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
+          >
+            Twitter / X
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/jamesdhw/"
             className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
