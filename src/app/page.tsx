@@ -17,9 +17,9 @@ export default function Home() {
             James Haworth Wheatman
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 md:text-xl text-xl">
-            Tech Lead at{" "}
+            <span className="font-semibold">Tech Lead</span> at{" "}
             <Link
-              className="font-semibold"
+              className="font-semibold underline"
               href="https://www.theodo.co.uk"
               target="_blank"
               rel="noreferrer"
