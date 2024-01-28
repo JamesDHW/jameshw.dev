@@ -6,6 +6,7 @@ import { BookCover } from "components/Home/BookCover/BookCover";
 import { Carousel } from "components/Common/Carousel/Carousel";
 import { ArrowRightIcon } from "icons/arrow-right";
 import { VideoIcon } from "icons/video";
+import { Divider } from "components/Common/Divider/Divider";
 import { MY_READING_LIST, PATHS } from "./constants";
 
 export default function Home() {
@@ -84,8 +85,7 @@ export default function Home() {
           <ArrowRightIcon width={20} height={20} />
         </span>
       </Link>
-      <hr className="w-full my-4 border-b-1 border-gray-200 dark:border-gray-700" />
-
+      <Divider />
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
         Are We on the Same Page?
       </h3>

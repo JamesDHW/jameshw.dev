@@ -4,6 +4,7 @@ import { Chip } from "components/Common/Chip/Chip";
 import { Article } from "types/cms";
 import { CalendarIcon } from "icons/calendar";
 import { PATHS } from "app/constants";
+import { Divider } from "components/Common/Divider/Divider";
 
 type BlogLinkCardProps = Article;
 
@@ -34,7 +35,7 @@ export const BlogLinkCard: FC<BlogLinkCardProps> = ({
         )}
       </div>
       <p className="text-gray-600 dark:text-gray-400">{summary}</p>
-      <hr className="my-4 border-gray-500" />
+      <Divider />
     </Link>
   );
 };

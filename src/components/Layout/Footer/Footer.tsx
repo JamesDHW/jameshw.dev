@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { FC } from "react";
 import { NAVBAR_ITEMS, PATHS } from "app/constants";
+import { Divider } from "components/Common/Divider/Divider";
 
 export const Footer: FC = () => {
   return (
     <footer className="flex flex-col justify-center items-start mx-auto w-full px-8">
-      <hr className="w-full border-b-1 border-gray-200 dark:border-gray-700 mb-8" />
+      <Divider />
       <div className="w-full grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3 sm:gap-32">
         <div className="flex flex-col space-y-4">
           {NAVBAR_ITEMS.map(({ label, href }) => (
