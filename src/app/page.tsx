@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </div>
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
-        Articles
+        Articles and Talks
       </h3>
       <div className="flex flex-col md:grid md:grid-cols-3 gap-4 pb-4">
         <BlogHighlightCard
@@ -79,7 +79,7 @@ export default function Home() {
         />
       </div>
       <Link className="flex text-lg justify-end" href={PATHS.BLOG}>
-        More articles{" "}
+        More articles and talks
         <span className="my-auto">
           <ArrowRightIcon width={20} height={20} />
         </span>
