@@ -5,6 +5,7 @@ import avatar from "/public/avatar.png";
 import { BookCover } from "components/Home/BookCover/BookCover";
 import { Carousel } from "components/Common/Carousel/Carousel";
 import { ArrowRightIcon } from "icons/arrow-right";
+import { VideoIcon } from "icons/video";
 import { MY_READING_LIST, PATHS } from "./constants";
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
             James Haworth Wheatman
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 md:text-xl text-xl">
-            Architect Developer at{" "}
+            Tech Lead at{" "}
             <Link
               className="font-semibold"
               href="https://www.theodo.co.uk"
@@ -43,20 +44,37 @@ export default function Home() {
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
         Articles
       </h3>
-      <div className="flex gap-6 flex-col md:flex-row pb-4">
+      <div className="flex flex-col md:grid md:grid-cols-3 gap-4 pb-4">
         <BlogHighlightCard
+          title="What Even is Tech Quality and Why Should I Care?"
+          slug="2023-01-31/what-is-tech-quality"
+          gradient="from-gray-700 to-gray-300"
+          Icon={VideoIcon}
+          callToActionText="Watch now..."
+        />
+        <BlogHighlightCard
+          title="What Does it Mean to Be a Tech Lead in a Lean Software Company?"
+          slug="2024-01-24/lean-tech-lead"
+          gradient="from-gray-300 to-gray-600"
+        />
+        <BlogHighlightCard
+          title="What Does it Mean to Be a Good Software Engineer?"
           slug="2022-12-18/how-to-be-a-good-software-engineer"
-          title="What does it mean to be a good Software Engineer?"
           gradient="from-gray-700 to-gray-300"
         />
         <BlogHighlightCard
-          slug="2021-08-21/serverless-for-long-computational-tasks"
-          title="AWS Fargate: harness the power of serverless for long-running computational tasks"
-          gradient="from-gray-300 to-gray-500"
+          title="Supercharge your Learning with This One Tool for Programmers!"
+          slug="2023-04-02/development-journal"
+          gradient="from-gray-400 to-gray-500"
         />
         <BlogHighlightCard
+          title="Universal Apps: A Single, Unified Codebase Powering iOS, Android, macOS, Windows, and Web"
+          slug="2023-09-24/universal-application-architecture"
+          gradient="from-gray-600 to-gray-400"
+        />
+        <BlogHighlightCard
+          title="Principles Gathered from Clean Code: A Handbook of Agile Software Craftsmanship"
           slug="2022-02-05/principles-from-clean-code"
-          title="Principles gathered from Clean Code: A Handbook of Agile Software Craftsmanship"
           gradient="from-gray-700 to-gray-300"
         />
       </div>
@@ -69,7 +87,7 @@ export default function Home() {
       <hr className="w-full my-4 border-b-1 border-gray-200 dark:border-gray-700" />
 
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
-        Are we on the same page?
+        Are We on the Same Page?
       </h3>
       <Carousel>
         {MY_READING_LIST.map(({ title, uri }, i) => (
