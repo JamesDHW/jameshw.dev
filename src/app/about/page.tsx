@@ -14,9 +14,14 @@ export default function About() {
         <div className="flex flex-col justify-evenly align-middle text-xl">
           <p className="py-2">I{`'`}m a London-based Software Engineer!</p>
           <p className="py-2">
+            I read <span className="font-semibold">Physics</span> and{" "}
+            <span className="font-semibold">Computer Science</span> at The
+            University of Sheffield and University College London.
+          </p>
+          <p className="py-2">
             Currently, I{`'`}m working as an{" "}
-            <span className="font-semibold">Architect Developer</span> on
-            full-stack web and mobile applications at{" "}
+            <span className="font-semibold">Tech Lead</span> on full-stack web
+            and mobile applications at{" "}
             <a
               href="https://www.theodo.co.uk"
               className="font-semibold underline"
