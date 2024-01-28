@@ -25,7 +25,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Theodo
+              Theodo UK
             </Link>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-base sm:mr-4">
