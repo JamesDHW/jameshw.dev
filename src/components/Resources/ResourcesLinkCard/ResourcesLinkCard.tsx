@@ -25,7 +25,7 @@ export const ResourcesLinkCard: FC<ResourcesLinkCardProps> = ({
       <div className="flex sm:flex-row flex-col w-full justify-between">
         <p className="my-auto px-2">{title}</p>
         {tags.length > 0 && (
-          <div className="flex flex-row gap-1 sm:my-auto my-1 px-2">
+          <div className="flex flex-row sm:flex-nowrap flex-wrap  gap-1 sm:my-auto my-1 px-2">
             {tags.map(({ name }) => (
               <Chip key={name}>{name}</Chip>
             ))}
