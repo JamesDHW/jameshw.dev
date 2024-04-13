@@ -5,16 +5,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-/* Workaround: height of first image in blog wants to be 400px */
-.notion-asset-wrapper-image {
-  height: 400px;
-}
-
-.notion-asset-wrapper img {
-  height: auto !important;
-}
-
-.notion-asset-wrapper-image ~ .notion-asset-wrapper-image {
-  height: auto !important;
-}
