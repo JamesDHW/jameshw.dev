@@ -1,6 +1,10 @@
 import { NotionAPI } from "notion-client";
 import { Client } from "@notionhq/client";
-import { QueryDatabaseParameters } from "@notionhq/client/build/src/api-endpoints";
+import {
+  PageObjectResponse,
+  PartialPageObjectResponse,
+  QueryDatabaseParameters,
+} from "@notionhq/client/build/src/api-endpoints";
 import { ExtendedRecordMap } from "notion-types";
 import {
   formatNotionPageAttributes,
@@ -29,9 +33,8 @@ class ServerSideCmsClient {
   ): Promise<T[]> {
     if (databaseId === undefined) throw new Error("No database id provided");
 
-    const { results } = await this.notionApiClient.databases.query({
-      database_id: databaseId,
-    });
+    const results: (PageObjectResponse | PartialPageObjectResponse)[] =
+      await this.getAllEntriesFromPaginated(databaseId);
 
     if (results.length === 0) return [];
 
@@ -49,6 +52,24 @@ class ServerSideCmsClient {
     }
 
     throw new Error("Partial response returned by Notion API");
+  }
+
+  private async getAllEntriesFromPaginated(databaseId: string) {
+    let hasMore = true;
+    let results: (PageObjectResponse | PartialPageObjectResponse)[] = [];
+    while (hasMore) {
+      const { results: pageResults, has_more } =
+        await this.notionApiClient.databases.query({
+          database_id: databaseId,
+          ...(results.length > 0
+            ? { start_cursor: results[results.length - 1]?.id }
+            : {}),
+        });
+      results = results.concat(pageResults);
+      hasMore = has_more;
+    }
+
+    return results;
   }
 
   async getPageContent(
