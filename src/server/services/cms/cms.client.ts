@@ -65,8 +65,7 @@ class ServerSideCmsClient {
         next_cursor,
       } = await this.notionApiClient.databases.query({
         database_id: databaseId,
-        // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-        ...(nextCursor ? { start_cursor: nextCursor } : {}),
+        start_cursor: nextCursor ?? undefined,
       });
       nextCursor = next_cursor;
       results = results.concat(pageResults);
