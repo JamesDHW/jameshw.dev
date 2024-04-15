@@ -57,14 +57,18 @@ class ServerSideCmsClient {
   private async getAllEntriesFromPaginated(databaseId: string) {
     let hasMore = true;
     let results: (PageObjectResponse | PartialPageObjectResponse)[] = [];
+    let nextCursor: string | null | undefined;
     while (hasMore) {
-      const { results: pageResults, has_more } =
-        await this.notionApiClient.databases.query({
-          database_id: databaseId,
-          ...(results.length > 0
-            ? { start_cursor: results[results.length - 1]?.id }
-            : {}),
-        });
+      const {
+        results: pageResults,
+        has_more,
+        next_cursor,
+      } = await this.notionApiClient.databases.query({
+        database_id: databaseId,
+        // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+        ...(nextCursor ? { start_cursor: nextCursor } : {}),
+      });
+      nextCursor = next_cursor;
       results = results.concat(pageResults);
       hasMore = has_more;
     }
