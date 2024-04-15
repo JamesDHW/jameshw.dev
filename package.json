@@ -23,13 +23,15 @@
     "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-notion-x": "^6.15.7"
+    "react-notion-x": "^6.15.7",
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
     "@types/react-modal": "^3.13.1",
+    "@types/rss": "^0.0.32",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
     "autoprefixer": "^10.4.13",

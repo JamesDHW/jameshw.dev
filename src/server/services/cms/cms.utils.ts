@@ -21,6 +21,8 @@ const notionDatabasePropertyResolver = (
       return prop.last_edited_time;
     case NotionBlockTypes.date:
       return prop.date?.start ?? null;
+    case NotionBlockTypes.created_time:
+      return prop.created_time;
     case NotionBlockTypes.select:
       return prop.select;
     case NotionBlockTypes.url:

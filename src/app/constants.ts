@@ -57,7 +57,12 @@ export const PATHS = {
   GIVING: "/giving",
   TECH: "/tech",
   RESOURCES: "/resources",
-};
+  RSS: "/rss",
+  RSS_MAIN: "/feed.xml",
+  RSS_BLOG: "/blog.xml",
+  RSS_JOURNAL: "/journal.xml",
+  RSS_RESOURCES: "/resources.xml",
+} as const;
 
 export const DOMAIN = "https://www.jameshw.dev";
 

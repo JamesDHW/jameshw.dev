@@ -26,6 +26,7 @@ export type LearningResource = {
   title: string;
   type: LearningResourceType;
   tags: MultiSelectOption[];
+  Date: string;
 };
 
 type MultiSelectOption = {

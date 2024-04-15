@@ -6,6 +6,7 @@ export enum NotionBlockTypes {
   last_edited_time = "last_edited_time",
   date = "date",
   url = "url",
+  created_time = "created_time",
 }
 
 export type SelectColor =
