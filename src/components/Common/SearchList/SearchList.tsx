@@ -19,7 +19,7 @@ export const SearchList = <T,>({
   ListItem,
   placeholder,
   initialQuery,
-}: SearchableListProps<T>) => {
+}: SearchableListProps<T>): JSX.Element => {
   const [query, setQuerySetState] = useState(initialQuery ?? "");
   const [data, setData] = useState<T[]>([]);
 
