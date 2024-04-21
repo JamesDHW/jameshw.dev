@@ -56,6 +56,7 @@ export const PATHS = {
   JOURNAL: "/journal",
   GIVING: "/giving",
   TECH: "/tech",
+  EXPERIENCE: "/experience",
   RESOURCES: "/resources",
   RSS: "/rss",
   RSS_MAIN: "/feed.xml",
