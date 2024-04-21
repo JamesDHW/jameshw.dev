@@ -2,12 +2,14 @@ import { FC } from "react";
 import classes from "classnames";
 import { TECH_PROFICIENCY } from "app/tech/constants";
 
+export type TechExperience = {
+  name: string;
+  icons: FC<JSX.IntrinsicElements["svg"]>[];
+  experience?: TECH_PROFICIENCY;
+};
+
 interface TechListDisplayProps {
-  list: {
-    name: string;
-    icons: FC<JSX.IntrinsicElements["svg"]>[];
-    experience?: TECH_PROFICIENCY;
-  }[];
+  list: TechExperience[];
 }
 
 export const TechListDisplay: FC<TechListDisplayProps> = ({ list }) => {
