@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { ResourcesHeader } from "components/Resources/ResourcesHeader/ResourcesHeader";
 import { serverSideCmsClient } from "server/services/cms/cms.client";
 import { isLearningResource } from "types/guards";
@@ -12,7 +13,9 @@ export default async function Resources() {
   return (
     <div className="flex flex-col px-8">
       <ResourcesHeader />
-      <ResourceList data={resources} />
+      <Suspense>
+        <ResourceList data={resources} />
+      </Suspense>
     </div>
   );
 }

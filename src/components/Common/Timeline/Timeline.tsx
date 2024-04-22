@@ -67,16 +67,16 @@ export const TimeLine: FC<TimeLineProps> = ({ timelineItems }) => {
               {formatDate(date)}
               {startDate !== undefined && ` (${dateDiff(startDate, date)})`}
             </time>
-              <div className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+            <div className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
               {description}
-              </div>
+            </div>
             {link !== undefined && (
-                <Link
+              <Link
                 href={link}
                 className="inline-flex items-center text-sm bg-gray-200 rounded-lg dark:bg-gray-600 mx-auto p-2 px-3 hover:ring-1 ring-gray-300 transition-all"
               >
-                  Learn more <ArrowRightIcon className="h-5 w-5 ml-2" />
-                </Link>
+                Learn more <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
             )}
           </li>
         ))}
