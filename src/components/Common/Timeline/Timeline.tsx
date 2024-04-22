@@ -1,5 +1,7 @@
 import classes from "classnames";
 import { FC, ReactNode } from "react";
+import Link from "next/link";
+import { ArrowRightIcon } from "icons/arrow-right";
 
 export type TimeLineItem = {
   date: Date;
@@ -65,31 +67,16 @@ export const TimeLine: FC<TimeLineProps> = ({ timelineItems }) => {
               {formatDate(date)}
               {startDate !== undefined && ` (${dateDiff(startDate, date)})`}
             </time>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+              <div className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
               {description}
-            </p>
+              </div>
             {link !== undefined && (
-              <a
+                <Link
                 href={link}
                 className="inline-flex items-center text-sm bg-gray-200 rounded-lg dark:bg-gray-600 mx-auto p-2 px-3 hover:ring-1 ring-gray-300 transition-all"
               >
-                Learn more{" "}
-                <svg
-                  className="w-3 h-3 ms-2 rtl:rotate-180"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 10"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 5h12m0 0L9 1m4 4L9 9"
-                  />
-                </svg>
-              </a>
+                  Learn more <ArrowRightIcon className="h-5 w-5 ml-2" />
+                </Link>
             )}
           </li>
         ))}
