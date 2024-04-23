@@ -174,8 +174,8 @@ export const EXPERIENCES: TimeLineItem[] = [
   },
   {
     title: "Client: Gaming Mobile App",
-    startDate: new Date("2023-01-26"),
-    date: new Date("2023-02-09"),
+    startDate: new Date("2022-02-10"),
+    date: new Date("2022-04-22"),
     description: (
       <TechListDisplay
         list={[
