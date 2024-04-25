@@ -40,15 +40,15 @@ export const TimeLine: FC<TimeLineProps> = ({ timelineSections }) => {
           return (
             <ol
               key={title}
-              className="border-s border-gray-200 dark:border-gray-700"
+              className="relative border-s border-gray-200 dark:border-gray-700"
             >
               <li
                 className={classes(
-                  "sticky top-20 ml-5 pb-2 mb-3 z-50 bg-white dark:bg-gray-900",
+                  "sm:sticky top-20 ml-5 pb-2 mb-3 z-50 bg-white dark:bg-gray-900",
                   "after:absolute after:h-5 after:w-full after:-bottom-5 after:z-50 after:bg-gradient-to-b after:dark:from-gray-900 after:dark:to-transparent after:from-white after:to-transparent"
                 )}
               >
-                <div className="absolute -start-9">
+                <div className="absolute sm:-start-9 -start-4">
                   <div className="absolute h-8 w-8 bg-gray-200 rounded-full border border-white dark:border-gray-800 dark:bg-gray-700" />
                   <Icon className="absolute h-6 w-6 m-1" />
                 </div>
