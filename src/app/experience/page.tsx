@@ -10,7 +10,7 @@ export default function Resume() {
         Here{"'"}s a summary of the organisations and projects I{"'"}ve been
         involved in over the years.
       </p>
-      <TimeLine timelineItems={EXPERIENCES} />
+      <TimeLine timelineSections={EXPERIENCES} />
     </div>
   );
 }
