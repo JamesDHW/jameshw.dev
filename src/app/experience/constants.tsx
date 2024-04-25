@@ -47,7 +47,7 @@ export const EXPERIENCES: TimelineSection[] = [
         startDate: new Date("2021-11-30"),
         date: new Date(),
         description: (
-          <p>
+          <div>
             At Theodo, I have coached 5 developers within the company, which I
             have greatly enjoyed. Through weekly coaching sessions, I drive my
             coachee{"'"}s progression by:
@@ -61,7 +61,7 @@ export const EXPERIENCES: TimelineSection[] = [
                 4. holding them to account for following or amending the plan.
               </li>
             </ol>
-          </p>
+          </div>
         ),
       },
       {
