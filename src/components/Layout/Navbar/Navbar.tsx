@@ -17,7 +17,7 @@ export const Navbar = () => {
     <nav
       className={classes(
         "flex z-40 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900",
-        "after:absolute after:-start-5 after:h-5 after:w-full after:-bottom-5 after:z-90 after:bg-gradient-to-b after:dark:from-gray-900 after:dark:to-transparent after:from-white after:to-transparent"
+        "after:absolute after:-start-5 after:h-5 after:w-full after:-bottom-5 after:bg-gradient-to-b after:dark:from-gray-900 after:dark:to-transparent after:from-white after:to-transparent"
       )}
     >
       <button

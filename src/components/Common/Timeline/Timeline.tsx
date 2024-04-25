@@ -44,8 +44,8 @@ export const TimeLine: FC<TimeLineProps> = ({ timelineSections }) => {
             >
               <li
                 className={classes(
-                  "sm:sticky top-20 ml-5 pb-2 mb-3 z-50 bg-white dark:bg-gray-900",
-                  "after:absolute after:h-5 after:w-full after:-bottom-5 after:z-50 after:bg-gradient-to-b after:dark:from-gray-900 after:dark:to-transparent after:from-white after:to-transparent"
+                  "sm:sticky top-20 ml-5 py-2 mb-3 z-30 bg-white dark:bg-gray-900",
+                  "after:absolute after:h-5 after:w-full after:-bottom-5 after:z-20 after:bg-gradient-to-b after:dark:from-gray-900 after:dark:to-transparent after:from-white after:to-transparent"
                 )}
               >
                 <div className="absolute sm:-start-9 -start-4">
