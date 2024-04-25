@@ -29,11 +29,41 @@ export const EXPERIENCES: TimelineSection[] = [
     startDate: new Date("2022-04-25"),
     date: new Date(),
     Icon: WorkIcon,
-    description:
-      "Transitioned to a management role as the most senior developer in the team\
-      while focusing on helping the team to deliver value effortlessly.",
+    description: (
+      <p>
+        As a Tech Lead on client projects, it is my job to create and maintain
+        working conditions in which Developers can deliver the most value to the
+        client whilst learning and progressing.
+        <br />
+        This starts by defining the technical conditions for a project to
+        succeed (project conception and architecture) and continues by working
+        with the developers to maintain high standards.
+      </p>
+    ),
     link: "/blog/2024-01-24/lean-tech-lead",
     items: [
+      {
+        title: "Role: Coach",
+        startDate: new Date("2021-11-30"),
+        date: new Date(),
+        description: (
+          <p>
+            At Theodo, I have coached 5 developers within the company, which I
+            have greatly enjoyed. Through weekly coaching sessions, I drive my
+            coachee{"'"}s progression by:
+            <ol className="pl-2">
+              <li>1. facilitating clarity in their goals;</li>
+              <li>
+                2. raising awareness of their current strengths & weaknesses;
+              </li>
+              <li>3. guiding them to create an actionable plan; and</li>
+              <li>
+                4. holding them to account for following or amending the plan.
+              </li>
+            </ol>
+          </p>
+        ),
+      },
       {
         title: "Client: Asset Finance Platform for International Bank",
         startDate: new Date("2023-02-27"),
