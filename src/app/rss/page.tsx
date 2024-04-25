@@ -6,7 +6,7 @@ export default function Giving() {
   return (
     <div className="flex flex-col px-8">
       <PageTitle>RSS</PageTitle>
-      <p className="py-2 text-lg">
+      <div className="py-2 text-lg">
         I have an{" "}
         <Link
           className="font-semibold underline"
@@ -18,19 +18,19 @@ export default function Giving() {
         </Link>{" "}
         feed! You can subscribe to this feed to hear all the latest updates from
         me in your own aggregator.
-      </p>
-      <p className="py-2 text-lg">
+      </div>
+      <div className="py-2 text-lg">
         I have three feeds you can subscribe to - you can subscribe to all of
         them{" "}
         <Link className="font-semibold underline" href={PATHS.RSS_MAIN}>
           here
         </Link>
         !
-      </p>
+      </div>
       <p className="py-2 text-lg">
         If you want to pick and choose, you can subscribe to them individually:
       </p>
-      <p className="py-2 text-lg">
+      <div className="py-2 text-lg">
         <ul className="list-disc">
           <li>
             <Link className="font-semibold underline" href={PATHS.RSS_BLOG}>
@@ -67,7 +67,7 @@ export default function Giving() {
             and passing on resources I think are cool!
           </li>
         </ul>
-      </p>
+      </div>
     </div>
   );
 }
