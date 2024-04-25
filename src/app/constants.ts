@@ -7,6 +7,7 @@ import GETTING_TO_YES from "images/books/getting-to-yes";
 import DOING_GOOD_BETTER from "images/books/doing-good-better";
 import TOYOTA_TALENT from "images/books/toyota-talent";
 import LEAN_STARTUP from "images/books/lean-startup";
+import RADICAL_CANDOR from "images/books/radical-candor";
 
 import { NavItemPops } from "components/Layout/Navbar/NavItem/NavItem";
 
@@ -32,6 +33,10 @@ export const MY_READING_LIST = [
     uri: FIVE_DYSFUNCTIONS,
   },
   {
+    title: "Radical Candor",
+    uri: RADICAL_CANDOR,
+  },
+  {
     title: "Getting to Yes",
     uri: GETTING_TO_YES,
   },
@@ -40,12 +45,12 @@ export const MY_READING_LIST = [
     uri: DOING_GOOD_BETTER,
   },
   {
-    title: "Toyota Talent: Developing Your People The Toyota Way",
-    uri: TOYOTA_TALENT,
-  },
-  {
     title: "The Lean Startup",
     uri: LEAN_STARTUP,
+  },
+  {
+    title: "Toyota Talent: Developing Your People The Toyota Way",
+    uri: TOYOTA_TALENT,
   },
 ];
 
