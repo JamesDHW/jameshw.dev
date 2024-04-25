@@ -2,6 +2,7 @@
 
 import { Dispatch, FC, SetStateAction, useState } from "react";
 import { useTheme } from "next-themes";
+import classes from "classnames";
 import { CrossIcon } from "icons/cross";
 import { HamburgerIcon } from "icons/hamburger";
 import { NAVBAR_ITEMS, PATHS } from "app/constants";
@@ -13,9 +14,14 @@ export const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="flex z-50 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900">
+    <nav
+      className={classes(
+        "flex z-40 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900",
+        "after:absolute after:h-5 after:w-full after:-bottom-5 after:z-90 after:bg-gradient-to-b after:dark:from-gray-900 after:dark:to-transparent after:from-white after:to-transparent"
+      )}
+    >
       <button
-        className="sm:hidden relative w-10 h-10 z-50 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
+        className="sm:hidden relative w-10 h-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
         onClick={() => setIsMenuOpen((v) => !v)}
         aria-label="Toggle menu"
         type="button"
