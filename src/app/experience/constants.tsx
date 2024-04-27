@@ -7,6 +7,7 @@ import { MicrosoftSqlIcon } from "icons/technologies/database/microsoft-sql";
 import { PostgresIcon } from "icons/technologies/database/postgres";
 import { AwsIcon } from "icons/technologies/infrastructure/aws";
 import { ContentfulIcon } from "icons/technologies/infrastructure/contentful";
+import { DockerIcon } from "icons/technologies/infrastructure/docker";
 import { ForrestAdminIcon } from "icons/technologies/infrastructure/forrest-admin";
 import { HubSpotIcon } from "icons/technologies/infrastructure/hubspot";
 import { SupabaseIcon } from "icons/technologies/infrastructure/supabase";
@@ -51,14 +52,14 @@ export const EXPERIENCES: TimelineSection[] = [
             At Theodo, I have coached 5 developers within the company, which I
             have greatly enjoyed. Through weekly coaching sessions, I drive my
             coachee{"'"}s progression by:
-            <ol className="pl-2">
-              <li>1. facilitating clarity in their goals;</li>
+            <ol className="pl-8 list-decimal">
+              <li>facilitating clarity in their goals;</li>
               <li>
-                2. raising awareness of their current strengths & weaknesses;
+                raising awareness of their current strengths & weaknesses;
               </li>
-              <li>3. guiding them to create an actionable plan; and</li>
+              <li>guiding them to create an actionable plan; and</li>
               <li>
-                4. holding them to account for following or amending the plan.
+                holding them to account for following or amending the plan.
               </li>
             </ol>
           </div>
@@ -85,8 +86,11 @@ export const EXPERIENCES: TimelineSection[] = [
               ]}
             />
             <p>
-              Asset Finance management application with event sourcing
-              architecture.
+              Asset Finance management enterprise application with an event
+              sourcing architecture. I managed the migration towards TypeScript,
+              reaching 100% file coverage, managed improvements to Cypress e2e
+              tests which reduced the runtime by 50%, and managed upgrades to
+              software versions (e.g. Groovy on Grails from v3 to v5).
             </p>
           </>
         ),
@@ -112,7 +116,7 @@ export const EXPERIENCES: TimelineSection[] = [
               ]}
             />
             <p>
-              Created Native Android plugin for turn-by-turn navigation in the
+              Created a native Android plugin for turn-by-turn navigation in the
               companion app which connects to the scooter via Bluetooth.
             </p>
           </>
@@ -138,7 +142,12 @@ export const EXPERIENCES: TimelineSection[] = [
                 },
               ]}
             />
-            <p>Built an Instagram-like social media platform from scratch.</p>
+            <p>
+              Built and deployed an Instagram-like social media platform from
+              scratch, which contained most typical social media features - user
+              management, image posts and feeds, liking, commenting, reposting,
+              and following.
+            </p>
           </>
         ),
       },
@@ -167,8 +176,8 @@ export const EXPERIENCES: TimelineSection[] = [
             />
             <p>
               Used Django and Postgres (PostGIS) to model a simulation of the
-              disruption caused by terror attacks for existing insurance data
-              platform. Added {'"'}GeoWizard{'"'} feature for uploading and
+              disruption caused by terror attacks for an existing insurance data
+              platform. Added a {'"'}GeoWizard{'"'} feature for uploading and
               manipulating geospatial CSV data.
             </p>
           </>
@@ -221,14 +230,20 @@ export const EXPERIENCES: TimelineSection[] = [
         startDate: new Date("2022-02-10"),
         date: new Date("2022-04-22"),
         description: (
-          <TechListDisplay
-            list={[
-              {
-                name: "TypeScript, React Native, Expo",
-                icons: [TypeScriptIcon, ReactNativeIcon, ExpoIcon],
-              },
-            ]}
-          />
+          <>
+            <TechListDisplay
+              list={[
+                {
+                  name: "TypeScript, React Native, Expo",
+                  icons: [TypeScriptIcon, ReactNativeIcon, ExpoIcon],
+                },
+              ]}
+            />
+            <p>
+              Built a React Native app from scratch with account management to
+              play games embedded using a Webview.
+            </p>
+          </>
         ),
       },
       {
@@ -246,8 +261,10 @@ export const EXPERIENCES: TimelineSection[] = [
               ]}
             />
             <p>
-              Building a multistage CMS-configurable questionnaire for
-              onboarding customers onto the portfolio management offering.
+              Built a multistage fully CMS-configurable questionnaire for
+              onboarding customers onto the portfolio management offering. The
+              question flow lead to a results page which showed customised which
+              depended on question responses.
             </p>
           </>
         ),
@@ -267,9 +284,11 @@ export const EXPERIENCES: TimelineSection[] = [
               ]}
             />
             <p>
-              Solo project, migrating AWS infrastructure for an AI material
-              synthesis application to multi-region in AWS to queue and
-              parallelise computational jobs running on P3 machines.
+              A solo project, migrating AWS infrastructure for an AI material
+              synthesis application to be multi-regional in AWS so that
+              computational jobs running on P3 machines could be queued (SQS)
+              and parallelised appropriately due to a lack of availability of
+              machines in a single region.
             </p>
           </>
         ),
@@ -283,14 +302,15 @@ export const EXPERIENCES: TimelineSection[] = [
             <TechListDisplay
               list={[
                 {
-                  name: "NestJS, Forrest Admin, NextJS",
-                  icons: [NestJsIcon, ForrestAdminIcon, NextJsIcon],
+                  name: "NestJS, Forrest Admin, React",
+                  icons: [NestJsIcon, ForrestAdminIcon, ReactNativeIcon],
                 },
               ]}
             />
             <p>
               Back-office and dashboard for doctors to access medical research
-              participation information about patients.
+              participation information about patients. Created a custom
+              calendar display component and PDF export functionality.
             </p>
           </>
         ),
@@ -310,8 +330,11 @@ export const EXPERIENCES: TimelineSection[] = [
               ]}
             />
             <p>
-              Solo developer, built the frontend for the internal tool which
-              powers budgeting for one of the big four accounting firms.
+              As the main developer, built the frontend for the internal tool
+              which powers budgeting for one of the big four accounting firms.
+              Built custom spreadsheet components to display roll-up financial
+              data and serialised and deserialised multidimensional data stored
+              in the OLAP database.
             </p>
           </>
         ),
@@ -326,8 +349,14 @@ export const EXPERIENCES: TimelineSection[] = [
             <TechListDisplay
               list={[
                 {
-                  name: "AWS Serverless, DynamoDB, Python, NextJS",
-                  icons: [AwsIcon, DynamoDbIcon, PythonIcon, NextJsIcon],
+                  name: "AWS Serverless, Docker, DynamoDB, Python, NextJS",
+                  icons: [
+                    AwsIcon,
+                    DockerIcon,
+                    DynamoDbIcon,
+                    PythonIcon,
+                    NextJsIcon,
+                  ],
                 },
               ]}
             />
@@ -356,8 +385,8 @@ export const EXPERIENCES: TimelineSection[] = [
               ]}
             />
             <p>
-              Greenfield React Native app connecting doctors to providers of
-              medical supplies int he US.
+              Greenfield React Native app built for a startup connecting doctors
+              to the providers of medical supplies in the US.
             </p>
           </>
         ),
@@ -431,7 +460,8 @@ export const EXPERIENCES: TimelineSection[] = [
         startDate: new Date("2017-10-30"),
         date: new Date("2018-07-01"),
         description:
-          "Designed, implemented, and delivered two Python courses to undergraduates and PhDs.",
+          "Designed, implemented, and delivered two Python courses to undergraduates and PhDs.\
+          The enterprise was financially stable and continues years later.",
       },
       {
         title: "Student Ambassador - The University of Sheffield",
