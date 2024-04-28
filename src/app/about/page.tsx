@@ -2,6 +2,7 @@ import { PageTitle } from "components/Common/PageTitle/PageTitle";
 import Image from "next/image";
 import windemere from "/public/windemere.jpeg";
 import river from "/public/river.jpeg";
+import athens from "/public/athens.jpeg";
 
 export default function About() {
   return (
@@ -38,7 +39,7 @@ export default function About() {
         <div className="relative sm:order-none order-first w-100 sm:w-72 h-96 overflow-hidden rounded-lg m-5 hover:scale-[1.02] transition-all hover:shadow-xl">
           <Image
             className="object-cover transition-all"
-            src={Math.random() > 0.5 ? windemere : river}
+            src={selectRandom([athens, river, windemere])}
             alt="Me stood in front of Windemere in the Lake District"
             placeholder="blur"
             fill
@@ -48,3 +49,9 @@ export default function About() {
     </div>
   );
 }
+
+const selectRandom = <T,>(arr: T[]): T => {
+  const randIndex = Math.floor(Math.random() * arr.length);
+
+  return arr[randIndex]!;
+};
