@@ -2,12 +2,7 @@ import { FC, ReactNode } from "react";
 import Link from "next/link";
 import classes from "classnames";
 import { ArrowRightIcon } from "icons/arrow-right";
-import {
-  dateDiff,
-  formatDate,
-  formatDateRange,
-  sortByLatestDate,
-} from "./Timeline.helpers.ts";
+import { formatDateRange, sortByLatestDate } from "./Timeline.utils";
 
 export type TimelineItem = {
   date: Date;
