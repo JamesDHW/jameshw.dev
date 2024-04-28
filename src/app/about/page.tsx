@@ -20,7 +20,7 @@ export default function About() {
             University of Sheffield and University College London.
           </p>
           <p className="py-2">
-            Currently, I{`'`}m working as an{" "}
+            Currently, I{`'`}m working as a{" "}
             <span className="font-semibold">Tech Lead</span> on full-stack web
             and mobile applications at{" "}
             <a
