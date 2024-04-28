@@ -64,10 +64,10 @@ export const PATHS = {
   EXPERIENCE: "/experience",
   RESOURCES: "/resources",
   RSS: "/rss",
-  RSS_MAIN: "/feed.xml",
-  RSS_BLOG: "/blog.xml",
-  RSS_JOURNAL: "/journal.xml",
-  RSS_RESOURCES: "/resources.xml",
+  RSS_MAIN: `/rss/feed.xml`,
+  RSS_BLOG: "/rss/blog.xml",
+  RSS_JOURNAL: "/rss/journal.xml",
+  RSS_RESOURCES: "/rss/resources.xml",
 } as const;
 
 export const DOMAIN = "https://www.jameshw.dev";
