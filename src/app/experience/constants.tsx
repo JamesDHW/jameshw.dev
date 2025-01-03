@@ -26,6 +26,44 @@ import { WorkIcon } from "icons/work";
 
 export const EXPERIENCES: TimelineSection[] = [
   {
+    title: "Theodo UK - Engineering Manager",
+    startDate: new Date("2025-01-20"),
+    date: new Date(),
+    Icon: WorkIcon,
+    description: (
+      <p>
+        As an Engineering Manager, I am responsible for managing Tech Leads
+        across different client projects, ensuring they have everything they
+        need to lead their teams to success.
+      </p>
+    ),
+    items: [
+      {
+        title: "Role: Coach",
+        startDate: new Date("2021-11-30"),
+        date: new Date(),
+        description: (
+          <div>
+            At Theodo, across my different positions in the company, I have
+            greatly enjoyed being a coach to 4 developers and 1 Tech Lead.
+            Through weekly coaching sessions, I drive my coachee{"'"}s
+            progression by:
+            <ol className="pl-8 list-decimal">
+              <li>facilitating clarity in their goals;</li>
+              <li>
+                raising awareness of their current strengths & weaknesses;
+              </li>
+              <li>guiding them to create an actionable plan; and</li>
+              <li>
+                holding them to account for following or amending the plan.
+              </li>
+            </ol>
+          </div>
+        ),
+      },
+    ],
+  },
+  {
     title: "Theodo UK - Tech Lead",
     startDate: new Date("2022-04-25"),
     date: new Date(),
@@ -43,28 +81,6 @@ export const EXPERIENCES: TimelineSection[] = [
     ),
     link: "/blog/2024-01-24/lean-tech-lead",
     items: [
-      {
-        title: "Role: Coach",
-        startDate: new Date("2021-11-30"),
-        date: new Date(),
-        description: (
-          <div>
-            At Theodo, I have coached 5 developers within the company, which I
-            have greatly enjoyed. Through weekly coaching sessions, I drive my
-            coachee{"'"}s progression by:
-            <ol className="pl-8 list-decimal">
-              <li>facilitating clarity in their goals;</li>
-              <li>
-                raising awareness of their current strengths & weaknesses;
-              </li>
-              <li>guiding them to create an actionable plan; and</li>
-              <li>
-                holding them to account for following or amending the plan.
-              </li>
-            </ol>
-          </div>
-        ),
-      },
       {
         title: "Client: Asset Finance Platform for International Bank",
         startDate: new Date("2023-02-27"),
