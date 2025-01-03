@@ -31,8 +31,12 @@ export const formatDateRange = (start: Date | undefined, end: Date) => {
   let result = "";
 
   if (start !== undefined) result += `${formatDate(start)} - `;
-  result += formatDate(end);
-  if (start !== undefined) result += ` (${dateDiff(start, end)})`;
+
+  const isOngoing = formatDate(end) === formatDate(new Date());
+  result += isOngoing ? "Present" : formatDate(end);
+
+  if (start !== undefined && formatDate(start) !== formatDate(end))
+    result += ` (${dateDiff(start, end)})`;
 
   return result;
 };
