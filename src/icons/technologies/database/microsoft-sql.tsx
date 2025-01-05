@@ -6,11 +6,11 @@ export const MicrosoftSqlIcon = (props: JSX.IntrinsicElements["svg"]) => {
       fill="#000000"
       {...props}
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         <g transform="matrix(.569 0 0 .569 199.451 -82.735)">
@@ -24,8 +24,8 @@ export const MicrosoftSqlIcon = (props: JSX.IntrinsicElements["svg"]) => {
             gradientTransform="matrix(.1234 0 0 -.1234 1158.33 1550.273)"
           >
             {" "}
-            <stop offset="0" stop-color="#909ca9"></stop>{" "}
-            <stop offset="1" stop-color="currentColor"></stop>{" "}
+            <stop offset="0" stopColor="#909ca9"></stop>{" "}
+            <stop offset="1" stopColor="currentColor"></stop>{" "}
           </linearGradient>
           <path
             fill="url(#a)"
@@ -41,8 +41,8 @@ export const MicrosoftSqlIcon = (props: JSX.IntrinsicElements["svg"]) => {
             gradientTransform="matrix(.1234 0 0 -.1234 1158.33 1550.273)"
           >
             {" "}
-            <stop offset="0" stop-color="#939fab"></stop>{" "}
-            <stop offset="1" stop-color="currentColor"></stop>{" "}
+            <stop offset="0" stopColor="#939fab"></stop>{" "}
+            <stop offset="1" stopColor="currentColor"></stop>{" "}
           </linearGradient>
           <path
             fill="url(#b)"
@@ -57,8 +57,8 @@ export const MicrosoftSqlIcon = (props: JSX.IntrinsicElements["svg"]) => {
             gradientUnits="userSpaceOnUse"
           >
             {" "}
-            <stop offset="0" stop-color="#ee352c"></stop>{" "}
-            <stop offset="1" stop-color="#a91d22"></stop>{" "}
+            <stop offset="0" stopColor="#ee352c"></stop>{" "}
+            <stop offset="1" stopColor="#a91d22"></stop>{" "}
           </radialGradient>
           <path
             fill="url(#c)"

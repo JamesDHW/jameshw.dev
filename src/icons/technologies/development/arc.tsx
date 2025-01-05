@@ -3,7 +3,7 @@ export const ArcIcon = (props: JSX.IntrinsicElements["svg"]) => {
     <svg
       clip-rule="evenodd"
       fill-rule="evenodd"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       stroke-miterlimit="2"
       viewBox="0 0 500 400"
       xmlns="http://www.w3.org/2000/svg"

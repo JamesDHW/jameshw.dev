@@ -123,8 +123,8 @@ export const VsCodeIcon = (props: JSX.IntrinsicElements["svg"]) => {
           y2="99.7423"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stopOpacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

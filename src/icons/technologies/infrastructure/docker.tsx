@@ -19,7 +19,7 @@ export const DockerIcon = (props: JSX.IntrinsicElements["svg"]) => {
         />
         <g
           transform="matrix(.184659 0 0 .184659 3.070472 -11.997864)"
-          clip-path="url(#A)"
+          clipPath="url(#A)"
         >
           <g id="B">
             <g id="C" transform="translate(0 -22.866)">
