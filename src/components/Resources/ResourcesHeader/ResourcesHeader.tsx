@@ -1,12 +1,14 @@
 "use client";
 
 import { FC } from "react";
+import { Caret } from "components/Common/TypewriterEffect/TypewriterEffect";
 
 export const ResourcesHeader: FC = () => {
   return (
     <div className="mb-8">
       <h1 className="font-bold text-3xl md:text-4xl tracking-tight mb-5 text-black dark:text-white">
         Resources
+        <Caret />
       </h1>
       <p>
         There are a number of learning resources that I really like and would

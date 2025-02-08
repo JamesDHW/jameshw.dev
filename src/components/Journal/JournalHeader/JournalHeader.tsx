@@ -1,11 +1,13 @@
 "use client";
 
 import { FC } from "react";
+import { Caret } from "components/Common/TypewriterEffect/TypewriterEffect";
 
 export const JournalHeader: FC = () => (
   <div className="mb-8">
     <h1 className="font-bold text-3xl md:text-4xl tracking-tight mb-5 text-black dark:text-white">
       Development Journal
+      <Caret />
     </h1>
     <p>
       I{`'`}ve learned the importance of solving small problems every day to

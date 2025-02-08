@@ -73,7 +73,7 @@ module.exports = {
         "waving-hand": "wave 5s linear infinite",
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
-        blink: "type 2s steps(15) forwards, blink 1s steps(11) infinite 2s",
+        blink: "blink infinite 2s",
       },
       boxShadow: {
         "3xl":

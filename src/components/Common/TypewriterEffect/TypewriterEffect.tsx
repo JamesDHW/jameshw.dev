@@ -19,8 +19,11 @@ export const TypewriterEffect = ({ text = "", keyPressDelay = 75 }) => {
   return (
     <>
       {displayedText}
-      {/* Blinking caret */}
-      <span className="ml-1 h-fit inline text-ice-800 animate-blink">|</span>
+      <Caret />
     </>
   );
 };
+
+export const Caret = () => (
+  <span className="ml-1 h-fit inline text-ice-800 animate-blink">|</span>
+);

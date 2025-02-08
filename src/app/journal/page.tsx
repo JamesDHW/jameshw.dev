@@ -1,6 +1,5 @@
 import { serverSideCmsClient } from "server/services/cms/cms.client";
 import { JournalEntryList } from "components/Journal/JournalEntryList/JournalEntryList";
-import { JournalHeader } from "components/Journal/JournalHeader/JournalHeader";
 import { isJournalEntry } from "types/guards";
 
 export default async function Journal() {
@@ -10,8 +9,7 @@ export default async function Journal() {
   );
 
   return (
-    <div className="flex flex-col px-8">
-      <JournalHeader />
+    <div className="flex flex-col">
       <JournalEntryList data={journalEntries} />
     </div>
   );

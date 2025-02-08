@@ -1,12 +1,10 @@
 import { Suspense } from "react";
 import { ResourcesLinkCardSkeleton } from "components/Resources/ResourcesLinkCardSkeleton/ResourcesLinkCardSkeleton";
-import { ResourcesHeader } from "components/Resources/ResourcesHeader/ResourcesHeader";
 import { ResourceList } from "components/Resources/ResourceList/ResourceList";
 
 export default function ResourcesLoading() {
   return (
-    <div className="flex flex-col px-8">
-      <ResourcesHeader />
+    <div className="flex flex-col">
       <Suspense>
         <ResourceList data={[]} />
       </Suspense>
