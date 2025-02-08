@@ -104,9 +104,10 @@ export const EXPERIENCES: TimelineSection[] = [
             <p>
               Asset Finance management enterprise application with an event
               sourcing architecture. I managed the migration towards TypeScript,
-              reaching 100% file coverage, managed improvements to Cypress e2e
-              tests which reduced the runtime by 50%, and managed upgrades to
-              software versions (e.g. Groovy on Grails from v3 to v5).
+              reaching 100% file coverage, migrated WebPack to Vite, managed
+              improvements to Cypress e2e tests (including a migration to
+              Playwright) which reduced the runtime by 50%, and managed upgrades
+              to software versions (e.g. Groovy on Grails from v3 to v5).
             </p>
           </>
         ),
