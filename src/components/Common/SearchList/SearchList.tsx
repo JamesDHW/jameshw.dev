@@ -29,7 +29,7 @@ export const SearchList = <T,>({
 
   return (
     <div>
-      <div className="sticky top-20 pb-2 z-50 bg-white dark:bg-gray-900">
+      <div className="sticky top-20 pb-2 z-40 bg-white dark:bg-gray-900">
         <div className="flex sm:flex-row flex-col">
           <div className="relative w-full">
             <input
