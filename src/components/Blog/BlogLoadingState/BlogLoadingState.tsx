@@ -6,13 +6,15 @@ import { ContentPageLoadingState } from "components/Common/ContentPageLoadingSta
 import { Skeleton } from "components/Common/Skeleton/Skeleton";
 import { PATHS } from "app/constants";
 import { BlogList } from "../BlogList/BlogList";
+import { BlogHeader } from "../BlogHeader/BlogHeader";
 
 export const BlogLoadingState: FC = () => {
   const path = usePathname();
 
   if (path === PATHS.BLOG)
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col px-8">
+        <BlogHeader />
         <BlogList data={[]} />
         <div className="my-4">
           {Array.from({ length: 3 }).map((_, i) => (

@@ -1,6 +1,7 @@
 import { serverSideCmsClient } from "server/services/cms/cms.client";
 import { JournalEntryList } from "components/Journal/JournalEntryList/JournalEntryList";
 import { isJournalEntry } from "types/guards";
+import { JournalHeader } from "components/Journal/JournalHeader/JournalHeader";
 
 export default async function Journal() {
   const journalEntries = await serverSideCmsClient.getDatabaseEntries(
@@ -9,7 +10,8 @@ export default async function Journal() {
   );
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col px-8">
+      <JournalHeader />
       <JournalEntryList data={journalEntries} />
     </div>
   );
