@@ -34,7 +34,8 @@ export const EXPERIENCES: TimelineSection[] = [
       <p>
         As an Engineering Manager, I am responsible for managing Tech Leads
         across different client projects, ensuring they have everything they
-        need to lead their teams to success.
+        need to lead their teams to success. Meanwhile, I remain a Tech Lead
+        myself on a project to keep my technical skills sharp.
       </p>
     ),
     items: [

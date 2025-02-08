@@ -1,24 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BlogHighlightCard } from "components/Home/BlogHighlightCard/BlogHighlightCard";
-import avatar from "/public/avatar.png";
+import avatar1 from "/public/avatar1.png";
+import avatar2 from "/public/avatar2.png";
 import { BookCover } from "components/Home/BookCover/BookCover";
 import { Carousel } from "components/Common/Carousel/Carousel";
 import { ArrowRightIcon } from "icons/arrow-right";
 import { VideoIcon } from "icons/video";
 import { Divider } from "components/Common/Divider/Divider";
+import { TypewriterEffect } from "components/Common/TypewriterEffect/TypewriterEffect";
 import { MY_READING_LIST, PATHS } from "./constants";
 
 export default function Home() {
   return (
     <div className="px-8">
       <div className="flex sm:flex-row flex-col-reverse justify-between">
-        <div className="flex flex-col justify-top align-top mb-8 sm:mb-14 text-center sm:text-left">
+        <div className="flex sm:flex-grow flex-col justify-top align-top mb-8 sm:mb-14 text-center sm:text-left">
           <h1 className="font-bold text-2xl md:text-4xl mb-8 tracking-tight text-gray-700 dark:text-white">
-            James Haworth Wheatman
+            <TypewriterEffect text="James Haworth Wheatman" />
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 md:text-xl text-xl">
-            <span className="font-semibold">Tech Lead</span> at{" "}
+            <span className="font-semibold">Engineering Manager</span> at{" "}
             <Link
               className="font-semibold underline"
               href="https://www.theodo.co.uk"
@@ -32,10 +34,10 @@ export default function Home() {
             I help people do good things with software!
           </p>
         </div>
-        <div className="relative mx-auto min-w-[225px] w-[225px] h-[225px] overflow-hidden rounded-full m-5 hover:scale-[1.05] transition-all hover:shadow-xl shadow-md">
+        <div className="relative mx-auto min-w-[225px] w-[225px] h-[225px] overflow-hidden rounded-full m-5 hover:scale-[1.05] transition-all hover:shadow-2xl shadow-2xl">
           <Image
             alt="James Haworth Wheatman"
-            src={avatar}
+            src={selectRandom([avatar1, avatar2])}
             className="object-cover"
             placeholder="blur"
             fill
@@ -103,3 +105,9 @@ export default function Home() {
     </div>
   );
 }
+
+const selectRandom = <T,>(arr: T[]): T => {
+  const randIndex = Math.floor(Math.random() * arr.length);
+
+  return arr[randIndex]!;
+};

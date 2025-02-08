@@ -22,7 +22,7 @@ module.exports = {
         },
         ice: {
           0: "#67d3ff",
-          100: "#5acdf",
+          100: "#5acdff",
           200: "#4cc7ff",
           300: "#3ec0ff",
           400: "#2fbaff",
@@ -51,11 +51,29 @@ module.exports = {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        blink: {
+          "0%": {
+            opacity: "0",
+          },
+          "0.1%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "50.1%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "waving-hand": "wave 5s linear infinite",
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
+        blink: "type 2s steps(15) forwards, blink 1s steps(11) infinite 2s",
       },
       boxShadow: {
         "3xl":
