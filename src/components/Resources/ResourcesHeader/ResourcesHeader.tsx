@@ -1,5 +1,3 @@
-"use client";
-
 import { FC } from "react";
 import { Caret } from "components/Common/TypewriterEffect/TypewriterEffect";
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BlogHighlightCard } from "components/Home/BlogHighlightCard/BlogHighlightCard";
+import { HighlightDisplayCard } from "components/Home/HighlightDisplayCard/HighlightDisplayCard";
 import avatar1 from "/public/avatar1.png";
 import avatar2 from "/public/avatar2.png";
 import { BookCover } from "components/Home/BookCover/BookCover";
@@ -9,6 +9,13 @@ import { ArrowRightIcon } from "icons/arrow-right";
 import { VideoIcon } from "icons/video";
 import { Divider } from "components/Common/Divider/Divider";
 import { TypewriterEffect } from "components/Common/TypewriterEffect/TypewriterEffect";
+import { GitHubIcon } from "icons/technologies/infrastructure/github";
+import { GitPullRequestIcon } from "icons/git-pull-request";
+import { ArticleIcon } from "icons/article";
+import { BookIcon } from "icons/book";
+import { VsCodeIcon } from "icons/technologies/development/vscode";
+import { EyeIcon } from "icons/eye";
+import { NpmIcon } from "icons/technologies/infrastructure/npm";
 import { MY_READING_LIST, PATHS } from "./constants";
 
 export default function Home() {
@@ -16,7 +23,7 @@ export default function Home() {
     <div className="px-8">
       <div className="flex sm:flex-row flex-col-reverse justify-between">
         <div className="flex sm:flex-grow flex-col justify-top align-top mb-8 sm:mb-14 text-center sm:text-left">
-          <h1 className="font-bold text-2xl md:text-4xl mb-8 tracking-tight text-gray-700 dark:text-white">
+          <h1 className="font-bold text-3xl md:text-4xl mb-8 tracking-tight text-gray-700 dark:text-white">
             <TypewriterEffect text="James Haworth Wheatman" />
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 md:text-xl text-xl">
@@ -44,41 +51,137 @@ export default function Home() {
           />
         </div>
       </div>
-      <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
-        Articles and Talks
+      <h3 className="flex flex-row font-bold text-2xl md:text-4xl tracking-tight my-4 text-ice-800 dark:text-white">
+        <GitPullRequestIcon className="w-8 md:w-10 h-8 md:h-10 dark:text-ice-800 text-gray-700" />
+        &nbsp;Commit History
       </h3>
+
+      <Divider />
+
+      <p className="pb-6">
+        While most of my commits happen at work behind closed repos, I have a
+        few pet projects...
+      </p>
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-4 pb-4">
+        <HighlightDisplayCard
+          title="VSChameleon"
+          description="A Visual Studio Code extension designed to dynamically customize the editor and workspace colors based on the active file's context."
+          gradient="from-gray-300 to-gray-500"
+          callToActions={[
+            {
+              Icon: GitHubIcon,
+              text: "View source code",
+              href: "https://github.com/JamesDHW/vschameleon",
+            },
+            {
+              Icon: VsCodeIcon,
+              text: "Install extension",
+              href: "https://marketplace.visualstudio.com/items?itemName=JamesHaworthWheatman.vschameleon&ssr=false#overview",
+            },
+          ]}
+        />
+        <HighlightDisplayCard
+          title="Next-Notion Blog Builder"
+          description="CLI to quickly generate a NextJS blog which uses Notion as a CMS to easily store and edit all your articles. Run `npx next-notion-blog-builder`!"
+          gradient="from-gray-500 to-gray-300"
+          callToActions={[
+            {
+              Icon: GitHubIcon,
+              text: "View source code",
+              href: "https://github.com/JamesDHW/next-notion-blog-builder",
+            },
+            {
+              Icon: NpmIcon,
+              text: "View on NPMJS",
+              href: "https://www.npmjs.com/package/next-notion-blog-builder",
+            },
+          ]}
+        />
+      </div>
+
+      <Link
+        className="flex text-lg justify-end"
+        href="https://github.com/JamesDHW/"
+      >
+        More GitHub repos
+        <span className="my-auto">
+          <ArrowRightIcon width={20} height={20} />
+        </span>
+      </Link>
+
+      <h3 className="flex flex-row font-bold text-2xl md:text-4xl tracking-tight my-4 text-ice-800 dark:text-white">
+        <ArticleIcon className="w-8 md:w-10 h-8 md:h-10 dark:text-ice-800 text-gray-700" />
+        &nbsp;Articles and Talks
+      </h3>
+
+      <Divider />
+
       <div className="flex flex-col md:grid md:grid-cols-3 gap-4 pb-4">
-        <BlogHighlightCard
+        <HighlightDisplayCard
           title="What Even is Tech Quality and Why Should I Care?"
-          slug="2023-01-31/what-is-tech-quality"
           gradient="from-gray-700 to-gray-300"
-          Icon={VideoIcon}
-          callToActionText="Watch now..."
+          callToActions={[
+            {
+              Icon: VideoIcon,
+              text: "Watch now...",
+              href: "/blog/2023-01-31/what-is-tech-quality",
+            },
+          ]}
         />
-        <BlogHighlightCard
+        <HighlightDisplayCard
           title="What Does it Mean to Be a Tech Lead in a Lean Software Company?"
-          slug="2024-01-24/lean-tech-lead"
           gradient="from-gray-300 to-gray-600"
+          callToActions={[
+            {
+              Icon: EyeIcon,
+              text: "Read more...",
+              href: "/blog/2024-01-24/lean-tech-lead",
+            },
+          ]}
         />
-        <BlogHighlightCard
+        <HighlightDisplayCard
           title="What Does it Mean to Be a Good Software Engineer?"
-          slug="2022-12-18/how-to-be-a-good-software-engineer"
           gradient="from-gray-700 to-gray-300"
+          callToActions={[
+            {
+              Icon: EyeIcon,
+              text: "Read more...",
+              href: "/blog/2022-12-18/how-to-be-a-good-software-engineer",
+            },
+          ]}
         />
-        <BlogHighlightCard
+        <HighlightDisplayCard
           title="Supercharge your Learning with This One Tool for Programmers!"
-          slug="2023-04-02/development-journal"
           gradient="from-gray-400 to-gray-500"
+          callToActions={[
+            {
+              Icon: EyeIcon,
+              text: "Read more...",
+              href: "/blog/2023-04-02/development-journal",
+            },
+          ]}
         />
-        <BlogHighlightCard
+        <HighlightDisplayCard
           title="Universal Apps: A Single, Unified Codebase Powering iOS, Android, macOS, Windows, and Web"
-          slug="2023-09-24/universal-application-architecture"
           gradient="from-gray-600 to-gray-400"
+          callToActions={[
+            {
+              Icon: EyeIcon,
+              text: "Read more...",
+              href: "/blog/2023-09-24/universal-application-architecture",
+            },
+          ]}
         />
-        <BlogHighlightCard
+        <HighlightDisplayCard
           title="Principles Gathered from Clean Code: A Handbook of Agile Software Craftsmanship"
-          slug="2022-02-05/principles-from-clean-code"
           gradient="from-gray-700 to-gray-300"
+          callToActions={[
+            {
+              Icon: EyeIcon,
+              text: "Read more...",
+              href: "/blog/2022-02-05/principles-from-clean-code",
+            },
+          ]}
         />
       </div>
       <Link className="flex text-lg justify-end" href={PATHS.BLOG}>
@@ -87,10 +190,14 @@ export default function Home() {
           <ArrowRightIcon width={20} height={20} />
         </span>
       </Link>
-      <Divider />
-      <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-6">
-        Are We on the Same Page?
+
+      <h3 className="flex flex-row font-bold text-2xl md:text-4xl tracking-tight my-4 text-ice-800 dark:text-white">
+        <BookIcon className="w-8 md:w-10 h-8 md:h-10 dark:text-ice-800 text-gray-700" />
+        &nbsp;Are We on the Same Page?
       </h3>
+
+      <Divider />
+
       <Carousel>
         {MY_READING_LIST.map(({ title, uri }, i) => (
           <BookCover title={title} uri={uri} key={`${title}-${i}`} />

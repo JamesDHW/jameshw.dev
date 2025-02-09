@@ -11,8 +11,7 @@ export const BookCover: FC<BlogPreviewCardProps> = ({ title, uri }) => {
   return (
     <div
       className={classes(
-        "dark:opacity-50 dark:hover:opacity-100 shadow-lg",
-        "w-full md:w-1/3 bg-gradient-to-r m-2"
+        "w-full md:w-1/3 shadow-lg bg-gradient-to-r m-2 grayscale hover:grayscale-0"
       )}
     >
       <div className="relative mx-auto w-[225px] h-[300px] hover:scale-[1.05] transition-all hover:shadow-lg shadow-md">
