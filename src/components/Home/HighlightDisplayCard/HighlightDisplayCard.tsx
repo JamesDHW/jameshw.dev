@@ -59,12 +59,12 @@ export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
                 />
               }
             >
-              <>
+              <div className="flex flex-row">
                 {Icon && <Icon className="h-6 w-6 mr-2" />}
                 <div className="flex text-right text-gray-800 dark:text-gray-200">
                   <p className="w-full underline">{text}</p>
                 </div>
-              </>
+              </div>
             </ConditionallyWrap>
           ))}
         </div>
