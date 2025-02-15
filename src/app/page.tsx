@@ -129,13 +129,13 @@ export default function Home() {
           ]}
         />
         <HighlightDisplayCard
-          title="What Does it Mean to Be a Tech Lead in a Lean Software Company?"
+          title="Tech Lead Conf: Not Your Everyday Tech Lead: What Does It Mean To Be TL in a Lean Software Company?"
           gradient="from-gray-300 to-gray-600"
           callToActions={[
             {
-              Icon: EyeIcon,
-              text: "Read more...",
-              href: "/blog/2024-01-24/lean-tech-lead",
+              Icon: VideoIcon,
+              text: "Watch now...",
+              href: "/blog/2024-06-15/tech-lead-conf",
             },
           ]}
         />
