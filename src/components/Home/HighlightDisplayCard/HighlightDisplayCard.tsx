@@ -1,11 +1,11 @@
 import classes from "classnames";
 import Link from "next/link";
 import { cloneElement, FC, ReactElement } from "react";
+import { selectRandom } from "src/utils/utils";
 
 interface BlogPreviewCardProps {
   title: string;
   description?: string;
-  gradient: string;
   callToActions: {
     Icon?: FC<{ className?: string }>;
     text?: string;
@@ -16,7 +16,6 @@ interface BlogPreviewCardProps {
 export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
   title,
   description,
-  gradient,
   callToActions = [],
 }) => {
   // controls wrapping _either_ the whole card _or_ individual CTAs because <a> tags cannot be nested due to hydration errors
@@ -33,9 +32,7 @@ export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
       }
       wrapIf={isSingularCallToAction}
     >
-      <div
-        className={classes("rounded-xl w-full bg-gradient-to-r p-1", gradient)}
-      >
+      <div className={classes("rounded-xl w-full p-1", getGradient())}>
         <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
           <div className="flex flex-col md:flex-row justify-between">
             <h4 className="text-lg md:text-lg font-bold w-full text-gray-900 dark:text-gray-100">
@@ -79,3 +76,11 @@ const ConditionallyWrap: FC<{
   children: ReactElement;
 }> = ({ wrapIf, Component, children }) =>
   wrapIf ? cloneElement(Component, {}, children) : children;
+
+const getGradient = (): string => {
+  const tailwindGradients = ["400", "500", "600", "700"];
+  const from = selectRandom(tailwindGradients);
+  const to = selectRandom(tailwindGradients.filter((color) => color !== from));
+
+  return `bg-gradient-to-br from-gray-${from} to-gray-${to}`;
+};

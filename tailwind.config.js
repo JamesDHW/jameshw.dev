@@ -83,4 +83,25 @@ module.exports = {
   },
   plugins: [],
   darkMode: "class",
+  safelist: [
+    {
+      pattern: /bg-gradient-to-br/,
+    },
+    {
+      pattern: /from-ice-(0|100|200|300|400|500|600|700|800)/,
+      variants: ["dark"],
+    },
+    {
+      pattern: /to-ice-(0|100|200|300|400|500|600|700|800)/,
+      variants: ["dark"],
+    },
+    {
+      pattern: /from-gray-(0|100|200|300|400|500|600|700|800|900)/,
+      variants: ["dark"],
+    },
+    {
+      pattern: /to-gray-(0|100|200|300|400|500|600|700|800|900)/,
+      variants: ["dark"],
+    },
+  ],
 };

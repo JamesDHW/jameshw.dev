@@ -16,6 +16,7 @@ import { BookIcon } from "icons/book";
 import { VsCodeIcon } from "icons/technologies/development/vscode";
 import { EyeIcon } from "icons/eye";
 import { NpmIcon } from "icons/technologies/infrastructure/npm";
+import { selectRandom } from "src/utils/utils";
 import { MY_READING_LIST, PATHS } from "./constants";
 
 export default function Home() {
@@ -66,7 +67,6 @@ export default function Home() {
         <HighlightDisplayCard
           title="VSChameleon"
           description="A Visual Studio Code extension designed to dynamically customize the editor and workspace colors based on the active file's context."
-          gradient="from-gray-300 to-gray-500"
           callToActions={[
             {
               Icon: GitHubIcon,
@@ -83,7 +83,6 @@ export default function Home() {
         <HighlightDisplayCard
           title="Next-Notion Blog Builder"
           description="CLI to quickly generate a NextJS blog which uses Notion as a CMS to easily store and edit all your articles. Run `npx next-notion-blog-builder`!"
-          gradient="from-gray-500 to-gray-300"
           callToActions={[
             {
               Icon: GitHubIcon,
@@ -118,19 +117,7 @@ export default function Home() {
 
       <div className="flex flex-col md:grid md:grid-cols-3 gap-4 pb-4">
         <HighlightDisplayCard
-          title="What Even is Tech Quality and Why Should I Care?"
-          gradient="from-gray-700 to-gray-300"
-          callToActions={[
-            {
-              Icon: VideoIcon,
-              text: "Watch now...",
-              href: "/blog/2023-01-31/what-is-tech-quality",
-            },
-          ]}
-        />
-        <HighlightDisplayCard
-          title="Tech Lead Conf: Not Your Everyday Tech Lead: What Does It Mean To Be TL in a Lean Software Company?"
-          gradient="from-gray-300 to-gray-600"
+          title="[TechLead Conf] Not Your Everyday Tech Lead: What Does It Mean To Be TL in a Lean Software Company?"
           callToActions={[
             {
               Icon: VideoIcon,
@@ -140,8 +127,17 @@ export default function Home() {
           ]}
         />
         <HighlightDisplayCard
+          title="What Even is Tech Quality and Why Should I Care?"
+          callToActions={[
+            {
+              Icon: VideoIcon,
+              text: "Watch now...",
+              href: "/blog/2023-01-31/what-is-tech-quality",
+            },
+          ]}
+        />
+        <HighlightDisplayCard
           title="What Does it Mean to Be a Good Software Engineer?"
-          gradient="from-gray-700 to-gray-300"
           callToActions={[
             {
               Icon: EyeIcon,
@@ -152,7 +148,6 @@ export default function Home() {
         />
         <HighlightDisplayCard
           title="Supercharge your Learning with This One Tool for Programmers!"
-          gradient="from-gray-400 to-gray-500"
           callToActions={[
             {
               Icon: EyeIcon,
@@ -163,7 +158,6 @@ export default function Home() {
         />
         <HighlightDisplayCard
           title="Universal Apps: A Single, Unified Codebase Powering iOS, Android, macOS, Windows, and Web"
-          gradient="from-gray-600 to-gray-400"
           callToActions={[
             {
               Icon: EyeIcon,
@@ -174,7 +168,6 @@ export default function Home() {
         />
         <HighlightDisplayCard
           title="Principles Gathered from Clean Code: A Handbook of Agile Software Craftsmanship"
-          gradient="from-gray-700 to-gray-300"
           callToActions={[
             {
               Icon: EyeIcon,
@@ -212,9 +205,3 @@ export default function Home() {
     </div>
   );
 }
-
-const selectRandom = <T,>(arr: T[]): T => {
-  const randIndex = Math.floor(Math.random() * arr.length);
-
-  return arr[randIndex]!;
-};
