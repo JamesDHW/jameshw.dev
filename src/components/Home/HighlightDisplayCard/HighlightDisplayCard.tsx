@@ -32,7 +32,12 @@ export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
       }
       wrapIf={isSingularCallToAction}
     >
-      <div className={classes("rounded-xl w-full p-1", getGradient())}>
+      <div
+        className={classes(
+          "rounded-xl w-full p-1 bg-gradient-to-br ",
+          getGradient(isSingularCallToAction)
+        )}
+      >
         <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
           <div className="flex flex-col md:flex-row justify-between">
             <h4 className="text-lg md:text-lg font-bold w-full text-gray-900 dark:text-gray-100">
@@ -56,9 +61,9 @@ export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
                 />
               }
             >
-              <div className="flex flex-row">
+              <div className="flex flex-row hover:text-ice-800">
                 {Icon && <Icon className="h-6 w-6 mr-2" />}
-                <div className="flex text-right text-gray-800 dark:text-gray-200">
+                <div className="flex text-right">
                   <p className="w-full underline">{text}</p>
                 </div>
               </div>
@@ -77,10 +82,14 @@ const ConditionallyWrap: FC<{
 }> = ({ wrapIf, Component, children }) =>
   wrapIf ? cloneElement(Component, {}, children) : children;
 
-const getGradient = (): string => {
+const getGradient = (addHoverEffect: boolean): string => {
   const tailwindGradients = ["400", "500", "600", "700"];
   const from = selectRandom(tailwindGradients);
   const to = selectRandom(tailwindGradients.filter((color) => color !== from));
 
-  return `bg-gradient-to-br from-gray-${from} to-gray-${to}`;
+  if (!addHoverEffect) {
+    return `from-gray-${from} to-gray-${to}`;
+  }
+
+  return `from-gray-${from} to-gray-${to} hover:from-ice-${from} hover:to-ice-${to}`;
 };

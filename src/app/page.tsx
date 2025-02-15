@@ -99,7 +99,7 @@ export default function Home() {
       </div>
 
       <Link
-        className="flex text-lg justify-end"
+        className="flex text-lg justify-end hover:text-ice-800"
         href="https://github.com/JamesDHW/"
       >
         More GitHub repos
@@ -177,7 +177,10 @@ export default function Home() {
           ]}
         />
       </div>
-      <Link className="flex text-lg justify-end" href={PATHS.BLOG}>
+      <Link
+        className="flex text-lg justify-end hover:text-ice-800"
+        href={PATHS.BLOG}
+      >
         More articles and talks
         <span className="my-auto">
           <ArrowRightIcon width={20} height={20} />
@@ -196,7 +199,10 @@ export default function Home() {
           <BookCover title={title} uri={uri} key={`${title}-${i}`} />
         ))}
       </Carousel>
-      <Link className="flex text-lg justify-end mb-4" href={PATHS.RESOURCES}>
+      <Link
+        className="flex text-lg justify-end hover:text-ice-800 mb-4"
+        href={PATHS.RESOURCES}
+      >
         More resources{" "}
         <span className="my-auto">
           <ArrowRightIcon width={20} height={20} />
