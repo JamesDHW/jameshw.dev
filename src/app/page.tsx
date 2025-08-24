@@ -96,6 +96,22 @@ export default function Home() {
             },
           ]}
         />
+        <HighlightDisplayCard
+          title="i18n-search"
+          description="A Visual Studio Code extension to search directly for translation key usage in your codebase by the keys' translation values—no more hopping via translation files to find occurrences!"
+          callToActions={[
+            {
+              Icon: GitHubIcon,
+              text: "View source code",
+              href: "https://github.com/JamesDHW/i18n-search",
+            },
+            {
+              Icon: VsCodeIcon,
+              text: "Install extension",
+              href: "https://marketplace.visualstudio.com/items?itemName=JamesHaworthWheatman.i18n-search&ssr=false#overview",
+            },
+          ]}
+        />
       </div>
 
       <Link
@@ -210,4 +226,8 @@ export default function Home() {
       </Link>
     </div>
   );
+}
+
+function useTranslation() {
+  return (s: string) => "";
 }
