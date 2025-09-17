@@ -22,7 +22,7 @@ export default function About() {
           </p>
           <p className="py-2">
             Currently, I{`'`}m working as a{" "}
-            <span className="font-semibold">Tech Lead</span> on full-stack web
+            <span className="font-semibold">Engineering Manager/ Tech Lead</span> on full-stack web
             and mobile applications at{" "}
             <a
               href="https://www.theodo.co.uk"

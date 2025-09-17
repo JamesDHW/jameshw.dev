@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { HighlightDisplayCard } from "components/Home/HighlightDisplayCard/HighlightDisplayCard";
 import avatar1 from "/public/avatar1.png";
-import avatar2 from "/public/avatar2.png";
 import { BookCover } from "components/Home/BookCover/BookCover";
 import { Carousel } from "components/Common/Carousel/Carousel";
 import { ArrowRightIcon } from "icons/arrow-right";
@@ -16,7 +15,6 @@ import { BookIcon } from "icons/book";
 import { VsCodeIcon } from "icons/technologies/development/vscode";
 import { EyeIcon } from "icons/eye";
 import { NpmIcon } from "icons/technologies/infrastructure/npm";
-import { selectRandom } from "src/utils/utils";
 import { MY_READING_LIST, PATHS } from "./constants";
 
 export default function Home() {
@@ -45,7 +43,7 @@ export default function Home() {
         <div className="relative mx-auto min-w-[225px] w-[225px] h-[225px] overflow-hidden rounded-full m-5 hover:scale-[1.05] transition-all hover:shadow-2xl shadow-2xl">
           <Image
             alt="James Haworth Wheatman"
-            src={selectRandom([avatar1, avatar2])}
+            src={avatar1}
             className="object-cover"
             placeholder="blur"
             fill
@@ -64,6 +62,33 @@ export default function Home() {
         few pet projects...
       </p>
       <div className="flex flex-col md:grid md:grid-cols-2 gap-4 pb-4">
+        <HighlightDisplayCard
+          title="dotstrap"
+          description="A tiny installer that consumes any dotfiles repo that follows the dotstrap spec to bootstrap any Mac with a single command."
+          callToActions={[
+            {
+              Icon: GitHubIcon,
+              text: "View source code",
+              href: "https://github.com/JamesDHW/dotstrap",
+            },
+          ]}
+        />
+          <HighlightDisplayCard
+            title="i18n-search"
+            description="A Visual Studio Code extension to search directly for translation key usage in your codebase by the keys' translation values—no more hopping via translation files to find occurrences!"
+            callToActions={[
+              {
+                Icon: GitHubIcon,
+                text: "View source code",
+                href: "https://github.com/JamesDHW/i18n-search",
+              },
+              {
+                Icon: VsCodeIcon,
+                text: "Install extension",
+                href: "https://marketplace.visualstudio.com/items?itemName=JamesHaworthWheatman.i18n-search&ssr=false#overview",
+              },
+            ]}
+          />
         <HighlightDisplayCard
           title="VSChameleon"
           description="A Visual Studio Code extension designed to dynamically customize the editor and workspace colors based on the active file's context."
@@ -93,22 +118,6 @@ export default function Home() {
               Icon: NpmIcon,
               text: "View on NPMJS",
               href: "https://www.npmjs.com/package/next-notion-blog-builder",
-            },
-          ]}
-        />
-        <HighlightDisplayCard
-          title="i18n-search"
-          description="A Visual Studio Code extension to search directly for translation key usage in your codebase by the keys' translation values—no more hopping via translation files to find occurrences!"
-          callToActions={[
-            {
-              Icon: GitHubIcon,
-              text: "View source code",
-              href: "https://github.com/JamesDHW/i18n-search",
-            },
-            {
-              Icon: VsCodeIcon,
-              text: "Install extension",
-              href: "https://marketplace.visualstudio.com/items?itemName=JamesHaworthWheatman.i18n-search&ssr=false#overview",
             },
           ]}
         />
