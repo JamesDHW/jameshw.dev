@@ -11,15 +11,16 @@ interface BlogPreviewCardProps {
     text?: string;
     href: string;
   }[];
+  // controls wrapping _either_ the whole card _or_ individual CTAs because <a> tags cannot be nested due to hydration errors
+  isSingularCallToAction?: boolean;
 }
 
 export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
   title,
   description,
   callToActions = [],
+  isSingularCallToAction = callToActions.length === 1,
 }) => {
-  // controls wrapping _either_ the whole card _or_ individual CTAs because <a> tags cannot be nested due to hydration errors
-  const isSingularCallToAction = callToActions.length === 1;
 
   return (
     <ConditionallyWrap
@@ -39,14 +40,17 @@ export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
         )}
       >
         <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
-          <div className="flex flex-col md:flex-row justify-between">
-            <h4 className="text-lg md:text-lg font-bold w-full text-gray-900 dark:text-gray-100">
-              {title}
-            </h4>
-          </div>
-          <p className="text-gray-800 dark:text-gray-200 mb-2 sm:mb-4">
-            {description}
-          </p>
+          <span>
+
+            <div className="flex flex-col md:flex-row">
+              <h4 className="text-lg md:text-lg font-bold w-full text-gray-900 dark:text-gray-100">
+                {title}
+              </h4>
+            </div>
+            <p className="text-gray-800 dark:text-gray-200 mb-2 sm:mb-4">
+              {description}
+            </p>
+          </span>
           {callToActions.map(({ Icon, text, href }) => (
             <ConditionallyWrap
               key={href}
@@ -80,7 +84,7 @@ const ConditionallyWrap: FC<{
   Component: ReactElement;
   children: ReactElement;
 }> = ({ wrapIf, Component, children }) =>
-  wrapIf ? cloneElement(Component, {}, children) : children;
+    wrapIf ? cloneElement(Component, {}, children) : children;
 
 const getGradient = (addHoverEffect: boolean): string => {
   const tailwindGradients = ["400", "500", "600", "700"];

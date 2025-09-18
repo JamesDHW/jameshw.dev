@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="px-8">
       <div className="flex sm:flex-row flex-col-reverse justify-between">
-        <div className="flex sm:flex-grow flex-col justify-top align-top mb-8 sm:mb-14 text-center sm:text-left">
+        <div className="flex sm:flex-grow flex-col justify-center align-center mb-8 sm:mb-14 text-center sm:text-left">
           <h1 className="font-bold text-3xl md:text-4xl mb-8 tracking-tight text-gray-700 dark:text-white">
             <TypewriterEffect text="James Haworth Wheatman" />
           </h1>
@@ -64,7 +64,8 @@ export default function Home() {
       <div className="flex flex-col md:grid md:grid-cols-2 gap-4 pb-4">
         <HighlightDisplayCard
           title="dotstrap"
-          description="A tiny installer that consumes any dotfiles repo that follows the dotstrap spec to bootstrap any Mac with a single command."
+          description="A tiny installer that consumes any dotfiles repo that follows the dotstrap spec. This allows you to bootstrap any Mac with (almost) a single command."
+          isSingularCallToAction={false}
           callToActions={[
             {
               Icon: GitHubIcon,
