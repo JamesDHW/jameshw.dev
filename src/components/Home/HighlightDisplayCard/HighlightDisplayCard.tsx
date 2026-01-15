@@ -21,7 +21,6 @@ export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
   callToActions = [],
   isSingularCallToAction = callToActions.length === 1,
 }) => {
-
   return (
     <ConditionallyWrap
       Component={
@@ -41,7 +40,6 @@ export const HighlightDisplayCard: FC<BlogPreviewCardProps> = ({
       >
         <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
           <span>
-
             <div className="flex flex-col md:flex-row">
               <h4 className="text-lg md:text-lg font-bold w-full text-gray-900 dark:text-gray-100">
                 {title}
@@ -84,7 +82,7 @@ const ConditionallyWrap: FC<{
   Component: ReactElement;
   children: ReactElement;
 }> = ({ wrapIf, Component, children }) =>
-    wrapIf ? cloneElement(Component, {}, children) : children;
+  wrapIf ? cloneElement(Component, {}, children) : children;
 
 const getGradient = (addHoverEffect: boolean): string => {
   const tailwindGradients = ["400", "500", "600", "700"];
