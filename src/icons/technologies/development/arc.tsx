@@ -1,10 +1,10 @@
-export const ArcIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const ArcIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      clip-rule="evenodd"
-      fill-rule="evenodd"
+      clipRule="evenodd"
+      fillRule="evenodd"
       strokeLinejoin="round"
-      stroke-miterlimit="2"
+      strokeMiterlimit="2"
       viewBox="0 0 500 400"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

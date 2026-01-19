@@ -1,5 +1,6 @@
 import { TimelineSection } from "components/Common/Timeline/Timeline";
 import { TechListDisplay } from "components/Tech/TechListDisplay/TechListDisplay";
+import { IllustratorIcon } from "icons/illustrator";
 import { SchoolIcon } from "icons/school";
 import { DynamoDbIcon } from "icons/technologies/database/dynamo";
 import { IbmIcon } from "icons/technologies/database/ibm";
@@ -22,6 +23,7 @@ import { ReactNativeIcon } from "icons/technologies/mobile/react-native";
 import { DjangoIcon } from "icons/technologies/web-backend/django";
 import { NestJsIcon } from "icons/technologies/web-backend/nest";
 import { NextJsIcon } from "icons/technologies/web-frontend/next-js";
+import { ViteIcon } from "icons/vite";
 import { WorkIcon } from "icons/work";
 
 export const EXPERIENCES: TimelineSection[] = [
@@ -62,6 +64,53 @@ export const EXPERIENCES: TimelineSection[] = [
           </div>
         ),
       },
+      {
+        title: "Client: Adobe Illustrator Extension for Fashion Retailer",
+        startDate: new Date("2025-02-01"),
+        date: new Date(),
+        description: (
+          <>
+            <TechListDisplay
+              list={[
+                {
+                  name: "TypeScript, React, Vite, Adobe Illustrator CEP",
+                  icons: [
+                    TypeScriptIcon,
+                    ReactNativeIcon,
+                    ViteIcon,
+                    IllustratorIcon,
+                  ],
+                },
+              ]}
+            />
+            <p>
+              Built a custom extension for Adobe Illustrator to allow users to import and export designs from the platform.
+              Designed a build system to allow for ExtendScript to interact with the Adobe Illustrator API in TypeScript.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Client: Asset Finance Platform for International Bank",
+        startDate: new Date("2025-02-01"),
+        date: new Date(),
+        description: (
+          <TechListDisplay
+            list={[
+              {
+                name: "Java, Groovy on Grails, Microsoft SQL, TypeScript, React",
+                icons: [
+                  JavaIcon,
+                  GroovyIcon,
+                  MicrosoftSqlIcon,
+                  TypeScriptIcon,
+                  ReactNativeIcon,
+                ],
+              },
+            ]}
+          />
+        ),
+      },
     ],
   },
   {
@@ -85,7 +134,7 @@ export const EXPERIENCES: TimelineSection[] = [
       {
         title: "Client: Asset Finance Platform for International Bank",
         startDate: new Date("2023-02-27"),
-        date: new Date(),
+        date: new Date("2025-02-01"),
         description: (
           <>
             <TechListDisplay
