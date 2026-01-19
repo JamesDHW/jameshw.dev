@@ -1,4 +1,4 @@
-export const LambdaIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const LambdaIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

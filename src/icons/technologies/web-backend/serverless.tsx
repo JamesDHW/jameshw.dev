@@ -1,4 +1,4 @@
-export const ServerlessIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const ServerlessIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

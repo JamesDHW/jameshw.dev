@@ -1,4 +1,4 @@
-export const ChannelIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const ChannelIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" {...props}>
       <path

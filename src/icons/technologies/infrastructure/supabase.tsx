@@ -1,4 +1,4 @@
-export const SupabaseIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const SupabaseIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="109"

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HighlightDisplayCard } from "components/Home/HighlightDisplayCard/HighlightDisplayCard";
-import avatar1 from "/public/avatar1.png";
+import avatar1 from "../../public/avatar1.png";
 import { BookCover } from "components/Home/BookCover/BookCover";
 import { Carousel } from "components/Common/Carousel/Carousel";
 import { ArrowRightIcon } from "icons/arrow-right";

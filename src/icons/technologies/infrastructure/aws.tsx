@@ -1,4 +1,4 @@
-export const AwsIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const AwsIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,4 @@
-export const VsCodeIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const VsCodeIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 100 100"

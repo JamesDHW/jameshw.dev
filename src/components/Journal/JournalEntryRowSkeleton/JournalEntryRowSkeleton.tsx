@@ -4,11 +4,11 @@ import { CalendarIcon } from "icons/calendar";
 export const JournalEntryRowSkeleton = () => (
   <div className="flex flex-col sm:flex-row w-full p-2 shadow-md justify-between">
     <div className="flex-col my-auto">
-      <p className="italic">
+      <div className="italic">
         <div role="status" className="animate-pulse w-full">
           <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 m-2" />
         </div>
-      </p>
+      </div>
       <div className="flex flex-row gap-1 font-semibold text-gray-600 dark:text-gray-500">
         <CalendarIcon className="my-auto" />
         <div role="status" className="animate-pulse w-36">

@@ -1,4 +1,4 @@
-export const S3Icon = (props: JSX.IntrinsicElements["svg"]) => {
+export const S3Icon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

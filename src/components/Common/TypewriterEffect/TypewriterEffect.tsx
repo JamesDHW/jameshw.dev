@@ -1,20 +1,37 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const TypewriterEffect = ({ text = "", keyPressDelay = 75 }) => {
   const [displayedText, setDisplayedText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentIndexRef = useRef(0);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText(text.slice(0, currentIndex + 1)); // Always take a full substring
-        setCurrentIndex(currentIndex + 1);
-      }, keyPressDelay);
-
-      return () => clearTimeout(timeout);
+    if (text.length === 0) {
+      return;
     }
-  }, [currentIndex, text, keyPressDelay]);
+
+    currentIndexRef.current = 0;
+    setDisplayedText("");
+
+    const animate = () => {
+      if (currentIndexRef.current < text.length) {
+        timeoutRef.current = setTimeout(() => {
+          currentIndexRef.current += 1;
+          setDisplayedText(text.slice(0, currentIndexRef.current));
+          animate();
+        }, keyPressDelay);
+      }
+    };
+
+    animate();
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [text, keyPressDelay]);
 
   return (
     <>

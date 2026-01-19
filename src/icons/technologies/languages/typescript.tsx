@@ -1,4 +1,4 @@
-export const TypeScriptIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const TypeScriptIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       fill="none"

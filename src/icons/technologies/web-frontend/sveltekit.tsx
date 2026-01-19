@@ -1,4 +1,4 @@
-export const SveltekitIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const SveltekitIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       version="1.1"

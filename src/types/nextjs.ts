@@ -1,5 +1,5 @@
 export type PageProps<T extends PageParams | CatchAllPageParams> = {
-  params: T;
+  params: Promise<T>;
 };
 
 export type PageParams = {

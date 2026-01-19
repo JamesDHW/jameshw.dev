@@ -1,4 +1,4 @@
-export const MicrosoftSqlIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const MicrosoftSqlIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="450 -100 1000 1000"

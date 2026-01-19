@@ -1,4 +1,4 @@
-export const ArticleIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const ArticleIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

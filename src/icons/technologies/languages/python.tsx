@@ -1,4 +1,4 @@
-export const PythonIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const PythonIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

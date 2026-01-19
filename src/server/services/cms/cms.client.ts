@@ -68,7 +68,7 @@ class ServerSideCmsClient {
         start_cursor: nextCursor ?? undefined,
       });
       nextCursor = next_cursor;
-      results = results.concat(pageResults);
+      results = results.concat(pageResults as (PageObjectResponse | PartialPageObjectResponse)[]);
       hasMore = has_more;
     }
 

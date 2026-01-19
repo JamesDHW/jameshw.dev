@@ -8,8 +8,10 @@ import { CatchAllPageParams, PageProps } from "types/nextjs";
 import { isJournalEntry, isTwoStringArray } from "types/guards";
 
 export default async function JournalPage({
-  params: { slug: pathParams },
+  params,
 }: PageProps<CatchAllPageParams>) {
+  const { slug: pathParams } = await params;
+  
   if (!isTwoStringArray(pathParams)) throw notFound();
 
   const [date, slug] = pathParams;
@@ -48,8 +50,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { slug: pathParams },
+  params,
 }: PageProps<CatchAllPageParams>): Promise<Metadata> {
+  const { slug: pathParams } = await params;
   const [published, journalSlug] = pathParams;
   const [journal] = (
     await serverSideCmsClient.getDatabaseEntries(

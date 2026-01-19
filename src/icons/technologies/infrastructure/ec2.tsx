@@ -1,4 +1,4 @@
-export const Ec2Icon = (props: JSX.IntrinsicElements["svg"]) => {
+export const Ec2Icon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

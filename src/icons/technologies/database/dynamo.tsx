@@ -1,4 +1,4 @@
-export const DynamoDbIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const DynamoDbIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="2215"

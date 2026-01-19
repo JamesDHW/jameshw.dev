@@ -1,4 +1,4 @@
-export const GroovyIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const GroovyIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="800px"

@@ -1,4 +1,4 @@
-export const MongoDbIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const MongoDbIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

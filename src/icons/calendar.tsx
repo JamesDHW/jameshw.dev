@@ -1,4 +1,4 @@
-export const CalendarIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const CalendarIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="20px"

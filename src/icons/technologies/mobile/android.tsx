@@ -1,4 +1,4 @@
-export const AndroidIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const AndroidIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 467.046 250.164"

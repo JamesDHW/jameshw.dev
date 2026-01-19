@@ -1,4 +1,4 @@
-export const GitHubIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const GitHubIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="2500"

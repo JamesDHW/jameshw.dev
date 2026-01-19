@@ -1,4 +1,4 @@
-export const CrossIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const CrossIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"

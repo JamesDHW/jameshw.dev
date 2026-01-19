@@ -1,4 +1,4 @@
-export const CognitoIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const CognitoIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

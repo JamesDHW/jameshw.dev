@@ -1,4 +1,4 @@
-export const AppleIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const AppleIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

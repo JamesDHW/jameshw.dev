@@ -1,4 +1,4 @@
-export const ForrestAdminIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const ForrestAdminIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

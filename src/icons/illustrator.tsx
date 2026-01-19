@@ -1,4 +1,4 @@
-export const IllustratorIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const IllustratorIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" {...props}>
       <defs>

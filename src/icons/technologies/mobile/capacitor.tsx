@@ -1,4 +1,4 @@
-export const CapacitorIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const CapacitorIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       height="2500"

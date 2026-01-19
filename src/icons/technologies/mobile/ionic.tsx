@@ -1,4 +1,4 @@
-export const IonicIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const IonicIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

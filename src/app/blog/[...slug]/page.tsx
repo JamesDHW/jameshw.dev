@@ -7,8 +7,10 @@ import { CatchAllPageParams, PageProps } from "types/nextjs";
 import { isArticle, isTwoStringArray } from "types/guards";
 
 export default async function ArticlePage({
-  params: { slug: pathParams },
+  params,
 }: PageProps<CatchAllPageParams>) {
+  const { slug: pathParams } = await params;
+  
   if (!isTwoStringArray(pathParams)) throw notFound();
 
   const [date, slug] = pathParams;
@@ -47,8 +49,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { slug: pathParams },
+  params,
 }: PageProps<CatchAllPageParams>): Promise<Metadata> {
+  const { slug: pathParams } = await params;
   const [date, articleSlug] = pathParams;
   const [article] = (
     await serverSideCmsClient.getDatabaseEntries(

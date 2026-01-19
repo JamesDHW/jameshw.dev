@@ -1,4 +1,4 @@
-export const NpmIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const NpmIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg width="24" height="24" viewBox="0 0 48 48" {...props}>
       <g>

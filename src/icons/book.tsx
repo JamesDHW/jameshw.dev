@@ -1,4 +1,4 @@
-export const BookIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const BookIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg viewBox="0 0 24 24" fill="none" {...props}>
       <rect width="24" height="24" fill="none" />

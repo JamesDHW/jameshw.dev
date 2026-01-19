@@ -1,11 +1,16 @@
 import { PageTitle } from "components/Common/PageTitle/PageTitle";
 import Image from "next/image";
-import dog from "/public/charlie.png";
-import windemere from "/public/windemere.jpeg";
-import river from "/public/river.jpeg";
-import athens from "/public/athens.jpeg";
+import dog from "../../../public/charlie.png";
+import windemere from "../../../public/windemere.jpeg";
+import river from "../../../public/river.jpeg";
+import athens from "../../../public/athens.jpeg";
+
+const images = [athens, river, windemere, dog];
 
 export default function About() {
+  const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
+  const selectedImage = images[dayOfYear % images.length]!;
+
   return (
     <div className="flex flex-col px-8">
       <PageTitle>
@@ -42,7 +47,7 @@ export default function About() {
         <div className="relative sm:order-none order-first w-100 sm:w-72 h-96 overflow-hidden rounded-lg m-5 hover:scale-[1.02] transition-all hover:shadow-xl">
           <Image
             className="object-cover transition-all"
-            src={selectRandom([athens, river, windemere, dog])}
+            src={selectedImage}
             alt="Me stood in front of Windemere in the Lake District"
             placeholder="blur"
             fill
@@ -52,9 +57,3 @@ export default function About() {
     </div>
   );
 }
-
-const selectRandom = <T,>(arr: T[]): T => {
-  const randIndex = Math.floor(Math.random() * arr.length);
-
-  return arr[randIndex]!;
-};

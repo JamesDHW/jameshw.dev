@@ -4,7 +4,7 @@ import { TECH_PROFICIENCY } from "app/tech/constants";
 
 export type TechExperience = {
   name: string;
-  icons: FC<JSX.IntrinsicElements["svg"]>[];
+  icons: FC<React.SVGProps<SVGSVGElement>>[];
   experience?: TECH_PROFICIENCY;
 };
 

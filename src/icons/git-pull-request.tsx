@@ -1,4 +1,4 @@
-export const GitPullRequestIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const GitPullRequestIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       fill="currentColor"

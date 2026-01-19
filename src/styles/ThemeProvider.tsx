@@ -8,5 +8,12 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => (
-  <NextThemeProvider attribute="class">{children}</NextThemeProvider>
+  <NextThemeProvider 
+    attribute="class"
+    defaultTheme="system"
+    enableSystem
+    storageKey="theme"
+  >
+    {children}
+  </NextThemeProvider>
 );

@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, ReactNode, useEffect, useState } from "react";
+import { FC, ReactElement, ReactNode, useMemo, useState } from "react";
 import { SearchIcon } from "icons/search";
 
 interface SearchableListProps<T> {
@@ -19,12 +19,11 @@ export const SearchList = <T,>({
   ListItem,
   placeholder,
   initialQuery,
-}: SearchableListProps<T>): JSX.Element => {
+}: SearchableListProps<T>): ReactElement => {
   const [query, setQuerySetState] = useState(initialQuery ?? "");
-  const [data, setData] = useState<T[]>([]);
 
-  useEffect(() => {
-    setData(fetchData(query.toLowerCase().trim()));
+  const data = useMemo(() => {
+    return fetchData(query.toLowerCase().trim());
   }, [fetchData, query]);
 
   return (

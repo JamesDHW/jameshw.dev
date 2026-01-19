@@ -1,4 +1,4 @@
-export const PostgresIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const PostgresIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="432.071pt"

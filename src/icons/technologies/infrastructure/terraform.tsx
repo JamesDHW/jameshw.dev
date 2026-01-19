@@ -1,4 +1,4 @@
-export const TerraformIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const TerraformIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="800px"

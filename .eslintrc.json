@@ -62,7 +62,7 @@
   "plugins": ["import", "jsx-a11y"],
   "env": {
     "browser": true,
-    "es6": true,
+    "es2025": true,
     "node": true
   },
   "settings": {

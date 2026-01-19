@@ -1,4 +1,4 @@
-export const DjangoIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const DjangoIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="1963"

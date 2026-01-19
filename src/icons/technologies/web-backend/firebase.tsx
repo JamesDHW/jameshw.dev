@@ -1,4 +1,4 @@
-export const FirebaseIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const FirebaseIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

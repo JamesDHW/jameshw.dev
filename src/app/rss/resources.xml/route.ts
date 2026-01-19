@@ -42,4 +42,4 @@ export async function GET() {
   });
 }
 
-export const revalidate = ONE_DAY_IN_MINS * 60;
+export const revalidate = 86400; // 1 day in seconds

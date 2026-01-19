@@ -1,4 +1,4 @@
-export const NestJsIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const NestJsIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="256px"

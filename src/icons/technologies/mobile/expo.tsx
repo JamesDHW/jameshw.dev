@@ -1,4 +1,4 @@
-export const ExpoIcon = (props: JSX.IntrinsicElements["svg"]) => {
+export const ExpoIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="24"
