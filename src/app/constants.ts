@@ -56,6 +56,7 @@ export const MY_READING_LIST = [
 
 export const PATHS = {
   HOME: "/",
+  RESUME: "/resume",
   ABOUT: "/about",
   BLOG: "/blog",
   JOURNAL: "/journal",

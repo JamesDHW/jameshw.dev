@@ -26,6 +26,13 @@ export const Footer: FC = () => {
             Tech
           </Link>
           <Link
+            href={PATHS.RESUME}
+            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
+            target="_blank"
+          >
+            Resume
+          </Link>
+          <Link
             href={PATHS.EXPERIENCE}
             className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
           >

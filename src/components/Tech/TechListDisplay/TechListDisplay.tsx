@@ -1,6 +1,6 @@
 import { FC } from "react";
 import classes from "classnames";
-import { TECH_PROFICIENCY } from "app/tech/constants";
+import { TECH_PROFICIENCY } from "app/(main)/tech/constants";
 
 export type TechExperience = {
   name: string;

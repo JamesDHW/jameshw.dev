@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HighlightDisplayCard } from "components/Home/HighlightDisplayCard/HighlightDisplayCard";
-import avatar1 from "../../public/avatar1.png";
+import avatar1 from "../../../public/avatar1.png";
 import { BookCover } from "components/Home/BookCover/BookCover";
 import { Carousel } from "components/Common/Carousel/Carousel";
 import { ArrowRightIcon } from "icons/arrow-right";
@@ -15,7 +15,7 @@ import { BookIcon } from "icons/book";
 import { VsCodeIcon } from "icons/technologies/development/vscode";
 import { EyeIcon } from "icons/eye";
 import { NpmIcon } from "icons/technologies/infrastructure/npm";
-import { MY_READING_LIST, PATHS } from "./constants";
+import { MY_READING_LIST, PATHS } from "../constants";
 
 export default function Home() {
   return (

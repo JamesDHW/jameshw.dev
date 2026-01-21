@@ -1,9 +1,9 @@
 import { PageTitle } from "components/Common/PageTitle/PageTitle";
 import Image from "next/image";
-import dog from "../../../public/charlie.png";
-import windemere from "../../../public/windemere.jpeg";
-import river from "../../../public/river.jpeg";
-import athens from "../../../public/athens.jpeg";
+import dog from "../../../../public/charlie.png";
+import windemere from "../../../../public/windemere.jpeg";
+import river from "../../../../public/river.jpeg";
+import athens from "../../../../public/athens.jpeg";
 
 const images = [athens, river, windemere, dog];
 
