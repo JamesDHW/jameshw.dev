@@ -16,13 +16,14 @@ import { VsCodeIcon } from "icons/technologies/development/vscode";
 import { EyeIcon } from "icons/eye";
 import { NpmIcon } from "icons/technologies/infrastructure/npm";
 import { MY_READING_LIST, PATHS } from "../constants";
+import { PROOF_LINKS } from "./work-with-me/content";
 
 export default function Home() {
   return (
     <div className="px-8">
       <div className="flex sm:flex-row flex-col-reverse justify-between">
         <div className="flex sm:flex-grow flex-col justify-center align-center mb-8 sm:mb-14 text-center sm:text-left">
-          <h1 className="font-bold text-3xl md:text-4xl mb-8 tracking-tight text-gray-700 dark:text-white">
+          <h1 className="font-bold text-3xl md:text-5xl mb-8 tracking-tight text-gray-700 dark:text-white">
             <TypewriterEffect text="James Haworth Wheatman" />
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 md:text-xl text-xl">

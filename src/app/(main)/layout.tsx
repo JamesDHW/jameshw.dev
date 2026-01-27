@@ -17,7 +17,7 @@ const RootLayout: FC<RootPageProps> = ({ children }) => {
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <head />
-      <body className="flex flex-col justify-between h-full max-w-3xl m-auto bg-white dark:bg-gray-900">
+      <body className="flex flex-col justify-between h-full max-w-4xl m-auto bg-white dark:bg-gray-900">
         <ThemeProvider>
           <div className="flex flex-col justify-center">
             <Navbar />

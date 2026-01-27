@@ -6,6 +6,7 @@ export const MicrosoftSqlIcon = (props: React.SVGProps<SVGSVGElement>) => {
       fill="#000000"
       {...props}
     >
+      <title>Microsoft SQL Server</title>
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"

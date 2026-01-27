@@ -16,12 +16,12 @@ export const Navbar = () => {
   return (
     <nav
       className={classes(
-        "flex z-50 width-full sticky top-0 px-8 py-5 mb-5 justify-between align-baseline bg-white dark:bg-gray-900",
+        "flex z-50 w-full sticky top-0 px-8 py-5 mb-5 justify-between items-center bg-white dark:bg-gray-900",
         "after:absolute after:-start-5 after:h-5 after:w-full after:-bottom-5 after:bg-gradient-to-b after:dark:from-gray-900 after:dark:to-transparent after:from-white after:to-transparent"
       )}
     >
       <button
-        className="sm:hidden relative w-10 h-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
+        className="md:hidden relative w-10 h-10 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all text-4xl"
         onClick={() => setIsMenuOpen((v) => !v)}
         aria-label="Toggle menu"
         type="button"
@@ -30,13 +30,13 @@ export const Navbar = () => {
       </button>
 
       <MobileNav open={isMenuOpen} setOpen={setIsMenuOpen} />
-      <ul className="hidden sm:flex sm:flex-row flex-col">
+      <ul className="hidden md:flex flex-1 items-center justify-between pr-6">
         {NAVBAR_ITEMS.map((item) => (
           <NavItem key={item.href} {...item} />
         ))}
       </ul>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 shrink-0">
         <a
           aria-label="RSS Feed"
           className="w-10 h-10 z-50 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all"
@@ -91,9 +91,8 @@ interface MobileNavProps {
 const MobileNav: FC<MobileNavProps> = ({ open, setOpen }) => {
   return (
     <div
-      className={`sm:hidden fixed top-0 left-0 h-screen w-screen transform ${
-        open ? "-translate-x-0" : "-translate-x-full"
-      } transition-transform duration-100 ease-in-out filter bg-gray-50 dark:bg-gray-900 opacity-95 drop-shadow-md overscroll-contain`}
+      className={`md:hidden fixed top-0 left-0 h-screen w-screen transform ${open ? "-translate-x-0" : "-translate-x-full"
+        } transition-transform duration-100 ease-in-out filter bg-gray-50 dark:bg-gray-900 opacity-95 drop-shadow-md overscroll-contain`}
     >
       <div className="flex flex-col h-full justify-center align-middle">
         {NAVBAR_ITEMS.map((item) => (

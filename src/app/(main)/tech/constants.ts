@@ -13,7 +13,7 @@ import { TerraformIcon } from "icons/technologies/infrastructure/terraform";
 import { NextJsIcon } from "icons/technologies/web-frontend/next-js";
 import { GatsbyIcon } from "icons/technologies/web-frontend/gatsby";
 import { SveltekitIcon } from "icons/technologies/web-frontend/sveltekit";
-import { ViteIcon } from "icons/vite";
+import { ViteIcon } from "icons/technologies/web-frontend/vite";
 
 import { ReactNativeIcon } from "icons/technologies/mobile/react-native";
 import { ExpoIcon } from "icons/technologies/mobile/expo";
@@ -34,6 +34,7 @@ import { MicrosoftSqlIcon } from "icons/technologies/database/microsoft-sql";
 import { AppleIcon } from "icons/technologies/development/apple";
 import { VsCodeIcon } from "icons/technologies/development/vscode";
 import { ArcIcon } from "icons/technologies/development/arc";
+import { CursorIcon } from "icons/technologies/development/cursor";
 
 export enum TECH_PROFICIENCY {
   PRODUCTION = "PRODUCTION",
@@ -63,9 +64,13 @@ export const TECHNOLOGIES = {
       icons: [NextJsIcon],
       experience: TECH_PROFICIENCY.PRODUCTION,
     },
+    {
+      name: "Vite",
+      icons: [ViteIcon],
+      experience: TECH_PROFICIENCY.PRODUCTION,
+    },
     { name: "Gatsby JS", icons: [GatsbyIcon] },
     { name: "SvelteKit", icons: [SveltekitIcon] },
-    { name: "Vite", icons: [ViteIcon] },
   ],
   MOBILE: [
     {
@@ -136,12 +141,12 @@ export const TECHNOLOGIES = {
   ],
   DEVELOPMENT: [
     {
-      name: "2021 MacBook Pro M1",
+      name: "2024 MacBook Pro, M4 Pro",
       icons: [AppleIcon],
     },
     {
-      name: "VS Code",
-      icons: [VsCodeIcon],
+      name: "VS Code and Cursor",
+      icons: [VsCodeIcon, CursorIcon],
     },
     {
       name: "Arc Browser",

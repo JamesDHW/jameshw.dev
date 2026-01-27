@@ -25,7 +25,7 @@ export const NavItem: FC<NavItemPops> = ({ href, label }) => {
           },
           "py-10 text-3xl",
           "sm:py-2 sm:text-base",
-          "px-3 w-full font-semibold rounded-lg hover:dark:bg-gray-800 hover:bg-gray-200 transition-all"
+          "px-5 w-full font-semibold rounded-lg hover:dark:bg-gray-800 hover:bg-gray-200 transition-all"
         )}
       >
         {label}

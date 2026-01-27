@@ -64,6 +64,7 @@ export const PATHS = {
   TECH: "/tech",
   EXPERIENCE: "/experience",
   RESOURCES: "/resources",
+  WORK_WITH_ME: "/work-with-me",
   RSS: "/rss",
   RSS_MAIN: `/rss/feed.xml`,
   RSS_BLOG: "/rss/blog.xml",
@@ -91,7 +92,7 @@ export const NAVBAR_ITEMS: NavItemPops[] = [
     label: "Dev Journal",
   },
   {
-    href: PATHS.RESOURCES,
-    label: "Resources",
+    href: PATHS.WORK_WITH_ME,
+    label: "Work with me",
   },
 ];

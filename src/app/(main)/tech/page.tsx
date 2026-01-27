@@ -11,12 +11,12 @@ export default function Tech() {
         specific tools they know (a bad craftsman blames his tools!).
       </p>
       <p className="py-2 text-lg">
-        That being said, it{`'`}s all about choosing the right tool for the job
-        - I try to work with tech that delivers the most value as quickly as
+        That being said, it{`'`}s all about choosing the right tool for the job–I
+        try to work with tech that delivers the most value as quickly as
         possible.
       </p>
       <p className="py-2 text-lg">
-        Here{`'`}s some of the tech I{`'`}ve used - I{`'`}
+        Here{`'`}s some of the tech I{`'`}ve used. I{`'`}
         ve highlighted those which I{`'`}ve used to{" "}
         <span className="font-bold underline">
           deploy production code professionally

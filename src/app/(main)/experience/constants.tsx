@@ -22,9 +22,15 @@ import { ExpoIcon } from "icons/technologies/mobile/expo";
 import { ReactNativeIcon } from "icons/technologies/mobile/react-native";
 import { DjangoIcon } from "icons/technologies/web-backend/django";
 import { NestJsIcon } from "icons/technologies/web-backend/nest";
+import { SstIcon } from "icons/technologies/web-backend/sst";
 import { NextJsIcon } from "icons/technologies/web-frontend/next-js";
-import { ViteIcon } from "icons/vite";
+import { ViteIcon } from "icons/technologies/web-frontend/vite";
 import { WorkIcon } from "icons/work";
+import { VsCodeIcon } from "icons/technologies/development/vscode";
+import { BashIcon } from "icons/technologies/infrastructure/bash";
+import { AppleIcon } from "icons/technologies/development/apple";
+import { DocusaurusIcon } from "icons/technologies/web-frontend/docusaurus";
+import { PlaywrightIcon } from "icons/technologies/web-frontend/playwright";
 
 export const EXPERIENCES: TimelineSection[] = [
   {
@@ -62,6 +68,31 @@ export const EXPERIENCES: TimelineSection[] = [
               </li>
             </ol>
           </div>
+        ),
+      },
+      {
+        title: "Client: Intelligent Procurement Orchestration Scale-Up",
+        startDate: new Date("2025-09-01"),
+        date: new Date("2025-10-30"),
+        description: (
+          <>
+            <TechListDisplay
+              list={[
+                {
+                  name: "Java, Groovy on Grails, Microsoft SQL, TypeScript, React",
+                  icons: [
+                    TypeScriptIcon,
+                    NextJsIcon,
+                    SstIcon,
+                  ],
+                },
+              ]}
+            />
+            <p>
+              Built integrations with third-party services to integrate into complex financial workflows.
+              Designed a migration strategy to move towards new ESLint rules incrementally.
+            </p>
+          </>
         ),
       },
       {
@@ -111,6 +142,80 @@ export const EXPERIENCES: TimelineSection[] = [
           />
         ),
       },
+      {
+        title: "Project: i18n-search VSCode Extension",
+        date: new Date("2025-07-26"),
+        link: "https://marketplace.visualstudio.com/items?itemName=JamesHaworthWheatman.i18n-search&ssr=false#overview",
+        description: (
+          <>
+            <TechListDisplay
+              list={[
+                {
+                  name: "TypeScript, VSCode",
+                  icons: [
+                    TypeScriptIcon,
+                    VsCodeIcon,
+                  ],
+                },
+              ]}
+            />
+            <p>
+              Built a VSCode extension to search for translation key usage in your codebase by the keys' translation values.
+              This allows you to find all the places where a translation key is used in your codebase.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Project: dotstrap - Bootstrap your Mac config with one command",
+        date: new Date("2025-09-14"),
+        link: "https://github.com/JamesDHW/dotstrap",
+        description: (
+          <>
+            <TechListDisplay
+              list={[
+                {
+                  name: "Shell, macOS",
+                  icons: [
+                    BashIcon,
+                    AppleIcon
+                  ],
+                },
+              ]}
+            />
+            <p>
+              A tiny installer that consumes any dotfiles repo that follows the dotstrap spec.
+              Standardise tool usage across the team and speed up company onboarding from days to minutes.
+            </p>
+
+          </>
+        ),
+      },
+      {
+        title: "Project: Test-Driven Documentation",
+        date: new Date("2026-01-15"),
+        link: "https://jameshw.dev/blog/2026-01-15/test-driven-documentation",
+        description: (
+          <>
+            <TechListDisplay
+              list={[
+                {
+                  name: "Docusaurus, Playwright",
+                  icons: [
+                    DocusaurusIcon,
+                    PlaywrightIcon,
+                  ],
+                },
+              ]}
+            />
+            <p>
+              A working example of a docusaurus user-guide site built from the output of Playwright tests.
+              This version could replace a corporate pre-release run-book and might be extended with a variety of potential features.
+            </p>
+
+          </>
+        ),
+      }
     ],
   },
   {
@@ -278,6 +383,63 @@ export const EXPERIENCES: TimelineSection[] = [
               production will pay off the upfront installation cost.
             </p>
           </>
+        ),
+      },
+      {
+        title: "Project: VSChameleon - VSCode Extension",
+        date: new Date("2024-11-24"),
+        link: "https://marketplace.visualstudio.com/items?itemName=JamesHaworthWheatman.vschameleon&ssr=false#overview",
+        description: (
+          <>
+            <TechListDisplay
+              list={[
+                {
+                  name: "TypeScript, VSCode",
+                  icons: [
+                    TypeScriptIcon,
+                    VsCodeIcon,
+                  ],
+                },
+              ]}
+            />
+            <p>
+              VSChameleon is a Visual Studio Code extension designed to dynamically customize the editor and workspace colors based on the active file's context.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Project: Next-Notion Blog Builder",
+        date: new Date("2023-02-15"),
+        link: "https://www.npmjs.com/package/next-notion-blog-builder",
+        description: (
+          <>
+            <TechListDisplay
+              list={[
+                {
+                  name: "TypeScript, VSCode",
+                  icons: [
+                    TypeScriptIcon,
+                    VsCodeIcon,
+                  ],
+                },
+              ]}
+            />
+            <p>
+              CLI to quickly generate a NextJS blog which uses Notion as a CMS to easily store and edit all your articles.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Project: Universal App",
+        date: new Date("2023-08-25"),
+        link: "https://github.com/JamesDHW/enguage-universal-app?tab=readme-ov-file",
+        description: (
+          <p>
+            Built a Universal App interface for Enguage, a Natural Language Understanding library.
+            One unified codebase with five different distributions on five different platforms. The codebase uses React + React Native to deploy via NextJS with SSR and Expo on Android and iOS.
+          </p>
         ),
       },
     ],
