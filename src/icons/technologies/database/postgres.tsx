@@ -7,6 +7,7 @@ export const PostgresIcon = (props: React.SVGProps<SVGSVGElement>) => {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Postgres</title>
       <g
         id="orginal"
         fillRule="nonzero"

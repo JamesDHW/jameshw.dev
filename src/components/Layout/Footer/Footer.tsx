@@ -20,6 +20,12 @@ export const Footer: FC = () => {
         </div>
         <div className="flex flex-col space-y-4">
           <Link
+            href={PATHS.EXPERIENCE}
+            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
+          >
+            Experience
+          </Link>
+          <Link
             href={PATHS.TECH}
             className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
@@ -33,10 +39,10 @@ export const Footer: FC = () => {
             Resume
           </Link>
           <Link
-            href={PATHS.EXPERIENCE}
+            href={PATHS.RESOURCES}
             className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
-            Experience
+            Resources
           </Link>
           <Link
             href={PATHS.RSS}
@@ -59,16 +65,16 @@ export const Footer: FC = () => {
             GitHub
           </Link>
           <Link
-            href="https://twitter.com/JamesDHW"
-            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
-          >
-            Twitter / X
-          </Link>
-          <Link
             href="https://www.linkedin.com/in/jamesdhw/"
             className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
           >
             LinkedIn
+          </Link>
+          <Link
+            href="https://twitter.com/JamesDHW"
+            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition"
+          >
+            Twitter / X
           </Link>
         </div>
       </div>

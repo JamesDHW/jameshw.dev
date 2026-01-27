@@ -8,6 +8,7 @@ export const DynamoDbIcon = (props: React.SVGProps<SVGSVGElement>) => {
       preserveAspectRatio="xMidYMid"
       {...props}
     >
+      <title>DynamoDB</title>
       <path
         d="M165.258 288.501h3.508l57.261-28.634.953-1.347V29.964l-.953-1.354L168.766 0h-3.551l.043 288.501"
         fill="#5294CF"

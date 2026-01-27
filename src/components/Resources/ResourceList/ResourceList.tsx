@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { SearchList } from "components/Common/SearchList/SearchList";
 import { ResourcesLinkCard } from "components/Resources/ResourcesLinkCard/ResourcesLinkCard";
 import { LearningResource } from "types/cms";
-import { RESOURCE_ICONS, ResourceType } from "app/resources/constants";
+import { ResourceType, RESOURCE_ICONS } from "app/(main)/resources/constants";
 
 interface ResourceList {
   data: LearningResource[];

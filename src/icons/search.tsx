@@ -7,6 +7,7 @@ export const SearchIcon = (props: React.SVGProps<SVGSVGElement>) => {
       stroke="currentColor"
       {...props}
     >
+      <title>Search</title>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
