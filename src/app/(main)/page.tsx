@@ -63,6 +63,18 @@ export default function Home() {
       </p>
       <div className="flex flex-col md:grid md:grid-cols-2 gap-4 pb-4">
         <HighlightDisplayCard
+          title="Lean Production Simulation"
+          description="Interactive simulation demonstrating Lean production principles, from Customer Feedback to One-Piece Flow."
+          isSingularCallToAction={false}
+          callToActions={[
+            {
+              Icon: EyeIcon,
+              text: "View Website",
+              href: "https://lean-flow-simulation.vercel.app/",
+            },
+          ]}
+        />
+        <HighlightDisplayCard
           title="dotstrap"
           description="A tiny installer that consumes any dotfiles repo that follows the dotstrap spec. This allows you to bootstrap any Mac with (almost) a single command."
           isSingularCallToAction={false}
@@ -71,22 +83,6 @@ export default function Home() {
               Icon: GitHubIcon,
               text: "View source code",
               href: "https://github.com/JamesDHW/dotstrap",
-            },
-          ]}
-        />
-        <HighlightDisplayCard
-          title="i18n-search"
-          description="A Visual Studio Code extension to search directly for translation key usage in your codebase by the keys' translation values—no more hopping via translation files to find occurrences!"
-          callToActions={[
-            {
-              Icon: GitHubIcon,
-              text: "View source code",
-              href: "https://github.com/JamesDHW/i18n-search",
-            },
-            {
-              Icon: VsCodeIcon,
-              text: "Install extension",
-              href: "https://marketplace.visualstudio.com/items?itemName=JamesHaworthWheatman.i18n-search&ssr=false#overview",
             },
           ]}
         />
