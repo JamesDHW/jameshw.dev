@@ -13,7 +13,6 @@ import { TerraformIcon } from "icons/technologies/infrastructure/terraform";
 import { NextJsIcon } from "icons/technologies/web-frontend/next-js";
 import { GatsbyIcon } from "icons/technologies/web-frontend/gatsby";
 import { SveltekitIcon } from "icons/technologies/web-frontend/sveltekit";
-import { ViteIcon } from "icons/vite";
 
 import { ReactNativeIcon } from "icons/technologies/mobile/react-native";
 import { ExpoIcon } from "icons/technologies/mobile/expo";
@@ -65,7 +64,6 @@ export const TECHNOLOGIES = {
     },
     { name: "Gatsby JS", icons: [GatsbyIcon] },
     { name: "SvelteKit", icons: [SveltekitIcon] },
-    { name: "Vite", icons: [ViteIcon] },
   ],
   MOBILE: [
     {
