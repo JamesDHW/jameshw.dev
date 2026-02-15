@@ -63,6 +63,23 @@ export default function Home() {
       </p>
       <div className="flex flex-col md:grid md:grid-cols-2 gap-4 pb-4">
         <HighlightDisplayCard
+          title="ErrorScript"
+          description="ErrorScript is a fork of TypeScript with an implementation of Checked Exceptions."
+          isSingularCallToAction={false}
+          callToActions={[
+            {
+              Icon: EyeIcon,
+              text: "View Website & Playground",
+              href: "https://errorscript-playground.vercel.app/",
+            },
+            {
+              Icon: GitHubIcon,
+              text: "View contribution",
+              href: "https://github.com/JamesDHW/ErrorScript/pull/1",
+            },
+          ]}
+        />
+        <HighlightDisplayCard
           title="Lean Production Simulation"
           description="Interactive simulation demonstrating Lean production principles, from Customer Feedback to One-Piece Flow."
           isSingularCallToAction={false}
@@ -83,6 +100,23 @@ export default function Home() {
               Icon: GitHubIcon,
               text: "View source code",
               href: "https://github.com/JamesDHW/dotstrap",
+            },
+          ]}
+        />
+        <HighlightDisplayCard
+          title="i18n-search"
+          description="Find usages of i18n translation keys in the codebase just from the translated text."
+          isSingularCallToAction={false}
+          callToActions={[
+            {
+              Icon: VsCodeIcon,
+              text: "Install extension",
+              href: "https://marketplace.visualstudio.com/items?itemName=JamesHaworthWheatman.i18n-search&ssr=false#overview",
+            },
+            {
+              Icon: GitHubIcon,
+              text: "View source code",
+              href: "https://github.com/JamesDHW/i18n-search/",
             },
           ]}
         />
