@@ -64,7 +64,7 @@ export default function Home() {
       <div className="flex flex-col md:grid md:grid-cols-2 gap-4 pb-4">
         <HighlightDisplayCard
           title="ErrorScript"
-          description="ErrorScript is a fork of TypeScript with an implementation of Checked Exceptions."
+          description="ErrorScript makes the exception channel in TypeScript explicit and type-checked. Write clean happy-path code while TypeScript enforces your error handling."
           isSingularCallToAction={false}
           callToActions={[
             {
